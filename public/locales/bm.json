@@ -21,5 +21,22 @@
       "TITLE": "Kerjasama Universiti",
       "UNI_NAME": "Malaysia University of Science and Technolgy (MUST)"
     }
+  },
+  "TEAM": {
+    "MEET_THE_TEAM": "Temui Pasukan",
+    "TITLE": "Pasukan Keusahawanan Kami",
+    "DESCRIPTION": "Kami menetapkan peranan secara strategik yang memanfaatkan setiap kekuatan dan kecekapan semula jadi ahli untuk membina usaha niaga produk yang berjaya.",
+    "CEO": "CEO",
+    "CEO_INSIGHT": "Kualiti kepimpinan semulajadi dan pemikiran strategik",
+    "COO": "COO/Pakar Strategi Model Perniagaan",
+    "COO_INSIGHT": "Kemahiran komunikasi yang kuat dan pemikiran kreatif",
+    "MARKETING_BRANDING_MANAGER": "Pengurus Pemasaran & Penjenamaan",
+    "MARKETING_BRANDING_MANAGER_INSIGHT": "Kemahiran interpersonal yang sangat baik dan keupayaan persuasif",
+    "SALES_MANAGER": "Pengurus Jualan",
+    "SALES_MANAGER_INSIGHT": "Berorientasikan perincian dan kekuatan organisasi",
+    "FINANCE_DATA_ANALYST": "Kewangan & Penganalisis Data",
+    "FINANCE_DATA_ANALYST_INSIGHT": "Pemikiran analitikal dan kecekapan berangka",
+    "TECH_WEBSITE_DEVELOPER": "Pembangun Teknik & Laman Web",
+    "TECH_WEBSITE_DEVELOPER_INSIGHT": "Pemikiran penyelesaian masalah dan kecekapan teknikal yang kukuh dalam pembangunan web"
   }
 }
