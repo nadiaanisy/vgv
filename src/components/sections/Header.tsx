@@ -93,7 +93,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
 
               {/* Mobile Language Selector */}
               <div className="mt-8 pt-6 border-t border-border">
-                <div className="text-sm font-medium text-muted-foreground mb-3">{t('CHOICE_OF_LANGUAGE')}</div>
+                <div className="text-sm font-medium text-muted-foreground mb-3 m-[10px]">{t('CHOICE_OF_LANGUAGE')}</div>
                 <div className="space-y-2">
                   {languages.map((language) => (
                     <Button
@@ -123,7 +123,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
             <h1 className="text-lg sm:text-xl font-medium text-foreground">{t('COMPANY_NAME')}</h1>
           </div>
         </div>
-        
+
         {/* Right side - Desktop Navigation and Language Selector */}
         <div className="hidden lg:flex items-center gap-4">
           {/* Desktop Navigation */}
