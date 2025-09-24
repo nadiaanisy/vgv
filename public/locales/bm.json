@@ -14,5 +14,12 @@
     "PRODUCTS": "Produk",
     "TESTIMONIAL": "Testimoni",
     "CONTACT_US": "Hubungi Kami"
+  },
+  "TRUST_SIGNALS": {
+    "TITLE": "Dipercayai oleh Yang Terbaik",
+    "UNI_PARTNERSHIP": {
+      "TITLE": "Kerjasama Universiti",
+      "UNI_NAME": "Malaysia University of Science and Technolgy (MUST)"
+    }
   }
 }

@@ -14,5 +14,12 @@
     "PRODUCTS": "Products",
     "TESTIMONIAL": "Testimonial",
     "CONTACT_US": "Contact Us"
+  },
+  "TRUST_SIGNALS": {
+    "TITLE": "Trusted by the Best",
+    "UNI_PARTNERSHIP": {
+      "TITLE": "University Partnership",
+      "UNI_NAME": "Malaysia University of Science and Technolgy (MUST)"
+    }
   }
 }
