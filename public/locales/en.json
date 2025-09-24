@@ -1,0 +1,18 @@
+{
+  "COMPANY_NAME": "Veyra Global Ventures",
+  "YOUR_TROLLEY": "Your Cart",
+  "CART_EMPTY_MESSAGE": "Your cart is empty. Add some products to get started!",
+  "CART_WHATSAPP_PREFFERED_MESSAGE": "Complete your order through WhatsApp for personalized service",
+  "TOTAL": "Total",
+  "VISION_TITLE": "Vision",
+  "VISION_DESCRIPTION": "To be a globally recognized enterprise that leads with innovation, sustainability, and trust, enriching lives and shaping a better future for generations to come.",
+  "MISSION_TITLE" : "Mission",
+  "MISSION_DESCRIPTION": "To provide high-quality , innovative, and reliable products that enhance everyday living, while creating lasting value for customers, partners, and communities through integrity and excellence.",
+  "MENU_LIST": {
+    "HOME": "Home",
+    "ABOUT_US": "About Us",
+    "PRODUCTS": "Products",
+    "TESTIMONIAL": "Testimonial",
+    "CONTACT_US": "Contact Us"
+  }
+}
