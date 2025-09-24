@@ -193,3 +193,27 @@
 html {
   font-size: var(--font-size);
 }
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-primary-foreground {
+  color: var(--primary-foreground);
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-primary\/10 {
+  background-color: color-mix(in oklab, var(--primary) 10%, transparent);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-secondary-foreground {
+  color: var(--secondary-foreground);
+}
