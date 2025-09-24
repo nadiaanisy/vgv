@@ -202,7 +202,7 @@ html {
   color: var(--primary-foreground);
 }
 
-.bg-background {
+.bg-background, .bg-popover {
   background-color: var(--background);
 }
 
