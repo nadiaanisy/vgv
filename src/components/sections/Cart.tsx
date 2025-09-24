@@ -20,9 +20,9 @@ interface CartProps {
 }
 export function Cart({ cartItems, updateCartItem }: CartProps) {
   const { t } = useCustomHook();
-  
+
   const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0)
+    return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   }
 
   const handleOnClickWhatsAppOrder = () => {
@@ -52,7 +52,7 @@ export function Cart({ cartItems, updateCartItem }: CartProps) {
 
   if (cartItems.length === 0) {
     return (
-      <div className="w-80 p-6">
+      <div className="p-6">
         <div className="flex items-center gap-2 mb-4">
           <ShoppingCart className="w-5 h-5 text-muted-foreground" />
           <h3 className="font-medium text-foreground">{t('YOUR_TROLLEY')}</h3>
@@ -68,7 +68,7 @@ export function Cart({ cartItems, updateCartItem }: CartProps) {
   }
 
   return (
-    <div className="w-80 p-6">
+    <div className="p-6">
       <div className="flex items-center gap-2 mb-4">
         <ShoppingCart className="w-5 h-5 text-primary" />
         <h3 className="font-medium text-foreground">{t('YOUR_TROLLEY')}</h3>
@@ -130,7 +130,7 @@ export function Cart({ cartItems, updateCartItem }: CartProps) {
 
       <div className="space-y-3">
         <div className="flex justify-between items-center">
-          <span className="font-medium text-foreground">Total:</span>
+          <span className="font-medium text-foreground">{t('TOTAL')}:</span>
           <span className="font-medium text-lg text-primary">
             RM{getTotalPrice().toFixed(2)}
           </span>
@@ -150,6 +150,4 @@ export function Cart({ cartItems, updateCartItem }: CartProps) {
       </div>
     </div>
   )
-
-
 }
