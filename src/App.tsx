@@ -1,26 +1,73 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './assets/i18';
+import { useState } from 'react';
+import { CartItem } from './components/interface';
+import { useCustomHook } from './components/misc';
+import { Header } from './components/sections/Header';
+import { HomePage } from './components/pages/HomePage';
 
-function App() {
+export default function App() {
+  const {
+    currentPage,
+    setCurrentPage,
+    handleNavigate,
+    currentLanguage,
+    handleLanguageChange
+  } = useCustomHook();
+
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  // const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
+  // const viewProductById = (page: string, productId?: string) => {
+  //   setCurrentPage(page)
+  //   if (productId) {
+  //     setSelectedProductId(productId)
+  //   }
+  // }
+
+  const updateCartItem = (id: string, quantity: number) => {
+    if (quantity <= 0) {
+      setCartItems(prevItems => prevItems.filter(item => item.id !== id))
+    } else {
+      setCartItems(prevItems =>
+        prevItems.map(item =>
+          item.id === id ? { ...item, quantity } : item
+        )
+      )
+    }
+  }
+
+  const getTotalCartItems = () => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0)
+  }
+
+  const renderPage = () => {
+    switch (currentPage) {
+      // case 'business-model':
+      //   return <BusinessModelPage onNavigate={handleNavigate} />
+      // case 'products':
+      //   return <ProductsPage onNavigate={handleNavigate} addToCart={addToCart} selectedProductId={selectedProductId} />
+      // case 'customer-feedback':
+      //   return <CustomerFeedbackPage onNavigate={handleNavigate} />
+      // case 'contact':
+      //   return <ContactPage onNavigate={handleNavigate} />
+      case 'home':
+      default:
+        return <HomePage onNavigate={handleNavigate}/>
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="size-full min-h-screen bg-background">
+      <Header 
+        currentPage={currentPage} 
+        onNavigate={handleNavigate}
+        currentLanguage={currentLanguage}
+        onLanguageChange={handleLanguageChange}
+        cartItems={cartItems}
+        totalCartItems={getTotalCartItems()}
+        updateCartItem={updateCartItem}
+      />
+      {renderPage()}
     </div>
-  );
-}
+  )
 
-export default App;
+}
