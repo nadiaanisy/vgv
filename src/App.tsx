@@ -6,6 +6,7 @@ import { Header } from './components/sections/Header';
 import { HomePage } from './components/pages/HomePage';
 import { AboutUsPage } from './components/pages/AboutUsPage';
 import { ContactUsPage } from './components/pages/ContactUsPage';
+import { TestimonialPage } from './components/pages/TestimonialPage';
 
 export default function App() {
   const {
@@ -47,8 +48,8 @@ export default function App() {
         return <AboutUsPage onNavigate={handleNavigate} />
       // case 'products':
       //   return <ProductsPage onNavigate={handleNavigate} addToCart={addToCart} selectedProductId={selectedProductId} />
-      // case 'customer-feedback':
-      //   return <CustomerFeedbackPage onNavigate={handleNavigate} />
+      case 'testimonial':
+        return <TestimonialPage onNavigate={handleNavigate} />
       case 'contact-us':
         return <ContactUsPage onNavigate={handleNavigate} />
       case 'home':
