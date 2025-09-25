@@ -4,6 +4,7 @@ import { CartItem } from './components/interface';
 import { useCustomHook } from './components/misc';
 import { Header } from './components/sections/Header';
 import { HomePage } from './components/pages/HomePage';
+import { AboutUsPage } from './components/pages/AboutUsPage';
 
 export default function App() {
   const {
@@ -15,13 +16,13 @@ export default function App() {
   } = useCustomHook();
 
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  // const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
-  // const viewProductById = (page: string, productId?: string) => {
-  //   setCurrentPage(page)
-  //   if (productId) {
-  //     setSelectedProductId(productId)
-  //   }
-  // }
+  const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
+  const viewProductById = (page: string, productId?: string) => {
+    setCurrentPage(page)
+    if (productId) {
+      setSelectedProductId(productId)
+    }
+  }
 
   const updateCartItem = (id: string, quantity: number) => {
     if (quantity <= 0) {
@@ -41,8 +42,8 @@ export default function App() {
 
   const renderPage = () => {
     switch (currentPage) {
-      // case 'business-model':
-      //   return <BusinessModelPage onNavigate={handleNavigate} />
+      case 'about-us':
+        return <AboutUsPage onNavigate={handleNavigate} />
       // case 'products':
       //   return <ProductsPage onNavigate={handleNavigate} addToCart={addToCart} selectedProductId={selectedProductId} />
       // case 'customer-feedback':
@@ -51,7 +52,7 @@ export default function App() {
       //   return <ContactPage onNavigate={handleNavigate} />
       case 'home':
       default:
-        return <HomePage onNavigate={handleNavigate}/>
+        return <HomePage onNavigate={viewProductById} />
     }
   }
 

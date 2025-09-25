@@ -1,25 +1,147 @@
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
-import { Badge } from './ui/badge'
-import { Button } from './ui/button'
+import {
+  useCustomHook
+} from '../misc';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle
+} from '../ui/card';
 import { 
   Target, 
   Users, 
-  Globe, 
+  Globe,
   Heart, 
   DollarSign, 
   Cog, 
   TrendingDown,
   Lightbulb,
   Handshake,
+  Star,
+  Package,
   ArrowLeft,
   Building2
 } from 'lucide-react'
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
 
-interface BusinessModelPageProps {
+interface AboutUsPageProps {
   onNavigate: (page: string) => void
 }
+export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
+  const { t } = useCustomHook();
 
-export function BusinessModelPage({ onNavigate }: BusinessModelPageProps) {
+  const businessSections = [
+    {
+      border: "border-l-4 border-l-primary",
+      title: "BUSINESS_MODEL_SECTION.VALUE_PROPOSITION",
+      icon: <Lightbulb className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.VALUE_PROPOSITION_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) Temperature Adaptation</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Performance Monitoring</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Extended Activity Time</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Comfort Optimization</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-blue-500",
+      title: "BUSINESS_MODEL_SECTION.CUSTOMER_SEGMENTS", 
+      icon: <Users className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.CUSTOMER_SEGMENTS_DECSRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) Recreational Enthusiasts (60%)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Professional Athletes (15%)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Marine Researchers (10%)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Safety Professionals (15%)</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-green-500",
+      title: "BUSINESS_MODEL_SECTION.CHANNELS",
+      icon: <Globe className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.CHANNELS_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) Direct Online Sales</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Retail Partnerships</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Trade Shows</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Training Centers</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-pink-500",
+      title: "BUSINESS_MODEL_SECTION.CUSTOMER_RELATIONSHIPS",
+      icon: <Heart className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.CUSTOMER_RELATIONSHIPS_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) 60-Day Guarantee</Badge>,
+        <Badge variant="outline">(NEED UPDATE) 24/7 Support</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Beta Community</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Monthly Updates</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-yellow-500",
+      title: "BUSINESS_MODEL_SECTION.REVENUE_STREAMS",
+      icon: <DollarSign className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.REVENUE_STREAMS_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) Wetsuit Sales ($1,299)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Accessory Bundles ($299)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Software Subscriptions ($49/year)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Technology Licensing</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-purple-500",
+      title: "BUSINESS_MODEL_SECTION.KEY_RESOURCES",
+      icon: <Cog className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.KEY_RESOURCES_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) MUST Partnership</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Manufacturing Partners</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Patent Portfolio</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Expert Team</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-indigo-500",
+      title: "BUSINESS_MODEL_SECTION.KEY_ACTIVITIES",
+      icon: <Cog className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.KEY_ACTIVITIES_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) R&D Innovation</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Manufacturing Management</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Digital Marketing</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Software Development</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-tael-500",
+      title: "BUSINESS_MODEL_SECTION.KEY_PARTNERSHIPS",
+      icon: <Handshake className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.KEY_PARTNERSHIPS_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) MIT Materials Lab</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Manufacturing Partners</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Retail Network</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Professional Athletes</Badge>
+      ],
+    },
+    {
+      border: "border-l-4 border-l-red-500",
+      title: "BUSINESS_MODEL_SECTION.COST_STRUCTURE",
+      icon: <TrendingDown className="w-6 h-6" />,
+      content: "BUSINESS_MODEL_SECTION.COST_STRUCTURE_DESCRIPTION",
+      highlights: [
+        <Badge variant="outline">(NEED UPDATE) R&D (25%)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Manufacturing (35%)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Marketing (20%)</Badge>,
+        <Badge variant="outline">(NEED UPDATE) Operations (15%)</Badge>
+      ],
+    },
+  ]
+
   return (
     <main className="min-h-screen bg-background">
       {/* Header Section */}
@@ -32,21 +154,20 @@ export function BusinessModelPage({ onNavigate }: BusinessModelPageProps) {
               className="gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to Homepage
+              {t('BUTTONS.BACK_TO_HOME')}
             </Button>
           </div>
-          
+
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 mb-6">
               <Building2 className="w-6 h-6 text-primary" />
-              <Badge variant="secondary" className="text-sm">About Us</Badge>
+              <Badge variant="secondary" className="text-sm">{t('BUSINESS_STRATEGY')}</Badge>
             </div>
             <h1 className="text-4xl lg:text-5xl font-medium text-foreground mb-6">
-              Our Business Model
+              {t('OUR_BUSINESS_MODEL_TITLE')}
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Understanding how Wetty Ventures creates, delivers, and captures value in the smart wetsuit market. 
-              Here's our comprehensive business model that drives our entrepreneurial success.
+              (NEED UPDATE) {t('OUR_BUSINESS_MODEL_SUBTITLE')}
             </p>
           </div>
         </div>
@@ -56,261 +177,108 @@ export function BusinessModelPage({ onNavigate }: BusinessModelPageProps) {
       <section className="w-full py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="space-y-12">
-            
-            {/* Value Proposition */}
-            <Card className="border-l-4 border-l-primary">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
-                    <Lightbulb className="w-6 h-6" />
+            {businessSections.map((section, index) => (
+              <Card key={index} className={`hover:shadow-lg transition-shadow ${section.border}`}>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+                      {section.icon}
+                    </div>
+                    <span>{t(section.title)}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed mb-4">{t(section.content)}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {section.highlights}
                   </div>
-                  <span>Value Proposition</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Our Wetty product offering provides exceptional value through revolutionary smart wetsuit technology that adapts to your water environment. 
-                  What makes us valuable is our unique combination of real-time temperature regulation, performance monitoring, and comfort optimization. 
-                  Unlike traditional wetsuits that offer static protection, our smart wetsuits actively respond to changing water conditions, extending your 
-                  activity time by up to 40% while maintaining optimal comfort. We solve the problem of temperature discomfort and performance limitations 
-                  that water sports enthusiasts face, giving them the confidence to push their boundaries in any aquatic environment.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Temperature Adaptation</Badge>
-                  <Badge variant="outline">Performance Monitoring</Badge>
-                  <Badge variant="outline">Extended Activity Time</Badge>
-                  <Badge variant="outline">Comfort Optimization</Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Financial Projections */}
+      <section className="w-full py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-medium text-foreground mb-4">{t('FINANCIAL_PROJECTION')}</h2>
+            <p className="text-muted-foreground">(NEED UPDATE) 3-year revenue and growth outlook</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center p-8">
+              <CardContent className="p-0">
+                <div className="text-3xl font-medium text-primary mb-2">(NEED UPDATE) Year 1</div>
+                <div className="text-2xl font-medium mb-4">(NEED UPDATE) $2.5M</div>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <div>(NEED UPDATE) 1,500 units sold</div>
+                  <div>(NEED UPDATE) Initial market entry</div>
+                  <div>(NEED UPDATE) Beta customer feedback</div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Customer Segments */}
-            <Card className="border-l-4 border-l-blue-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <span>Customer Segments</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Our target customers are passionate water sports enthusiasts who prioritize performance and comfort. Our primary segment includes 
-                  recreational surfers, divers, and swimmers (60% of our market) who engage in water activities regularly and are willing to invest 
-                  in premium gear for better experiences. Our secondary segment comprises professional athletes and competitive water sports participants 
-                  (15%) who need cutting-edge technology for competitive advantage. We also serve marine researchers and professionals (10%) who require 
-                  reliable thermal protection for extended water exposure, and water safety professionals including coast guard and rescue teams (15%) 
-                  who need dependable gear for critical operations.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Recreational Enthusiasts (60%)</Badge>
-                  <Badge variant="outline">Professional Athletes (15%)</Badge>
-                  <Badge variant="outline">Marine Researchers (10%)</Badge>
-                  <Badge variant="outline">Safety Professionals (15%)</Badge>
+            <Card className="text-center p-8 border-primary/50">
+              <CardContent className="p-0">
+                <div className="text-3xl font-medium text-primary mb-2">(NEED UPDATE) Year 2</div>
+                <div className="text-2xl font-medium mb-4">(NEED UPDATE) $8.5M</div>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <div>(NEED UPDATE) 5,000 units sold</div>
+                  <div>(NEED UPDATE) Retail partnerships</div>
+                  <div>(NEED UPDATE) Product improvements</div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Channels */}
-            <Card className="border-l-4 border-l-green-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
-                    <Globe className="w-6 h-6" />
-                  </div>
-                  <span>Channels</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  We reach our customers through multiple strategic channels to maximize market penetration. Our primary channel is direct-to-consumer 
-                  online sales through our website, which allows us to maintain higher margins and direct customer relationships. We partner with premium 
-                  surf shops and dive centers (50+ locations) to provide hands-on product experience and serve customers who prefer in-person shopping. 
-                  We participate in major trade shows like DEMA, Surf Expo, and Outdoor Retailer to build brand awareness and establish industry connections. 
-                  Additionally, we collaborate with marine training academies and certification centers to introduce our products to new water sports participants 
-                  and professionals who need reliable gear for their training and work.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Direct Online Sales</Badge>
-                  <Badge variant="outline">Retail Partnerships</Badge>
-                  <Badge variant="outline">Trade Shows</Badge>
-                  <Badge variant="outline">Training Centers</Badge>
+            <Card className="text-center p-8">
+              <CardContent className="p-0">
+                <div className="text-3xl font-medium text-primary mb-2">(NEED UPDATE) Year 3</div>
+                <div className="text-2xl font-medium mb-4">(NEED UPDATE) $25M</div>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <div>(NEED UPDATE) 15,000 units sold</div>
+                  <div>(NEED UPDATE) International expansion</div>
+                  <div>(NEED UPDATE) Technology licensing</div>
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
 
-            {/* Customer Relationships */}
-            <Card className="border-l-4 border-l-pink-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center text-pink-600">
-                    <Heart className="w-6 h-6" />
-                  </div>
-                  <span>Customer Relationships</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  We build strong customer relationships through trust, transparency, and exceptional service. Our approach focuses on creating long-term 
-                  loyalty rather than one-time transactions. We maintain transparency by providing monthly development newsletters with behind-the-scenes 
-                  content about our innovation process. We offer a 60-day satisfaction guarantee to build confidence in our products and demonstrate our 
-                  commitment to customer satisfaction. Our responsive customer support team provides 24/7 assistance with an average 4-hour response time. 
-                  We also run an exclusive beta tester community where early adopters get access to new features and provide valuable feedback that shapes 
-                  our product development, making them feel like valued partners in our innovation journey.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">60-Day Guarantee</Badge>
-                  <Badge variant="outline">24/7 Support</Badge>
-                  <Badge variant="outline">Beta Community</Badge>
-                  <Badge variant="outline">Monthly Updates</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Revenue Streams */}
-            <Card className="border-l-4 border-l-yellow-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-yellow-600">
-                    <DollarSign className="w-6 h-6" />
-                  </div>
-                  <span>Revenue Streams</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Our revenue model combines multiple streams to ensure sustainable growth and profitability. Primary revenue comes from direct wetsuit 
-                  sales at $1,299 MSRP with a 45% gross margin, targeting to sell 1,500 units in Year 1. We offer premium accessory bundles including 
-                  smart gloves, boots, and hoods for $299 with a 60% margin, as these complement our main product and enhance the user experience. 
-                  Annual software subscriptions at $49/year provide recurring revenue for advanced analytics and performance tracking features. 
-                  Looking ahead, we plan to generate significant revenue through technology licensing to major sportswear brands, projecting $2M+ 
-                  annually as our smart fabric technology proves successful in the market.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Wetsuit Sales ($1,299)</Badge>
-                  <Badge variant="outline">Accessory Bundles ($299)</Badge>
-                  <Badge variant="outline">Software Subscriptions ($49/year)</Badge>
-                  <Badge variant="outline">Technology Licensing</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Key Resources */}
-            <Card className="border-l-4 border-l-purple-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600">
-                    <Cog className="w-6 h-6" />
-                  </div>
-                  <span>Key Resources</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Our key resources are the essential assets that enable our business operations and competitive advantage. Our most valuable resource 
-                  is our exclusive 3-year partnership with MIT Materials Lab, giving us access to cutting-edge research and development capabilities. 
-                  We have established relationships with Tier-1 manufacturing partners in Taiwan who hold ISO certifications and can scale production 
-                  as we grow. Our intellectual property portfolio includes 12 pending patents on thermal regulation technology, which creates barriers 
-                  to competition. Our experienced team of 15 professionals brings combined 80+ years of expertise in wearable technology, materials 
-                  science, and water sports, along with our proprietary AI algorithms that power the smart adaptation features of our wetsuits.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">MIT Partnership</Badge>
-                  <Badge variant="outline">Manufacturing Partners</Badge>
-                  <Badge variant="outline">Patent Portfolio</Badge>
-                  <Badge variant="outline">Expert Team</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Key Activities */}
-            <Card className="border-l-4 border-l-indigo-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600">
-                    <Target className="w-6 h-6" />
-                  </div>
-                  <span>Key Activities</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Our key activities focus on continuous innovation, quality manufacturing, and effective marketing to build our brand and reach customers. 
-                  Research and development is our primary activity, consuming 25% of our revenue as we continuously improve our smart fabric technology 
-                  and develop new features. We actively manage our manufacturing relationships to ensure quality control and efficient production scaling. 
-                  Digital marketing campaigns including social media, influencer partnerships, and targeted advertising help us reach our specific customer 
-                  segments. We participate in major trade shows and water sports events to build brand awareness and establish industry relationships. 
-                  Software development is ongoing to enhance our mobile app and smart features, while customer support activities ensure satisfaction 
-                  and loyalty among our user base.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">R&D Innovation</Badge>
-                  <Badge variant="outline">Manufacturing Management</Badge>
-                  <Badge variant="outline">Digital Marketing</Badge>
-                  <Badge variant="outline">Software Development</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Key Partnerships */}
-            <Card className="border-l-4 border-l-teal-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center text-teal-600">
-                    <Handshake className="w-6 h-6" />
-                  </div>
-                  <span>Key Partnerships</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Strategic partnerships are crucial for our success, providing access to expertise, resources, and markets that we couldn't develop 
-                  independently. Our partnership with MIT Materials Lab gives us access to world-class research facilities and expertise in advanced 
-                  materials science. Manufacturing partnerships with certified facilities in Taiwan ensure reliable, high-quality production at scale. 
-                  We partner with premium surf shops and dive centers for retail distribution, leveraging their existing customer relationships and 
-                  local market knowledge. Influencer partnerships with professional water sports athletes help build credibility and reach our target 
-                  audience authentically. We also collaborate with marine training centers and certification programs to introduce our products to 
-                  new water sports participants and establish our brand as the professional choice for serious water enthusiasts.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">MIT Materials Lab</Badge>
-                  <Badge variant="outline">Manufacturing Partners</Badge>
-                  <Badge variant="outline">Retail Network</Badge>
-                  <Badge variant="outline">Professional Athletes</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Cost Structure */}
-            <Card className="border-l-4 border-l-red-500">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600">
-                    <TrendingDown className="w-6 h-6" />
-                  </div>
-                  <span>Cost Structure</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Our cost structure reflects our commitment to innovation and quality while maintaining sustainable profitability. Research and development 
-                  represents our largest investment at 25% of revenue, funding our MIT partnership, materials testing, and continuous product improvement. 
-                  Manufacturing costs account for 35% of revenue due to premium materials and smart components required for our advanced wetsuit technology. 
-                  Marketing expenses consume 20% of revenue, covering digital advertising campaigns, influencer partnerships, trade show participation, 
-                  and content creation to build brand awareness in competitive markets. Operations costs represent 15% of revenue, covering our team 
-                  salaries, office facilities, software development tools, and ongoing technology infrastructure needed to support our smart features 
-                  and customer support services.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">R&D (25%)</Badge>
-                  <Badge variant="outline">Manufacturing (35%)</Badge>
-                  <Badge variant="outline">Marketing (20%)</Badge>
-                  <Badge variant="outline">Operations (15%)</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
+      {/* Key Metrics */}
+      <section className="w-full py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Package className="w-5 h-5 text-primary" />
+                <span className="text-2xl font-medium">(NEED UPDATE) $1,299</span>
+              </div>
+              <p className="text-sm text-muted-foreground">(NEED UPDATE) Launch price</p>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Users className="w-5 h-5 text-primary" />
+                <span className="text-2xl font-medium">(NEED UPDATE) 50M</span>
+              </div>
+              <p className="text-sm text-muted-foreground">(NEED UPDATE) Target market size</p>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Handshake className="w-5 h-5 text-primary" />
+                <span className="text-2xl font-medium">(NEED UPDATE) 15+</span>
+              </div>
+              <p className="text-sm text-muted-foreground">(NEED UPDATE) Retail partners</p>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Star className="w-5 h-5 text-primary" />
+                <span className="text-2xl font-medium">(NEED UPDATE) Q2 2025</span>
+              </div>
+              <p className="text-sm text-muted-foreground">(NEED UPDATE) Launch timeline</p>
+            </div>
           </div>
         </div>
       </section>
@@ -322,16 +290,13 @@ export function BusinessModelPage({ onNavigate }: BusinessModelPageProps) {
             <CardContent className="p-0 space-y-4">
               <div className="inline-flex items-center gap-2 mb-4">
                 <Target className="w-5 h-5 text-primary" />
-                <Badge variant="secondary">Business Model Summary</Badge>
+                <Badge variant="secondary">{t('BUSINESS_MODEL_SUMMARY')}</Badge>
               </div>
               
-              <h3 className="text-xl font-medium text-foreground">Our Integrated Business Approach</h3>
+              <h3 className="text-xl font-medium text-foreground">{t('BUSINESS_MODEL_SUMMARY_TITLE')}</h3>
               
               <p className="text-muted-foreground leading-relaxed">
-                Wetty Ventures operates on a comprehensive business model that combines innovative product development, 
-                strategic partnerships, and customer-focused service delivery. By investing heavily in R&D while maintaining 
-                strong manufacturing and marketing capabilities, we're positioned to capture significant value in the growing 
-                smart wearables market while delivering exceptional value to water sports enthusiasts worldwide.
+                (NEED UPDATE) {t('BUSINESS_MODEL_SUMMARY_DESCRIPTION')}
               </p>
             </CardContent>
           </Card>
