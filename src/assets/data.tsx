@@ -44,7 +44,7 @@ export const languages = [
 export const navigationItems = [
   { key: 'home', label: 'MENU_LIST.HOME' },
   { key: 'about-us', label: 'MENU_LIST.ABOUT_US' },
-//   { key: 'products', label: 'MENU_LIST.PRODUCTS' },
+  { key: 'products', label: 'MENU_LIST.PRODUCTS' },
   { key: 'testimonial', label: 'MENU_LIST.TESTIMONIAL' },
   { key: 'contact-us', label: 'MENU_LIST.CONTACT_US' }
 ];
