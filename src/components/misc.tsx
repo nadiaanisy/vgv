@@ -14,11 +14,6 @@ import { useState } from 'react';
 import { twMerge } from "tailwind-merge";
 import { useTranslation } from 'react-i18next';
 
-
-
-import { CartItem } from './interface';
-
-
 export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {
   const [didError, setDidError] = useState(false);
 

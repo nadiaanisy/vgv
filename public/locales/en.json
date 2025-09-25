@@ -222,5 +222,67 @@
     "FINANCE_DATA_ANALYST_INSIGHT": "Analytical thinking and numerical competency",
     "TECH_WEBSITE_DEVELOPER": "Tech & Website Developer",
     "TECH_WEBSITE_DEVELOPER_INSIGHT": "Problem-solving mindset and strong technical proficiency in web development"
+  },
+  "PRODUCT_SECTION": {
+    "PRODUCT_1": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 aren’t just for diaper changes—they’re perfect for cleaning after breastfeeding, sticky surfaces, pacifiers, toys, food mess, and more. Moms use them as makeup removers, and dads keep them in the car. Versatile and ready for anything!",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 is a multi-purpose wipe – perfect for diaper changes, post-feeding clean-ups, sticky surfaces, makeup removal, and daily use. A must-have for every family!",
+      "WHY_CHOSEN": "Entry-level product that introduces customers to Wetty brand quality at an accessible price point. High-margin consumable product that encourages repeat purchases and builds brand loyalty before investing in higher-ticket items.",
+      "TARGET_MARKET": {
+        "1": "Budget-conscious customers",
+        "2": "First-time buyers",
+        "3": "Students"
+      },
+      "BENEFITS": {
+        "1": "4 different fragrance options available",
+        "2": "Gentle on skin with premium materials",
+        "3": "Compact and portable for travel",
+        "4": "Special university pricing available",
+        "5": "Perfect for post-water sports cleanup"
+      },
+      "OPTIONS": {
+        "FRAGRANCE_FREE": "Bebas Wangian", 
+        "FRAGRANCE_FRESH_APPLE": "Wangian Epal Segar", 
+        "FRAGRANCE_ROSE": "Wangian Mawar", 
+        "FRAGRANCE_ANTIBACTERIAL": "Wangian Bebas Antibakteria"
+      },
+      "OPTIONS_DETAILS": {
+        "FRAGRANCE_FREE_DESC": "Original formula, gentle and unscented",
+        "FRAGRANCE_FRESH_APPLE_DESC": "Fresh apple scent for a refreshing experience",
+        "FRAGRANCE_ROSE_DESC": "Elegant rose fragrance for a luxurious feel",
+        "FRAGRANCE_ANTIBACTERIAL_DESC": "Enhanced antibacterial formula, fragrance-free"
+      }
+    },
+    "PRODUCT_2": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 (5x30's) offers the same versatile cleaning power as the original Wetty wipes, now in a convenient multi-pack. Ideal for families, students, and on-the-go use, these wipes handle diaper changes, sticky messes, post-meal clean-ups, makeup removal, and more. Stock up and never run out of your essential wipes!",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 (5x30's) – convenient multi-pack for all your cleaning needs, from diaper changes to daily use. Perfect for home, travel, and outdoor activities.",
+      "WHY_CHOSEN": "Multi-pack format encourages bulk purchasing, ideal for frequent users and families. Provides better value per unit while maintaining brand quality. Strengthens customer loyalty by offering convenience and consistent performance.",
+      "TARGET_MARKET": {
+        "1": "Families with babies and young children",
+        "2": "Students looking for convenient cleaning solutions",
+        "3": "Active individuals who need portable cleaning wipes"
+      },
+      "BENEFITS": {
+        "1": "Pack of 5 with 30 wipes each – longer-lasting supply",
+        "2": "Gentle on skin with premium materials",
+        "3": "Compact and portable for home, school, or travel",
+        "4": "Multiple fragrance options to suit every preference",
+        "5": "Reliable for sticky messes, spills, and daily hygiene"
+      },
+      "OPTIONS": {
+        "FRAGRANCE_FREE": "Fragrance Free",
+        "FRAGRANCE_LAVENDER": "Lavender Fragrance",
+        "FRAGRANCE_ROSE": "Rose Fragrance",
+        "FRAGRANCE_ANTIBACTERIAL": "Antibacterial Fragrance",
+        "FRAGRANCE_ANTIBACTERIAL_FREE": "Antibacterial Fragrance Free"
+      },
+      "OPTIONS_DETAILS": {
+        "FRAGRANCE_FREE_DESC": "Original formula, gentle and unscented",
+        "FRAGRANCE_LAVENDER_DESC": "Soothing lavender fragrance for a calming experience",
+        "FRAGRANCE_ROSE_DESC": "Elegant rose fragrance for a luxurious feel",
+        "FRAGRANCE_ANTIBACTERIAL_DESC": "Enhanced antibacterial formula with a mild fragrance",
+        "FRAGRANCE_ANTIBACTERIAL_FREE_DESC": "Enhanced antibacterial formula, fragrance-free for sensitive skin"
+      }
+    }
   }
 }

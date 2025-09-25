@@ -5,6 +5,7 @@ import { useCustomHook } from './components/misc';
 import { Header } from './components/sections/Header';
 import { HomePage } from './components/pages/HomePage';
 import { AboutUsPage } from './components/pages/AboutUsPage';
+import { ProductsPage } from './components/pages/ProductsPage';
 import { ContactUsPage } from './components/pages/ContactUsPage';
 import { TestimonialPage } from './components/pages/TestimonialPage';
 
@@ -14,17 +15,25 @@ export default function App() {
     setCurrentPage,
     handleNavigate,
     currentLanguage,
-    handleLanguageChange
+    handleLanguageChange,
+    selectedProductId
   } = useCustomHook();
 
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  // const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
-  // const viewProductById = (page: string, productId?: string) => {
-  //   setCurrentPage(page)
-  //   if (productId) {
-  //     setSelectedProductId(productId)
-  //   }
-  // }
+
+  const addToCart = (item: Omit<CartItem, 'quantity'>) => {
+    setCartItems(prevItems => {
+      const existingItem = prevItems.find(cartItem => cartItem.id === item.id)
+      if (existingItem) {
+        return prevItems.map(cartItem =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        )
+      }
+      return [...prevItems, { ...item, quantity: 1 }]
+    })
+  }
 
   const updateCartItem = (id: string, quantity: number) => {
     if (quantity <= 0) {
@@ -46,8 +55,8 @@ export default function App() {
     switch (currentPage) {
       case 'about-us':
         return <AboutUsPage onNavigate={handleNavigate} />
-      // case 'products':
-      //   return <ProductsPage onNavigate={handleNavigate} addToCart={addToCart} selectedProductId={selectedProductId} />
+      case 'products':
+        return <ProductsPage onNavigate={handleNavigate} addToCart={addToCart} selectedProductId={selectedProductId} />
       case 'testimonial':
         return <TestimonialPage onNavigate={handleNavigate} />
       case 'contact-us':

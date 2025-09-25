@@ -16,7 +16,7 @@ export interface Product {
   priceRange: string
   originalPrice: string
   whyChosen: string
-  targetMarket: string
+  targetMarket: any
   benefits: any
   hasOptions: boolean,
   options?: {
@@ -26,10 +26,4 @@ export interface Product {
     description: string;
     image: any
   }[];
-  // priceValue: number
-  
-  // // priceMin?: number
-  // // priceMax?: number
-  // // price?: string
-  // // originalPrice?: string
 }

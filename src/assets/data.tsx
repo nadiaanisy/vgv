@@ -30,6 +30,13 @@ import option1MiniWipes from './images/products/1.1.webp';
 import option2MiniWipes from './images/products/1.2.webp';
 import option3MiniWipes from './images/products/1.3.webp';
 import option4MiniWipes from './images/products/1.4.webp';
+import wetWipesAll from './images/products/2.webp';
+import option1Wipes from './images/products/2.1.webp';
+import option2Wipes from './images/products/2.2.webp';
+import option3Wipes from './images/products/2.3.webp';
+import option4Wipes from './images/products/2.4.webp';
+import option5Wipes from './images/products/2.5.webp';
+
 
 export const email = "[your_company_help_email]";
 export const whatsappNumber = "[your_whatsapp_number]";
@@ -324,18 +331,49 @@ export const teamMembers = [
   }
 ];
 
+export const experiments = [
+  {
+    icon: <Instagram className="w-6 h-6" />,
+    title: "Social Media Campaign",
+    period: "October - November 2024",
+    description: "Instagram and TikTok content featuring local surfers testing our products",
+    results: "15,000 views, 320 engagement interactions, 45 direct inquiries",
+    learnings: "Video content performs 3x better than static images. Authentic user-generated content drives higher conversion than polished ads."
+  },
+  {
+    icon: <Users className="w-6 h-6" />,
+    title: "Campus Booth Sales",
+    period: "University Sports Fair - November 2024",
+    description: "Physical booth at university sports event with product demonstrations",
+    results: "150 people approached, 12 units pre-ordered, 65 email signups",
+    learnings: "Hands-on experience is crucial for high-ticket items. Price objections reduced by 40% after product demonstration."
+  },
+  {
+    icon: <Megaphone className="w-6 h-6" />,
+    title: "Peer Selling Network",
+    period: "Ongoing since October 2024",
+    description: "Team members leveraging personal networks and friend referrals",
+    results: "25 direct sales through team connections, $18,750 in revenue",
+    learnings: "Personal recommendations are our highest-converting channel (35% conversion rate). Trust is the biggest factor in purchase decisions."
+  }
+];
+
 export const products: Product[] = [
   {
     id: '0',
     image: miniWetWipesAll,
-    name: 'Wetty Mini Wet Wipes (3 Pack x 8\'s)',
+    name: 'Wetty Mini Wet Wipes (3x8\'s)',
     category: 'Wetty Mini Wipes',
     description_short: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_SHORT',
     description_long: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_LONG',
     priceRange: "RM3.90 - RM4.90",
     originalPrice: "RM6.90",
     whyChosen: "PRODUCT_SECTION.PRODUCT_1.WHY_CHOSEN",
-    targetMarket: "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.3"
+    ],
     benefits: [
       "PRODUCT_SECTION.PRODUCT_1.BENEFITS.1",
       "PRODUCT_SECTION.PRODUCT_1.BENEFITS.2",
@@ -376,10 +414,65 @@ export const products: Product[] = [
 
     ]
   },
-  // {
-  //   id: '1',
-  //   name: 'Wetty Mini Wet Wipes',
-  //   image: miniWetWipes,
-  //   category: 'Wetty Wipes',
-  // }
+  {
+    id: '1',
+    image: wetWipesAll,
+    name: 'Wetty Wet Tissue (5x30\'s)',
+    category: 'Wetty Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_LONG',
+    priceRange: "RM11.65 - RM13.89",
+    originalPrice: "RM18.50",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_2.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_FREE",
+        originalPrice: "RM18.50",
+        salePrice: "RM11.65",
+        description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
+        image: option1Wipes
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_LAVENDER",
+        originalPrice: "RM18.50",
+        salePrice: "RM13.89",
+        description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_LAVENDER_DESC",
+        image: option2Wipes
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ROSE",
+        originalPrice: "RM18.50",
+        salePrice: "RM13.89",
+        description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ROSE_DESC",
+        image: option3Wipes
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL",
+        originalPrice: "RM18.50",
+        salePrice: "RM13.89",
+        description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
+        image: option4Wipes
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL_FREE",
+        originalPrice: "RM18.50",
+        salePrice: "RM13.89",
+        description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_FREE_DESC",
+        image: option5Wipes
+      }
+    ]
+  }
 ];

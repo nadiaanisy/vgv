@@ -6,10 +6,6 @@ import {
     useCustomHook,
     ImageWithFallback
 } from '../misc';
-import { 
-  Product,
-  CartItem
-} from '../interface';
 import {
     Plus,
     ChevronLeft,
