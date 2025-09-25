@@ -1,10 +1,14 @@
-import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
-import { Badge } from './ui/badge'
-import { Button } from './ui/button'
-import { Input } from './ui/input'
-import { Textarea } from './ui/textarea'
-import { Label } from './ui/label'
+import {
+  handleClicks,
+  useCustomHook,
+  handleWhatsAppOrder,
+} from '../misc';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle
+} from '../ui/card';
 import { 
   ArrowLeft, 
   MessageCircle, 
@@ -19,19 +23,33 @@ import {
   MapPin,
   Calendar
 } from 'lucide-react'
-import { toast } from 'sonner@2.0.3'
+import {
+  businessHours,
+  contactMethods
+} from '../../assets/data';
+import { toast } from 'sonner';
+import { useState } from 'react';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
+import { Textarea } from '../ui/textarea';
 
-interface ContactPageProps {
+interface ContactUsPageProps {
   onNavigate: (page: string) => void
 }
+export function ContactUsPage({ onNavigate }: ContactUsPageProps) {
+  const { 
+    t,
+    isSubmitting,
+    setIsSubmitting
+   } = useCustomHook();
 
-export function ContactPage({ onNavigate }: ContactPageProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -47,68 +65,12 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
 
     // Simulate form submission
     setTimeout(() => {
-      toast.success('Message sent successfully! We\'ll get back to you within 24 hours.')
+      const msg = t('SUBMIT_FORM_MESSAGE');
+      toast.success(msg)
       setFormData({ name: '', email: '', message: '' })
       setIsSubmitting(false)
     }, 1500)
   }
-
-  const whatsappNumber = "+1234567890" // Replace with actual WhatsApp number
-  const instagramHandle = "@wettyventures"
-  const email = "hello@wettyventures.com"
-
-  const handleWhatsAppClick = () => {
-    const message = "Hi! I'm interested in learning more about Wetty products."
-    const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank')
-  }
-
-  const handleInstagramClick = () => {
-    window.open(`https://instagram.com/${instagramHandle.replace('@', '')}`, '_blank')
-  }
-
-  const handleEmailClick = () => {
-    window.open(`mailto:${email}`, '_blank')
-  }
-
-  const contactMethods = [
-    {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "WhatsApp",
-      description: "Quick responses for urgent inquiries",
-      contact: whatsappNumber,
-      action: handleWhatsAppClick,
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-      responseTime: "Usually within 1 hour"
-    },
-    {
-      icon: <Instagram className="w-6 h-6" />,
-      title: "Instagram DM",
-      description: "Connect with us on social media",
-      contact: instagramHandle,
-      action: handleInstagramClick,
-      color: "text-pink-600",
-      bgColor: "bg-pink-50",
-      responseTime: "Usually within 4 hours"
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      description: "For detailed inquiries and support",
-      contact: email,
-      action: handleEmailClick,
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
-      responseTime: "Usually within 24 hours"
-    }
-  ]
-
-  const businessHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM PST" },
-    { day: "Saturday", hours: "10:00 AM - 4:00 PM PST" },
-    { day: "Sunday", hours: "Closed" }
-  ]
 
   return (
     <main className="min-h-screen bg-background">
@@ -122,21 +84,20 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
               className="gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to Home
+              {t('BUTTONS.BACK_TO_HOME')}
             </Button>
           </div>
           
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 mb-6">
               <Phone className="w-6 h-6 text-primary" />
-              <Badge variant="secondary" className="text-sm">Get in Touch</Badge>
+              <Badge variant="secondary" className="text-sm">{t('GET_IN_TOUCH')}</Badge>
             </div>
             <h1 className="text-4xl lg:text-5xl font-medium text-foreground mb-6">
-              Contact Us
+              {t('MENU_LIST.CONTACT_US')}
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Have questions about our products or need support? We're here to help! 
-              Choose your preferred way to reach out and we'll get back to you quickly.
+              {t('HAVE_A_QUESTION_?')}
             </p>
           </div>
         </div>
@@ -146,19 +107,19 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
       <section className="w-full py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-medium text-foreground mb-4">Choose Your Preferred Contact Method</h2>
-            <p className="text-muted-foreground">We're available across multiple channels to assist you</p>
+            <h2 className="text-3xl font-medium text-foreground mb-4">{t('CHOOSE_YOUR_PREFERRED_CONTACT')}</h2>
+            <p className="text-muted-foreground">{t('WE_ARE_AVAILABLE_MULTIPLE_CHANNELS')}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-shadow cursor-pointer" onClick={method.action}>
+              <Card key={index} className="h-full hover:shadow-lg transition-shadow cursor-pointer">
                 <CardHeader className="text-center pb-4">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-xl flex items-center justify-center ${method.bgColor} ${method.color}`}>
                     {method.icon}
                   </div>
-                  <CardTitle className="text-xl">{method.title}</CardTitle>
-                  <p className="text-muted-foreground text-sm">{method.description}</p>
+                  <CardTitle className="text-xl">{t(method.title)}</CardTitle>
+                  <p className="text-muted-foreground text-sm">{t(method.description)}</p>
                 </CardHeader>
                 
                 <CardContent className="text-center space-y-4">
@@ -167,12 +128,12 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                   </div>
                   
                   <div className="text-sm text-muted-foreground">
-                    {method.responseTime}
+                    {t(method.responseTime)}
                   </div>
                   
                   <Button className="w-full gap-2" onClick={method.action}>
                     <ExternalLink className="w-4 h-4" />
-                    Contact via {method.title}
+                    {t('CONTACT_VIA')} {t(method.title)}
                   </Button>
                 </CardContent>
               </Card>
@@ -187,56 +148,56 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-4">
               <Send className="w-5 h-5 text-primary" />
-              <Badge variant="secondary">Contact Form</Badge>
+              <Badge variant="secondary">{t('CONTACT_FORM')}</Badge>
             </div>
-            <h2 className="text-3xl font-medium text-foreground mb-4">Send Us a Message</h2>
+            <h2 className="text-3xl font-medium text-foreground mb-4">{t("SEND_US_A_MESSAGE")}</h2>
             <p className="text-muted-foreground">
-              Fill out the form below and we'll get back to you as soon as possible.
+              {t('FILL_OUT_FORM_BELOW')}
             </p>
           </div>
 
           <Card className="max-w-2xl mx-auto">
             <CardHeader>
-              <CardTitle className="text-center">Get in Touch</CardTitle>
+              <CardTitle className="text-center">{t('GET_IN_TOUCH')}</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name *</Label>
+                  <Label htmlFor="name">{t('NAME')} *</Label>
                   <Input
                     id="name"
                     name="name"
                     type="text"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Your full name"
+                    placeholder={t('NAME_PLACEHOLDER')}
                     required
                     className="w-full"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email">{t('EMAIL')} *</Label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="your.email@example.com"
+                    placeholder={t('EMAIL_PLACEHOLDER')}
                     required
                     className="w-full"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">{t('MESSAGE')} *</Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Tell us about your inquiry, questions about products, or how we can help you..."
+                    placeholder={t('MESSAGE_PLACEHOLDER')}
                     required
                     className="w-full min-h-32 resize-none"
                   />
@@ -250,12 +211,12 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                   {isSubmitting ? (
                     <>
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Sending...
+                      {t('SENDING')}...
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      Send Message
+                      {t('SEND_MESSAGE')}
                     </>
                   )}
                 </Button>
@@ -276,19 +237,19 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
                     <Clock className="w-5 h-5" />
                   </div>
-                  Business Hours
+                  {t("BUSINESS_HOURS")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm mb-6">
-                  Our team is available during these hours for live support and immediate responses.
+                  {t("BUSINESS_HOURS_SUBTITLE")}
                 </p>
                 
                 <div className="space-y-3">
                   {businessHours.map((schedule, index) => (
                     <div key={index} className="flex justify-between items-center py-2 border-b border-border/50 last:border-b-0">
-                      <span className="font-medium text-foreground">{schedule.day}</span>
-                      <span className="text-muted-foreground">{schedule.hours}</span>
+                      <span className="font-medium text-foreground">{t(schedule.day)}</span>
+                      <span className="text-muted-foreground">{t(schedule.hours)}</span>
                     </div>
                   ))}
                 </div>
@@ -296,10 +257,10 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
                     <MapPin className="w-4 h-4 text-blue-600" />
-                    <span className="text-sm font-medium text-blue-800">Time Zone</span>
+                    <span className="text-sm font-medium text-blue-800">{t("TIME_ZONE")}</span>
                   </div>
                   <p className="text-sm text-blue-700">
-                    Pacific Standard Time (PST) / Pacific Daylight Time (PDT)
+                    {t('MYT')}
                   </p>
                 </div>
               </CardContent>
@@ -312,44 +273,44 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                   <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
                     <Timer className="w-5 h-5" />
                   </div>
-                  Response Times
+                  {t("RESPONSE_TIMES")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm mb-6">
-                  Here's what you can expect when you reach out to us through different channels.
+                  {t("RESPONSE_TIMES_SUBTITLE")}
                 </p>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                     <div>
-                      <div className="font-medium text-foreground">WhatsApp Messages</div>
-                      <div className="text-sm text-muted-foreground">Usually within 1 hour during business hours</div>
+                      <div className="font-medium text-foreground">{t("WHATSAPP_MESSAGES")}</div>
+                      <div className="text-sm text-muted-foreground">{t("WHATSAPP_MESSAGES_SUBTITLE")}</div>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                     <div>
-                      <div className="font-medium text-foreground">Instagram DMs</div>
-                      <div className="text-sm text-muted-foreground">Usually within 4 hours during business hours</div>
+                      <div className="font-medium text-foreground">{t("INSTAGRAM_DMS")}</div>
+                      <div className="text-sm text-muted-foreground">{t("INSTAGRAM_DMS_SUBTITLE")}</div>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                     <div>
-                      <div className="font-medium text-foreground">Email & Contact Form</div>
-                      <div className="text-sm text-muted-foreground">Usually within 24 hours</div>
+                      <div className="font-medium text-foreground">{t("EMAIL_CONTACT_FORM")}</div>
+                      <div className="text-sm text-muted-foreground">{t("EMAIL_CONTACT_FORM_SUBTITLE")}</div>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                     <div>
-                      <div className="font-medium text-foreground">Urgent Support Issues</div>
-                      <div className="text-sm text-muted-foreground">Priority response within 2 hours</div>
+                      <div className="font-medium text-foreground">{t("URGENT_SUPPORT_ISSUES")}</div>
+                      <div className="text-sm text-muted-foreground">{t("URGENT_SUPPORT_ISSUES_SUBTITLE")}</div>
                     </div>
                   </div>
                 </div>
@@ -357,10 +318,10 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                 <div className="mt-6 p-4 bg-green-50 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
                     <Calendar className="w-4 h-4 text-green-600" />
-                    <span className="text-sm font-medium text-green-800">Weekend Support</span>
+                    <span className="text-sm font-medium text-green-800">{t("WEEKEND_SUPPORT")}</span>
                   </div>
                   <p className="text-sm text-green-700">
-                    Limited support available on weekends. Urgent issues will be addressed within 4 hours.
+                    {t("WEEKEND_SUPPORT_SUBTITLE")}
                   </p>
                 </div>
               </CardContent>
@@ -376,25 +337,31 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
             <CardContent className="p-0 space-y-4">
               <div className="inline-flex items-center gap-2 mb-4">
                 <MessageCircle className="w-5 h-5 text-primary" />
-                <Badge variant="secondary">Quick Tip</Badge>
+                <Badge variant="secondary">{t('QUICK_TIP')}</Badge>
               </div>
               
-              <h3 className="text-xl font-medium text-foreground">Need Immediate Help?</h3>
+              <h3 className="text-xl font-medium text-foreground">{t('NEED_IMMEDIATE_HELP?')}</h3>
               
               <p className="text-muted-foreground leading-relaxed">
-                For the fastest response, especially for product questions or order inquiries, 
-                we recommend using WhatsApp. Our team monitors WhatsApp throughout business hours 
-                and can provide real-time assistance with your Wetty products.
+                {t('NEED_IMMEDIATE_HELP?_SUBTITLE')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button onClick={handleWhatsAppClick} className="gap-2 bg-green-600 hover:bg-green-700">
+                <Button
+                  onClick={() =>handleWhatsAppOrder('contactUs')}
+                  className="gap-2 bg-green-600 hover:bg-green-700"
+                >
                   <MessageCircle className="w-4 h-4" />
-                  WhatsApp Us Now
+                  {t('BUTTONS.WHATSAPP_US_NOW')}
                 </Button>
-                <Button variant="outline" onClick={handleEmailClick} className="gap-2">
+                <Button
+                  variant="outline"
+                  onClick={() => handleClicks('email')}
+                  className="gap-2"
+                  style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}
+                >
                   <Mail className="w-4 h-4" />
-                  Send Email
+                  {t('BUTTONS.SEND_EMAIL')}
                 </Button>
               </div>
             </CardContent>
