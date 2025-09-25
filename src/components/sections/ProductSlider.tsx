@@ -1,68 +1,29 @@
-import { useState, useEffect } from 'react'
-import { Button } from './ui/button'
-import { Badge } from './ui/badge'
-import { ImageWithFallback } from './figma/ImageWithFallback'
-import { ChevronLeft, ChevronRight, Plus } from 'lucide-react'
-import { CartItem } from '../App'
-
-interface Product {
-  id: string
-  name: string
-  description: string
-  price: number
-  image: string
-  category: string
-}
+import { 
+  useEffect,
+  useState
+} from 'react';
+import {
+    useCustomHook,
+    ImageWithFallback
+} from '../misc';
+import { 
+  Product,
+  CartItem
+} from '../interface';
+import {
+    Plus,
+    ChevronLeft,
+    ChevronRight
+} from 'lucide-react';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
+import { products } from '../../assets/data';
 
 interface ProductSliderProps {
   onNavigate: (page: string, productId?: string) => void
-  addToCart: (item: Omit<CartItem, 'quantity'>) => void
 }
-
-const products: Product[] = [
-  {
-    id: 'wetty-pro-surfer',
-    name: 'Wetty Pro Surfer',
-    description: 'Advanced smart wetsuit with temperature adaptation for professional surfing',
-    price: 899.99,
-    image: 'https://images.unsplash.com/photo-1633297345330-261df10cf6a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXRzdWl0JTIwc3VyZmluZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzU3ODYwMjUyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    category: 'Professional'
-  },
-  {
-    id: 'wetty-dive-master',
-    name: 'Wetty Dive Master',
-    description: 'Smart diving wetsuit with depth monitoring and temperature control',
-    price: 1299.99,
-    image: 'https://images.unsplash.com/photo-1644196851494-6df3ca098a10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMHdldHN1aXQlMjBkaXZpbmclMjBvY2VhbnxlbnwxfHx8fDE3NTc4NjAyNTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    category: 'Professional'
-  },
-  {
-    id: 'wetty-swim-sport',
-    name: 'Wetty Swim Sport',
-    description: 'Flexible smart wetsuit designed for competitive swimming and training',
-    price: 599.99,
-    image: 'https://images.unsplash.com/photo-1599769569317-a156d52fda22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXRzdWl0JTIwc3dpbW1pbmclMjB3YXRlciUyMHNwb3J0c3xlbnwxfHx8fDE3NTc4NjAyNTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    category: 'Sport'
-  },
-  {
-    id: 'wetty-triathlon-elite',
-    name: 'Wetty Triathlon Elite',
-    description: 'High-performance smart wetsuit optimized for triathlon competitions',
-    price: 799.99,
-    image: 'https://images.unsplash.com/photo-1632512404263-7f22b6759908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXRzdWl0JTIwdHJpYXRobG9uJTIwYXRobGV0ZXxlbnwxfHx8fDE3NTc4NjAyNjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    category: 'Competition'
-  },
-  {
-    id: 'wetty-adventure-gear',
-    name: 'Wetty Adventure Gear',
-    description: 'All-purpose smart wetsuit for recreational water activities and adventures',
-    price: 449.99,
-    image: 'https://images.unsplash.com/photo-1598632598200-beb70561625f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxwcm9mZXNzaW9uYWwlMjB3ZXRzdWl0JTIwZ2VhcnxlbnwxfHx8fDE3NTc4NjAyNjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    category: 'Recreational'
-  }
-]
-
-export function ProductSlider({ onNavigate, addToCart }: ProductSliderProps) {
+export function ProductSlider({ onNavigate }: ProductSliderProps) {
+  const { t } = useCustomHook();
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
@@ -71,15 +32,6 @@ export function ProductSlider({ onNavigate, addToCart }: ProductSliderProps) {
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length)
-  }
-
-  const handleAddToCart = (product: Product) => {
-    addToCart({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      image: product.image
-    })
   }
 
   // Auto-slide functionality
@@ -113,7 +65,7 @@ export function ProductSlider({ onNavigate, addToCart }: ProductSliderProps) {
                   {currentProduct.category}
                 </Badge>
                 <Badge variant="outline" className="text-xs">
-                  Featured Product
+                  {(t('FEATURED_PRODUCT'))}
                 </Badge>
               </div>
               
@@ -122,12 +74,12 @@ export function ProductSlider({ onNavigate, addToCart }: ProductSliderProps) {
               </h3>
               
               <p className="text-sm text-muted-foreground mb-4">
-                {currentProduct.description}
+                {t(currentProduct.description_short)}
               </p>
               
               <div className="flex items-center justify-between">
                 <div className="text-lg font-medium text-primary">
-                  RM{currentProduct.price.toFixed(2)}
+                  {currentProduct.priceRange}
                 </div>
                 <Button 
                   size="sm" 
@@ -135,7 +87,7 @@ export function ProductSlider({ onNavigate, addToCart }: ProductSliderProps) {
                   onClick={() => onNavigate('products', currentProduct.id)}
                 >
                   <Plus className="w-4 h-4" />
-                  View Product
+                  {t('BUTTONS.VIEW_PRODUCTS')}
                 </Button>
               </div>
             </div>
@@ -180,7 +132,7 @@ export function ProductSlider({ onNavigate, addToCart }: ProductSliderProps) {
       {/* Product counter */}
       <div className="text-center mt-2">
         <p className="text-sm text-muted-foreground">
-          {currentIndex + 1} of {products.length} - Wetty Product Range
+          {currentIndex + 1} {t('OF')} {products.length}
         </p>
       </div>
     </div>
