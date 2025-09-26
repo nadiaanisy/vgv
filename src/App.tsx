@@ -12,7 +12,6 @@ import { TestimonialPage } from './components/pages/TestimonialPage';
 export default function App() {
   const {
     currentPage,
-    setCurrentPage,
     handleNavigate,
     currentLanguage,
     handleLanguageChange,
