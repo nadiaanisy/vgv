@@ -10,7 +10,8 @@ import {
   Phone,
   Star,
   TrendingUp,
-  Users
+  Users,
+  Music2
 } from 'lucide-react';
 import {
   handleClicks,
@@ -47,7 +48,8 @@ import antibactrialShowerCream from './images/products/6.webp';
 
 export const email = "[your_company_help_email]";
 export const whatsappNumber = "[your_whatsapp_number]";
-export const instagramHandle = "[your_instagram_handle]";
+export const instagramHandle = "veyraglobalventures";
+export const titktokHandle = "veyraglobalventures";
 export const ERROR_IMG_SRC = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
 
 export const languages = [
@@ -79,6 +81,16 @@ export const contactMethods = [
     color: "text-green-600",
     bgColor: "bg-green-50",
     responseTime: "USUALLY_IN_AN_HOUR"
+  },
+  {
+    icon: <Music2 className="w-6 h-6" />,
+    title: "TikTok",
+    description: "CONNECT_WITH_US_ON_SM",
+    contact: titktokHandle,
+    action: () => handleClicks('tiktok'),
+    color: "text-white",
+    bgColor: "bg-black",
+    responseTime: "USUALLY_IN_4_HOUR"
   },
   {
     icon: <Instagram className="w-6 h-6" />,

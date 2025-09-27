@@ -12,7 +12,7 @@ import {
 import { 
   ArrowLeft, 
   MessageCircle, 
-  Instagram, 
+  Instagram,
   Mail,
   Send,
   Clock,
@@ -287,6 +287,14 @@ export function ContactUsPage({ onNavigate }: ContactUsPageProps) {
                     <div>
                       <div className="font-medium text-foreground">{t("WHATSAPP_MESSAGES")}</div>
                       <div className="text-sm text-muted-foreground">{t("WHATSAPP_MESSAGES_SUBTITLE")}</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                    <div>
+                      <div className="font-medium text-foreground">{t("TIKTOK")}</div>
+                      <div className="text-sm text-muted-foreground">{t("TIKTOK_SUBTITLE")}</div>
                     </div>
                   </div>
 

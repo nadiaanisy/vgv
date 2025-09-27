@@ -7,7 +7,8 @@ import {
   languages,
   ERROR_IMG_SRC,
   whatsappNumber,
-  instagramHandle
+  instagramHandle,
+  titktokHandle
 } from '../assets/data';
 import i18n from 'i18next';
 import { useState } from 'react';
@@ -49,6 +50,8 @@ export function cn(...inputs: ClassValue[]) {
 export function handleClicks(type: string) {
   if(type === 'instagram') {
     window.open(`https://instagram.com/${instagramHandle.replace('@', '')}`, '_blank');
+  } else if (type === 'tiktok') {
+    window.open(`https://tiktok.com/${titktokHandle.replace('@', '')}`, '_blank');
   } else {
     window.open(`mailto:${email}`, '_blank');
   }
