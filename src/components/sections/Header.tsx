@@ -36,6 +36,7 @@ import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { CartItem } from '../interface';
 import vlogo from '../../assets/images/others/vlogo.png';
+import { useState } from 'react'
 
 interface HeaderProps {
   currentPage: string
@@ -45,14 +46,17 @@ interface HeaderProps {
   cartItems: CartItem[]
   totalCartItems: number
   updateCartItem: (id: string, quantity: number) => void
+  onProceedToCheckout: () => void
 }
-export function Header({ currentPage, onNavigate, currentLanguage, onLanguageChange, cartItems, totalCartItems, updateCartItem }: HeaderProps) {
+export function Header({ currentPage, onNavigate, currentLanguage, onLanguageChange, cartItems, totalCartItems, updateCartItem, onProceedToCheckout }: HeaderProps) {
   const {
     t,
     mobileMenuOpen,
     setMobileMenuOpen,
     getCurrentLanguage
   } = useCustomHook();
+  const [cartPopoverOpen, 
+    setCartPopoverOpen] = useState(false)
 
   const handleNavigateAndClose = (page: string) => {
     onNavigate(page)
@@ -150,7 +154,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
 
           {/* Cart Button */}
           <div className="border-l border-border pl-4">
-            <Popover>
+            <Popover open={cartPopoverOpen} onOpenChange={setCartPopoverOpen}>
               <PopoverTrigger asChild>
                 <Button variant="ghost" className="relative px-3 text-sm">
                   <ShoppingCart className="w-4 h-4" />
@@ -165,7 +169,12 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
                 </Button>
               </PopoverTrigger>
               <PopoverContent align="end" className="p-0">
-                <Cart cartItems={cartItems} updateCartItem={updateCartItem} />
+                <Cart 
+                  cartItems={cartItems} 
+                  updateCartItem={updateCartItem} 
+                  onClose={() => setCartPopoverOpen(false)}
+                  onProceedToCheckout={onProceedToCheckout}
+                />
               </PopoverContent>
             </Popover>
           </div>
@@ -207,7 +216,9 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
         {/* Mobile Cart and Language Selector */}
         <div className="lg:hidden flex items-center gap-2">
           {/* Mobile Cart */}
-          <Popover>
+          <Popover
+          //open={cartPopoverOpen} onOpenChange={setCartPopoverOpen}
+          >
             <PopoverTrigger asChild>
               <Button variant="ghost" size="sm" className="relative p-2">
                 <ShoppingCart className="w-4 h-4" />
@@ -222,7 +233,12 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
               </Button>
             </PopoverTrigger>
             <PopoverContent align="end" className="p-0">
-              <Cart cartItems={cartItems} updateCartItem={updateCartItem} />
+              <Cart 
+                cartItems={cartItems} 
+                updateCartItem={updateCartItem} 
+                onClose={() => setCartPopoverOpen(false)}
+                onProceedToCheckout={onProceedToCheckout}
+              />
             </PopoverContent>
           </Popover>
         </div>

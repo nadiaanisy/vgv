@@ -6,6 +6,17 @@ export interface CartItem {
   image: string
 }
 
+export interface CheckoutFormData {
+  fullName: string
+  email: string
+  phone: string
+  address: string
+  city: string
+  state: string
+  postalCode: string
+  notes?: string
+}
+
 export interface Product {
   id: string
   image: any

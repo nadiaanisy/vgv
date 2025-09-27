@@ -1,5 +1,7 @@
 import './assets/i18';
+import { toast } from 'sonner';
 import { useState } from 'react';
+import { Toaster } from './components/ui/sooner';
 import { CartItem } from './components/interface';
 import { useCustomHook } from './components/misc';
 import { Header } from './components/sections/Header';
@@ -7,10 +9,12 @@ import { HomePage } from './components/pages/HomePage';
 import { AboutUsPage } from './components/pages/AboutUsPage';
 import { ProductsPage } from './components/pages/ProductsPage';
 import { ContactUsPage } from './components/pages/ContactUsPage';
+import { CheckoutForm } from './components/sections/CheckoutForm';
 import { TestimonialPage } from './components/pages/TestimonialPage';
 
 export default function App() {
   const {
+    t,
     currentPage,
     handleNavigate,
     currentLanguage,
@@ -18,18 +22,38 @@ export default function App() {
     selectedProductId
   } = useCustomHook();
 
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>([])
+  const [showCheckout, setShowCheckout] = useState(false);
 
   const addToCart = (item: Omit<CartItem, 'quantity'>) => {
     setCartItems(prevItems => {
-      const existingItem = prevItems.find(cartItem => cartItem.id === item.id)
+      const existingItem = prevItems.find(cartItem => cartItem.id === item.id);
+      const [rawName, rawKey] = item.name.split(' - ');
+      const translatedOption = t(rawKey);
+      const displayName = `${rawName} - ${translatedOption}`;
+      const toastId = `cart-update-${item.id}`;
       if (existingItem) {
+        toast.success(t('CART.UPDATETITLE'), {
+          id: toastId,
+          description: t('CART.QUANTITYINCREASED', {
+            itemName: displayName,
+            quantity: existingItem.quantity + 1,
+          }),
+          duration: 3000,
+        })
         return prevItems.map(cartItem =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         )
       }
+      toast.success(t('CART.ADDEDTITTLE'), {
+        description: t('CART.ITEMADDED', {
+          id: toastId,
+          itemName: displayName
+        }),
+        duration: 3000,
+      })
       return [...prevItems, { ...item, quantity: 1 }]
     })
   }
@@ -44,6 +68,19 @@ export default function App() {
         )
       )
     }
+  }
+
+  const clearCart = () => {
+    setCartItems([])
+  }
+
+  const handleProceedToCheckout = () => {
+    setShowCheckout(true)
+  }
+
+  const handleCloseCheckout = () => {
+    setShowCheckout(false)
+    clearCart()
   }
 
   const getTotalCartItems = () => {
@@ -76,9 +113,18 @@ export default function App() {
         cartItems={cartItems}
         totalCartItems={getTotalCartItems()}
         updateCartItem={updateCartItem}
+        onProceedToCheckout={handleProceedToCheckout}
       />
       {renderPage()}
+      
+      {/* Checkout Dialog */}
+      <CheckoutForm 
+        cartItems={cartItems}
+        isOpen={showCheckout}
+        onClose={handleCloseCheckout}
+      />
+
+      <Toaster position="top-right" richColors />
     </div>
   )
-
 }

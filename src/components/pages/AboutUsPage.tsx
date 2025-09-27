@@ -38,10 +38,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <Lightbulb className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.VALUE_PROPOSITION_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) Temperature Adaptation</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Performance Monitoring</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Extended Activity Time</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Comfort Optimization</Badge>
+        "(NEED UPDATE) Temperature Adaptation",
+        "(NEED UPDATE) Performance Monitoring",
+        "(NEED UPDATE) Extended Activity Time",
+        "(NEED UPDATE) Comfort Optimization"
       ],
     },
     {
@@ -50,10 +50,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <Users className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.CUSTOMER_SEGMENTS_DECSRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) Recreational Enthusiasts (60%)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Professional Athletes (15%)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Marine Researchers (10%)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Safety Professionals (15%)</Badge>
+        "NEED UPDATE) Recreational Enthusiasts (60%)",
+        "NEED UPDATE) Professional Athletes (15%)",
+        "NEED UPDATE) Marine Researchers (10%)",
+        "NEED UPDATE) Safety Professionals (15%)"
       ],
     },
     {
@@ -62,10 +62,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <Globe className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.CHANNELS_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) Direct Online Sales</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Retail Partnerships</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Trade Shows</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Training Centers</Badge>
+        "NEED UPDATE) Direct Online Sales",
+        "NEED UPDATE) Retail Partnerships",
+        "NEED UPDATE) Trade Shows",
+        "NEED UPDATE) Training Centers"
       ],
     },
     {
@@ -74,10 +74,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <Heart className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.CUSTOMER_RELATIONSHIPS_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) 60-Day Guarantee</Badge>,
-        <Badge variant="outline">(NEED UPDATE) 24/7 Support</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Beta Community</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Monthly Updates</Badge>
+        "NEED UPDATE) 60-Day Guarantee",
+        "NEED UPDATE) 24/7 Support",
+        "NEED UPDATE) Beta Community",
+        "NEED UPDATE) Monthly Updates"
       ],
     },
     {
@@ -86,10 +86,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <DollarSign className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.REVENUE_STREAMS_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) Wetsuit Sales ($1,299)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Accessory Bundles ($299)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Software Subscriptions ($49/year)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Technology Licensing</Badge>
+        "NEED UPDATE) Wetsuit Sales ($1,299)",
+        "NEED UPDATE) Accessory Bundles ($299)",
+        "NEED UPDATE) Software Subscriptions ($49/year)",
+        "NEED UPDATE) Technology Licensing"
       ],
     },
     {
@@ -98,10 +98,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <Cog className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.KEY_RESOURCES_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) MUST Partnership</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Manufacturing Partners</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Patent Portfolio</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Expert Team</Badge>
+        "NEED UPDATE) MUST Partnership",
+        "NEED UPDATE) Manufacturing Partners",
+        "NEED UPDATE) Patent Portfolio",
+        "NEED UPDATE) Expert Team"
       ],
     },
     {
@@ -110,10 +110,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <Cog className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.KEY_ACTIVITIES_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) R&D Innovation</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Manufacturing Management</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Digital Marketing</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Software Development</Badge>
+        "NEED UPDATE) R&D Innovation",
+        "NEED UPDATE) Manufacturing Management",
+        "NEED UPDATE) Digital Marketing",
+        "NEED UPDATE) Software Development"
       ],
     },
     {
@@ -122,10 +122,10 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <Handshake className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.KEY_PARTNERSHIPS_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) MIT Materials Lab</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Manufacturing Partners</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Retail Network</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Professional Athletes</Badge>
+        "NEED UPDATE) MIT Materials Lab",
+        "NEED UPDATE) Manufacturing Partners",
+        "NEED UPDATE) Retail Network",
+        "NEED UPDATE) Professional Athletes"
       ],
     },
     {
@@ -134,13 +134,13 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
       icon: <TrendingDown className="w-6 h-6" />,
       content: "BUSINESS_MODEL_SECTION.COST_STRUCTURE_DESCRIPTION",
       highlights: [
-        <Badge variant="outline">(NEED UPDATE) R&D (25%)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Manufacturing (35%)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Marketing (20%)</Badge>,
-        <Badge variant="outline">(NEED UPDATE) Operations (15%)</Badge>
+        "NEED UPDATE) R&D (25%)",
+        "NEED UPDATE) Manufacturing (35%)",
+        "NEED UPDATE) Marketing (20%)",
+        "NEED UPDATE) Operations (15%)"
       ],
     },
-  ]
+  ];
 
   return (
     <main className="min-h-screen bg-background">
@@ -190,7 +190,9 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed mb-4">{t(section.content)}</p>
                   <div className="flex flex-wrap gap-2">
-                    {section.highlights}
+                    {section.highlights.map((text) => (
+                      <Badge key={text} variant="outline">{text}</Badge>
+                    ))}
                   </div>
                 </CardContent>
               </Card>

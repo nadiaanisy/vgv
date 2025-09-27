@@ -58,7 +58,7 @@ export function Main({ onNavigate }: MainProps) {
 
             {/* Strong Call-to-Action */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="px-8 py-3 gap-2" onClick={() => handleWhatsAppOrder('home')}>
+              <Button size="lg" className="px-8 py-3 gap-2 bg-green-600 hover:bg-green-700" onClick={() => handleWhatsAppOrder('home')}>
                 <MessageCircle className="w-5 h-5" />
                 {t('BUTTONS.ORDER_VIA_WHATSAPP')}
               </Button>

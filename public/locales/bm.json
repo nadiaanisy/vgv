@@ -156,6 +156,7 @@
   "LIMITED_TIME": "Tawaran Terhad",
   "READY_TO_EXPERIENCE_THE_PRODUCT": "Bersedia untuk Mengalami Produk Ini?",
   "READY_TO_EXPERIENCE_THE_PRODUCT_SUBTITLE": "Jangan lepaskan peluang anda!",
+  "WELCOME_TOUR": "Selamat Datang",
   "BUSINESS_MODEL_SECTION": {
     "CHANNELS": "Saluran",
     "CHANNELS_DESCRIPTION": "Kami menjangkau pelanggan kami melalui berbilang saluran strategik untuk memaksimumkan penembusan pasaran. Saluran utama kami ialah jualan dalam talian terus kepada pengguna melalui tapak web kami, yang membolehkan kami mengekalkan margin yang lebih tinggi dan hubungan pelanggan langsung. Kami bekerjasama dengan kedai-kedai luncur air dan pusat menyelam premium (50+ lokasi) untuk menyediakan pengalaman produk langsung kepada pengguna dan memberi perkhidmatan kepada pelanggan yang lebih suka pameran perdagangan secara langsung, Surpo Expo dan memberi perkhidmatan kepada pelanggan seperti DEMA secara langsung dan peribadi. Peruncit untuk membina kesedaran jenama dan mewujudkan hubungan industri Selain itu, kami bekerjasama dengan akademi latihan marin dan pusat pensijilan untuk memperkenalkan produk kami kepada peserta sukan air baharu dan profesional yang memerlukan peralatan yang boleh dipercayai untuk latihan dan kerja mereka.",
@@ -192,7 +193,8 @@
     "SEND_EMAIL": "Hantar Emel",
     "VIEW_OPTIONS": "Lihat Pilihan",
     "ORDER": "Pesan",
-    "FOLLOW_ON_INSTAGRAM": "Ikuti di Instagram"
+    "FOLLOW_ON_INSTAGRAM": "Ikuti di Instagram",
+    "PROCEED": "Teruskan"
   },
   "MENU_LIST": {
     "HOME": "Utama",
@@ -364,5 +366,11 @@
         "5": "Penyelesaian kebersihan mampu milik untuk seisi keluarga"
       }
     }
+  },
+  "CART": {
+    "UPDATETITLE": "Kuantiti produk dikemas kini dalam troli!", 
+    "ADDEDTITTLE": "Produk ditambahkan pada troli!",
+    "QUANTITYINCREASED": "Kuantiti {{itemName}} meningkat kepada {{quantity}}",
+    "ITEMADDED": "{{itemName}} telah ditambahkan pada troli anda" 
   }
 }

@@ -12,7 +12,7 @@ import {
 } from '../assets/data';
 import i18n from 'i18next';
 import { useState } from 'react';
-import { twMerge } from "tailwind-merge";
+import { twMerge } from 'tailwind-merge';
 import { useTranslation } from 'react-i18next';
 
 export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {
@@ -109,14 +109,22 @@ export const useCustomHook = () => {
   const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState('home');
   const [currentLanguage, setCurrentLanguage] = useState(() => i18n.language.toLowerCase());
+  const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedOption, setSelectedOption] = useState<any>(null)
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
-  const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
 
   /*Handle pages navigation*/
   const handleNavigate = (page: string, productId?: string) => {
     setCurrentPage(page)
+
+    // Clear selectedProductId when navigating to other pages or directly to products
+    if (page !== 'products' || !productId) {
+      setSelectedProductId(null)
+    }
+    
     if (productId) {
       setSelectedProductId(productId)
     }
@@ -139,16 +147,17 @@ export const useCustomHook = () => {
     setCurrentPage,
     currentLanguage,
     setCurrentLanguage,
-    mobileMenuOpen,
-    setMobileMenuOpen,
-
-    selectedProductId,
-    setSelectedProductId,
-    
     handleNavigate,
     handleLanguageChange,
     getCurrentLanguage,
+    selectedProductId,
+    mobileMenuOpen,
+    setMobileMenuOpen,
     isSubmitting,
-    setIsSubmitting
+    setIsSubmitting,
+    showSuccessDialog,
+    setShowSuccessDialog,
+    selectedOption,
+    setSelectedOption
   };
 }

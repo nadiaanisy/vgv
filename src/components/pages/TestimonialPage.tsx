@@ -58,7 +58,7 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
   return (
     <main className="min-h-screen bg-background">
       {/* Header Section */}
-      <section className="w-full py-12 bg-gradient-to-br from-blue-50 to-cyan-50 dark\:from-blue-950\/20 dark\:to-cyan-950\/20">
+      <section className="w-full py-12 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-4 mb-8">
             <Button 

@@ -1,13 +1,14 @@
 import {
   useCustomHook,
-  handleWhatsAppOrder
+  // handleWhatsAppOrder
 } from '../misc';
 import {
   Plus,
   Minus,
   Trash2,
   ShoppingCart,
-  MessageCircle
+  // MessageCircle,
+  ArrowRight
 } from 'lucide-react';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
@@ -17,37 +18,24 @@ import { Separator } from '../ui/separator';
 interface CartProps {
   cartItems: CartItem[]
   updateCartItem: (id: string, quantity: number) => void
+  onClose?: () => void
+  onProceedToCheckout?: () => void
 }
-export function Cart({ cartItems, updateCartItem }: CartProps) {
+export function Cart({ cartItems, updateCartItem, onClose, onProceedToCheckout }: CartProps) {
   const { t } = useCustomHook();
 
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   }
 
-  const handleOnClickWhatsAppOrder = () => {
-    if (cartItems.length === 0) return
-
-    let message = "";
-    if (localStorage.getItem('i18nextLng') === 'BM') {
-      message += "Hai! Saya ingin memesan produk berikut:\n\n";
-    } else {
-      message += "Hi! I'd like to order the following products:\n\n";
+  const handleProceedToCheckout = () => {
+    if (onProceedToCheckout) {
+      onProceedToCheckout()
     }
-    
-    cartItems.forEach((item, index) => {
-      message += `${index + 1}. ${item.name} - Quantity: ${item.quantity} - RM${item.price * item.quantity}\n`;
-    })
-    
-    if (localStorage.getItem('i18nextLng') === 'BM') {
-      message += `\nJumlah: RM${getTotalPrice().toFixed(2)}\n\n`;
-      message += "Sila beritahu saya langkah seterusnya untuk membuat pesanan. Terima kasih!";
-    } else {
-      message += `\nTotal: RM${getTotalPrice().toFixed(2)}\n\n`;
-      message += "Please let me know the next steps for ordering. Thank you!";
+    // Close the cart popover
+    if (onClose) {
+      onClose()
     }
-
-    handleWhatsAppOrder('cart', message);
   }
 
   if (cartItems.length === 0) {
@@ -137,16 +125,16 @@ export function Cart({ cartItems, updateCartItem }: CartProps) {
         </div>
 
         <Button 
-          className="w-full gap-2" 
-          onClick={handleOnClickWhatsAppOrder}
+          className="w-full gap-2 bg-primary hover:bg-primary/90 text-primary-foreground" 
+          onClick={handleProceedToCheckout}
         >
-          <MessageCircle className="w-4 h-4" />
-          {t('BUTTONS.ORDER_VIA_WHATSAPP')}
+          <ArrowRight className="w-4 h-4" />
+          {t('BUTTONS.PROCEED')}
         </Button>
 
-        <p className="text-xs text-muted-foreground text-center">
-          {t('CART_WHATSAPP_PREFFERED_MESSAGE')}
-        </p>
+        {/* <p className="text-xs text-muted-foreground text-center">
+          Complete your order details and pay securely via WhatsApp
+        </p> */}
       </div>
     </div>
   )
