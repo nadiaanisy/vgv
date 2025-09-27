@@ -283,6 +283,84 @@
         "FRAGRANCE_ANTIBACTERIAL_DESC": "Formula anti-bakteria yang ditingkatkan dengan wangian ringan",
         "FRAGRANCE_ANTIBACTERIAL_FREE_DESC": "Formula anti-bakteria yang ditingkatkan, tiada wangian sesuai untuk kulit sensitif"
       }
+    },
+    "PRODUCT_3": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Fragrance Free Menthol Cooling Feel Wipes direka khas untuk gaya hidup aktif. Tisu ini memberikan rasa sejuk menyegarkan mentol yang sesuai digunakan selepas bersukan, aktiviti luar, atau semasa cuaca panas. Bebas wangian dan lembut pada kulit – sesuai untuk mereka yang aktif dan mahukan kesegaran segera di mana-mana.",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Tisu Basah Bebas Wangian dengan Rasa Sejuk Mentol – pilihan ideal selepas bersenam atau aktiviti luar. Rasa sejuk menyegarkan tanpa wangian tambahan.",
+      "WHY_CHOSEN": "Produk ini direka untuk memenuhi keperluan golongan aktif yang mahukan kesegaran segera dan kelembutan pada kulit selepas aktiviti fizikal. Dengan mentol yang menyegarkan dan bebas wangian, ia sesuai untuk semua jenis kulit termasuk kulit sensitif.",
+      "TARGET_MARKET": {
+        "1": "Individu aktif dan ahli sukan",
+        "2": "Pekerja luar dan pelajar",
+        "3": "Mereka yang sensitif terhadap wangian"
+      },
+      "BENEFITS": {
+        "1": "Memberi rasa sejuk menyegarkan dengan mentol",
+        "2": "Bebas wangian – sesuai untuk kulit sensitif",
+        "3": "Mudah dibawa dan digunakan di mana-mana",
+        "4": "Sesuai digunakan selepas bersenam, sukan, atau aktiviti luar",
+        "5": "Tisu premium yang lembut dan tidak menyebabkan iritasi"
+      }
+    },
+    "PRODUCT_4": {
+      "DESCRIPTION_LONG": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel menggabungkan haruman menenangkan freesia dengan khasiat aloe vera untuk memberikan kesegaran, kebersihan dan penjagaan pada kulit anda. Mandian badan yang harum ini menghasilkan buih yang mewah dan membersih dengan lembut tanpa mengeringkan kulit. Sesuai untuk semua jenis kulit dan digunakan setiap hari.",
+      "DESCRIPTION_SHORT": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel – menyegarkan, wangi, dan lembut pada kulit. Mandian harian dengan aloe vera dan haruman freesia untuk pengalaman mandi yang menenangkan.",
+      "WHY_CHOSEN": "Produk penjagaan diri harian yang mampu milik, menggabungkan keharuman, kelembutan kulit, dan nilai. Menggalakkan penggunaan berulang dengan ramuan mesra kulit dan aroma yang menyenangkan.",
+      "TARGET_MARKET": {
+        "1": "Pelajar dan golongan muda",
+        "2": "Pengguna penjagaan diri yang berjimat",
+        "3": "Peminat haruman yang mahukan mandian harian lembut"
+      },
+      "BENEFITS": {
+        "1": "Diformulasikan dengan haruman freesia yang menyegarkan dan menenangkan",
+        "2": "Diperkaya dengan aloe vera untuk melembap dan menenangkan kulit",
+        "3": "Menghasilkan buih mewah untuk pengalaman mandi yang menyenangkan",
+        "4": "Lembut untuk kegunaan harian dan semua jenis kulit",
+        "5": "Harga mampu milik dan mudah dimasukkan dalam rutin penjagaan diri"
+      }
+    },
+    "PRODUCT_5": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) menyegarkan fabrik anda serta-merta dengan haruman tahan lama. Hanya beberapa semburan mampu menghilangkan bau yang tidak menyenangkan dan menggantikannya dengan aroma yang lembut dan menenangkan. Sesuai digunakan pada pakaian, langsir, perabot kain, cadar, beg gim, dan banyak lagi. Terdapat dalam tiga haruman eksklusif – Twilight, Sunset, dan Morning Dew – mengikut cita rasa dan suasana anda.",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) – sembur untuk menyegarkan pakaian, langsir, atau fabrik. Pilih antara Twilight, Sunset, atau Morning Dew untuk bau segar serta-merta.",
+      "WHY_CHOSEN": "Produk gaya hidup yang membantu pengguna mengekalkan kesegaran fabrik dan persekitaran dengan mudah. Potensi pembelian berulang tinggi kerana boleh digunakan setiap hari di rumah, pejabat, atau kenderaan.",
+      "TARGET_MARKET": {
+        "1": "Pemilik rumah dan suri rumah",
+        "2": "Pelajar yang tinggal di asrama atau ruang kongsi",
+        "3": "Pemilik kenderaan yang mahu bau kekal segar"
+      },
+      "BENEFITS": {
+        "1": "Menyegarkan pakaian, fabrik, dan linen dengan segera",
+        "2": "Menghilangkan bau tidak menyenangkan dan menggantikannya dengan haruman lembut",
+        "3": "Selamat digunakan pada kebanyakan jenis fabrik",
+        "4": "Tiga pilihan haruman unik untuk pelbagai selera",
+        "5": "Sesuai digunakan di rumah, dalam kereta, atau ketika dalam perjalanan"
+      },
+      "OPTIONS": {
+        "TWILIGHT": "Twilight",
+        "SUNSET": "Sunset",
+        "MORNING_DEW": "Morning Dew"
+      },
+      "OPTIONS_DETAILS": {
+        "TWILIGHT_DESC": "Haruman menenangkan dan elegan, sesuai untuk waktu malam dan bersantai",
+        "SUNSET_DESC": "Aroma hangat dan selesa yang memberi ketenangan pada ruang anda",
+        "MORNING_DEW_DESC": "Haruman segar dan bersih, sesuai untuk permulaan hari yang ceria"
+      }
+    },
+    "PRODUCT_6": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream diformulasikan khas untuk membersih secara mendalam sambil melindungi kulit anda daripada bakteria berbahaya. Diperkaya dengan agen pelembap, ia menjadikan kulit anda lembut, segar, dan bersih selepas setiap mandi. Sesuai untuk kegunaan harian oleh seisi keluarga, terutamanya dalam cuaca panas dan lembap.",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream – perlindungan lembut tetapi berkesan terhadap kuman setiap kali mandi. Menjadikan kulit bersih, lembut dan segar.",
+      "WHY_CHOSEN": "Produk penjagaan kebersihan penting untuk keluarga moden, menggabungkan perlindungan anti-bakteria dengan ramuan mesra kulit. Nilai dan keberkesanannya menjadikannya pilihan harian yang berulang.",
+      "TARGET_MARKET": {
+        "1": "Keluarga yang mencari penjagaan badan anti-bakteria harian",
+        "2": "Individu yang aktif dan sering berpeluh",
+        "3": "Pengguna yang mementingkan kebersihan dan penjagaan kulit"
+      },
+      "BENEFITS": {
+        "1": "Membunuh 99.9% kuman dan bakteria",
+        "2": "Melembap dan melembutkan kulit setiap kali mandi",
+        "3": "Lembut dan sesuai untuk semua jenis kulit",
+        "4": "Ideal untuk persekitaran panas dan lembap",
+        "5": "Penyelesaian kebersihan mampu milik untuk seisi keluarga"
+      }
     }
   }
 }

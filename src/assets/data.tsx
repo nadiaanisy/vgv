@@ -36,6 +36,13 @@ import option2Wipes from './images/products/2.2.webp';
 import option3Wipes from './images/products/2.3.webp';
 import option4Wipes from './images/products/2.4.webp';
 import option5Wipes from './images/products/2.5.webp';
+import sportsWetWipes from './images/products/3.webp';
+import shinyShowerGel from './images/products/4.webp';
+import fabricAll from './images/products/5.webp';
+import optionFabric1 from './images/products/5.1.png';
+import optionFabric2 from './images/products/5.2.png';
+import optionFabric3 from './images/products/5.3.png';
+import antibactrialShowerCream from './images/products/6.webp';
 
 
 export const email = "[your_company_help_email]";
@@ -474,5 +481,124 @@ export const products: Product[] = [
         image: option5Wipes
       }
     ]
-  }
+  },
+  {
+    id: '2',
+    image: sportsWetWipes,
+    name: 'Wetty Sports Wipes',
+    category: 'Wetty Sport Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_LONG',
+    priceRange: "RM6.00",
+    originalPrice: "RM16.65",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_3.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.5"
+    ],
+    hasOptions: false
+  },
+  {
+    id: '3',
+    image: shinyShowerGel,
+    name: 'Shinny Shower Gell',
+    category: 'Shower',
+    description_short: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_LONG',
+    priceRange: "RM6.00",
+    originalPrice: "RM18.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_4.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.5"
+    ],
+    hasOptions: false
+  },
+  {
+    id: '4',
+    image: fabricAll,
+    name: 'Wetty Fabric Freshener (400ml)',
+    category: 'Wetty abric Freshener',
+    description_short: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_LONG',
+    priceRange: "RM8.00",
+    originalPrice: "RM12.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_5.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.TWILIGHT",
+        originalPrice: "RM12.90",
+        salePrice: "RM8.00",
+        description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.TWILIGHT_DESC",
+        image: optionFabric1
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.SUNSET",
+        originalPrice: "RM12.90",
+        salePrice: "RM8.00",
+        description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.SUNSET_DESC",
+        image: optionFabric2
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.MORNING_DEW",
+        originalPrice: "RM12.90",
+        salePrice: "RM8.00",
+        description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.MORNING_DEW_DESC",
+        image: optionFabric3
+      }
+    ]
+  },
+  {
+    id: '5',
+    image: antibactrialShowerCream,
+    name: 'Wetty Antibacterial Shower Cream',
+    category: 'Shower',
+    description_short: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_LONG',
+    priceRange: "RM9.65",
+    originalPrice: "RM20.00",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_6.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.5"
+    ],
+    hasOptions: false
+  },
 ];

@@ -283,6 +283,84 @@
         "FRAGRANCE_ANTIBACTERIAL_DESC": "Enhanced antibacterial formula with a mild fragrance",
         "FRAGRANCE_ANTIBACTERIAL_FREE_DESC": "Enhanced antibacterial formula, fragrance-free for sensitive skin"
       }
+    },
+    "PRODUCT_3": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Fragrance Free Menthol Cooling Feel Wipes are specially designed for an active lifestyle. These wipes provide a refreshing menthol cooling sensation, perfect for use after sports, outdoor activities, or in hot weather. Fragrance-free and gentle on the skin – ideal for those who need instant freshness anytime, anywhere.",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Fragrance Free Menthol Cooling Wipes – your go-to wipe for post-workout refreshment. Cooling feel, fragrance-free, and skin-friendly.",
+      "WHY_CHOSEN": "This product is tailored for active individuals who seek quick freshness and skin comfort after physical activity. With a menthol cooling effect and no added fragrance, it's suitable even for sensitive skin.",
+      "TARGET_MARKET": {
+        "1": "Active individuals and athletes",
+        "2": "Outdoor workers and students",
+        "3": "People with sensitivity to fragrance"
+      },
+      "BENEFITS": {
+        "1": "Provides an instant cooling menthol sensation",
+        "2": "Fragrance-free – safe for sensitive skin",
+        "3": "Portable and easy to use anytime, anywhere",
+        "4": "Ideal after workouts, sports, or outdoor activities",
+        "5": "Premium soft wipes that don’t irritate the skin"
+      }
+    },
+    "PRODUCT_4": {
+      "DESCRIPTION_LONG": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel combines the calming scent of freesia with the nourishing power of aloe vera to leave your skin feeling refreshed, clean, and cared for. This fragrant body wash creates a rich lather that gently cleanses without drying out your skin. Suitable for all skin types and ideal for daily use.",
+      "DESCRIPTION_SHORT": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel – refreshing, fragrant, and gentle on skin. Daily body wash with aloe vera and freesia scent for a soothing shower experience.",
+      "WHY_CHOSEN": "An affordable, everyday self-care essential that combines fragrance, skin comfort, and value. Encourages repeat use with its skin-friendly ingredients and pleasant aroma.",
+      "TARGET_MARKET": {
+        "1": "Students and young adults",
+        "2": "Budget-conscious self-care buyers",
+        "3": "Fragrance lovers seeking gentle daily body wash"
+      },
+      "BENEFITS": {
+        "1": "Infused with freesia fragrance for a floral, relaxing scent",
+        "2": "Enriched with aloe vera to moisturize and soothe the skin",
+        "3": "Creates a rich, foamy lather for a luxurious shower",
+        "4": "Gentle enough for daily use and all skin types",
+        "5": "Affordable and easy to include in your self-care routine"
+      }
+    },
+    "PRODUCT_5": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) instantly revitalizes your fabrics with long-lasting freshness. Just a few sprays can eliminate unpleasant odors and leave behind a soft, lingering scent. Perfect for clothes, curtains, upholstery, bedding, gym bags, and more. Available in three signature scents – Twilight, Sunset, and Morning Dew – to suit your mood and lifestyle.",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) – spray to refresh clothes, curtains, or upholstery. Choose from Twilight, Sunset, or Morning Dew for instant freshness.",
+      "WHY_CHOSEN": "A lifestyle enhancer that helps users maintain fresh-smelling environments and fabrics effortlessly. High repeat potential due to everyday use across households, offices, and even in vehicles.",
+      "TARGET_MARKET": {
+        "1": "Homeowners and homemakers",
+        "2": "Students living in dorms or shared spaces",
+        "3": "Vehicle owners who want lasting freshness"
+      },
+      "BENEFITS": {
+        "1": "Instantly refreshes clothes, upholstery, and linen",
+        "2": "Removes bad odors and replaces them with a soft, pleasant scent",
+        "3": "Safe to use on most fabric types",
+        "4": "Available in 3 unique scents to match different preferences",
+        "5": "Perfect for use at home, in the car, or on the go"
+      },
+      "OPTIONS": {
+        "TWILIGHT": "Twilight",
+        "SUNSET": "Sunset",
+        "MORNING_DEW": "Morning Dew"
+      },
+      "OPTIONS_DETAILS": {
+        "TWILIGHT_DESC": "A calming and elegant scent ideal for evenings and relaxation",
+        "SUNSET_DESC": "Warm, cozy fragrance that brings comfort to your space",
+        "MORNING_DEW_DESC": "Fresh and clean scent perfect for starting the day"
+      }
+    },
+    "PRODUCT_6": {
+      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream is specially formulated to cleanse deeply while protecting your skin from harmful bacteria. Enriched with moisturizing agents, it leaves your skin soft, refreshed, and hygienically clean after every shower. Ideal for daily use by the whole family, especially in hot and humid climates.",
+      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream – gentle yet powerful protection against germs with every wash. Keeps skin clean, soft, and refreshed.",
+      "WHY_CHOSEN": "An essential hygiene product for modern families, combining antibacterial protection with skin-loving ingredients. Its value and effectiveness make it a strong everyday repeat purchase item.",
+      "TARGET_MARKET": {
+        "1": "Families seeking daily antibacterial body care",
+        "2": "Individuals with active lifestyles",
+        "3": "Consumers prioritizing hygiene and skin care"
+      },
+      "BENEFITS": {
+        "1": "Kills 99.9% of germs and bacteria",
+        "2": "Moisturizes and softens skin with every wash",
+        "3": "Gentle enough for daily use by all skin types",
+        "4": "Ideal for humid, sweat-prone environments",
+        "5": "Affordable hygiene solution for the whole family"
+      }
     }
   }
 }
