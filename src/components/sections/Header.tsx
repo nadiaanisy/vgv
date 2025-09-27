@@ -1,4 +1,8 @@
 import {
+  useCustomHook,
+  ImageWithFallback
+} from '../misc';
+import {
   Sheet,
   SheetTitle,
   SheetHeader,
@@ -31,7 +35,7 @@ import { Cart } from './Cart';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { CartItem } from '../interface';
-import { useCustomHook } from '../misc';
+import vlogo from '../../assets/images/others/vlogo.png';
 
 interface HeaderProps {
   currentPage: string
@@ -117,8 +121,12 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
 
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-medium">V</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center p-1 overflow-hidden">
+              <ImageWithFallback 
+                src={vlogo}
+                alt="Veyra Global Ventures Logo"
+                className="w-full h-full object-cover rounded-sm"
+              />
             </div>
             <h1 className="text-lg sm:text-xl font-medium text-foreground">{t('COMPANY_NAME')}</h1>
           </div>

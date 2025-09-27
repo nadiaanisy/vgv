@@ -418,8 +418,8 @@ export const products: Product[] = [
         description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
         image: option4MiniWipes
       }
-
-    ]
+    ],
+    salePrice: 0.00
   },
   {
     id: '1',
@@ -479,8 +479,9 @@ export const products: Product[] = [
         salePrice: "RM13.89",
         description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_FREE_DESC",
         image: option5Wipes
-      }
-    ]
+      },
+    ],
+    salePrice: 0.00
   },
   {
     id: '2',
@@ -504,7 +505,8 @@ export const products: Product[] = [
       "PRODUCT_SECTION.PRODUCT_3.BENEFITS.4",
       "PRODUCT_SECTION.PRODUCT_3.BENEFITS.5"
     ],
-    hasOptions: false
+    hasOptions: false,
+    salePrice: 6.00
   },
   {
     id: '3',
@@ -528,7 +530,8 @@ export const products: Product[] = [
       "PRODUCT_SECTION.PRODUCT_4.BENEFITS.4",
       "PRODUCT_SECTION.PRODUCT_4.BENEFITS.5"
     ],
-    hasOptions: false
+    hasOptions: false,
+    salePrice: 6.00
   },
   {
     id: '4',
@@ -553,6 +556,7 @@ export const products: Product[] = [
       "PRODUCT_SECTION.PRODUCT_5.BENEFITS.5"
     ],
     hasOptions: true,
+    salePrice: 0.00,
     options: [
       {
         name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.TWILIGHT",
@@ -599,6 +603,7 @@ export const products: Product[] = [
       "PRODUCT_SECTION.PRODUCT_6.BENEFITS.4",
       "PRODUCT_SECTION.PRODUCT_6.BENEFITS.5"
     ],
-    hasOptions: false
+    hasOptions: false,
+    salePrice: 9.65
   },
 ];

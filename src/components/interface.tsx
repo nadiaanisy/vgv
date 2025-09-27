@@ -19,6 +19,7 @@ export interface Product {
   targetMarket: any
   benefits: any
   hasOptions: boolean,
+  salePrice: number
   options?: {
     name: string;
     originalPrice: string;

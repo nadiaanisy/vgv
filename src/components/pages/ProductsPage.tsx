@@ -33,7 +33,8 @@ import {
   TestTube,
   BarChart3,
   Calendar,
-  Eye
+  Eye,
+  ShoppingCart
 } from 'lucide-react';
 import {
   products,
@@ -249,11 +250,11 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                         </div>
                       ) : (
                         <div className="flex gap-3">
-                          {/* <Button 
+                          <Button 
                             onClick={() => addToCart({
                               id: product.id,
                               name: product.name,
-                              price: product.priceValue,
+                              price: product.salePrice,
                               image: product.image
                             })}
                             className="flex-1 gap-2"
@@ -261,7 +262,7 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                           >
                             <ShoppingCart className="w-5 h-5" />
                             {t('BUTTONS.ADD_TO_CART')}
-                          </Button> */}
+                          </Button>
                           <Button 
                             onClick={() => handleWhatsAppOrder(product.name, product.priceRange)}
                             className="flex-1 gap-2 bg-green-600 hover:bg-green-700"
