@@ -23,31 +23,38 @@ import {
 import { Product } from '../components/interface';
 
 /* IMAGES */
+/* -- AVATAR -- */
 import yatiAvatar from './images/teams/yati.jpg';
 import isyqiAvatar from './images/teams/isyqi.jpg';
 import amirahAvatar from './images/teams/amirah.jpg';
 import kalimanAvatar from './images/teams/kaliman.jpg';
 import etengahAvatar from './images/teams/etengah.jpg';
 import christineAvatar from './images/teams/christine.jpg';
-import miniWetWipesAll from './images/products/1.webp';
+/* -- ------ -- */
+
+/* -- PRODUCTS -- */
+/* -- MAIN PRODUCTS -- */
+import Main_Mini_Wet_Wipes from './images/products/1.jpeg';
+import Main_Wet_Wipes from './images/products/2.jpeg';
+import Main_Sport_wipes from './images/products/3.jpeg';
+import Main_Shinny_Shower_Gel from './images/products/4.jpeg';
+import Main_Fabric_Spray from './images/products/5.jpeg';
+import Main_Antibacteria_Shower_Cream from './images/products/6.jpeg';
+
+/* -- SUB PRODUCTS -- */
 import option1MiniWipes from './images/products/1.1.webp';
 import option2MiniWipes from './images/products/1.2.webp';
 import option3MiniWipes from './images/products/1.3.webp';
 import option4MiniWipes from './images/products/1.4.webp';
-import wetWipesAll from './images/products/2.webp';
 import option1Wipes from './images/products/2.1.webp';
 import option2Wipes from './images/products/2.2.webp';
 import option3Wipes from './images/products/2.3.webp';
 import option4Wipes from './images/products/2.4.webp';
 import option5Wipes from './images/products/2.5.webp';
-import sportsWetWipes from './images/products/3.webp';
-import shinyShowerGel from './images/products/4.webp';
-import fabricAll from './images/products/5.webp';
 import optionFabric1 from './images/products/5.1.png';
 import optionFabric2 from './images/products/5.2.png';
 import optionFabric3 from './images/products/5.3.png';
-import antibactrialShowerCream from './images/products/6.webp';
-
+/* -- ------ -- */
 
 export const email = "[your_company_help_email]";
 export const whatsappNumber = "[your_whatsapp_number]";
@@ -420,8 +427,8 @@ export const experiments = [
 export const products: Product[] = [
   {
     id: '0',
-    image: miniWetWipesAll,
-    name: 'Wetty Mini Wet Wipes (3x8\'s)',
+    image: Main_Mini_Wet_Wipes,
+    name: 'Wetty Mini Wet Wipes (3 Pack x8\'s)',
     category: 'Wetty Mini Wipes',
     description_short: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_SHORT',
     description_long: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_LONG',
@@ -443,18 +450,18 @@ export const products: Product[] = [
     hasOptions: true,
     options: [
       {
-        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FREE",
-        originalPrice: "RM6.90",
-        salePrice: "RM3.90",
-        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
-        image: option1MiniWipes
-      },
-      {
         name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FRESH_APPLE",
         originalPrice: "RM6.90", 
         salePrice: "RM3.90",
         description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FRESH_APPLE_DESC",
         image: option2MiniWipes
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FREE",
+        originalPrice: "RM6.90",
+        salePrice: "RM3.90",
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
+        image: option1MiniWipes
       },
       {
         name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_ROSE",
@@ -475,8 +482,8 @@ export const products: Product[] = [
   },
   {
     id: '1',
-    image: wetWipesAll,
-    name: 'Wetty Wet Tissue (5x30\'s)',
+    image: Main_Wet_Wipes,
+    name: 'Wetty Wet Tissue (6 Pack x 80\'s)',
     category: 'Wetty Wipes',
     description_short: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_SHORT',
     description_long: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_LONG',
@@ -537,7 +544,7 @@ export const products: Product[] = [
   },
   {
     id: '2',
-    image: sportsWetWipes,
+    image: Main_Sport_wipes,
     name: 'Wetty Sports Wipes',
     category: 'Wetty Sport Wipes',
     description_short: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_SHORT',
@@ -562,7 +569,7 @@ export const products: Product[] = [
   },
   {
     id: '3',
-    image: shinyShowerGel,
+    image: Main_Shinny_Shower_Gel,
     name: 'Shinny Shower Gell',
     category: 'Shower',
     description_short: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_SHORT',
@@ -587,7 +594,7 @@ export const products: Product[] = [
   },
   {
     id: '4',
-    image: fabricAll,
+    image: Main_Fabric_Spray,
     name: 'Wetty Fabric Freshener (400ml)',
     category: 'Wetty abric Freshener',
     description_short: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_SHORT',
@@ -635,7 +642,7 @@ export const products: Product[] = [
   },
   {
     id: '5',
-    image: antibactrialShowerCream,
+    image: Main_Antibacteria_Shower_Cream,
     name: 'Wetty Antibacterial Shower Cream',
     category: 'Shower',
     description_short: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_SHORT',

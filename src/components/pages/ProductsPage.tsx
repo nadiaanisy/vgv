@@ -139,10 +139,10 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                         alt={product.name}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 right-4">
+                      <div className="absolute bottom-4 right-4 sm:bottom-4 sm:right-4 md:top-4 md:left-4 md:bottom-auto md:right-auto">
                         <div className="bg-white rounded-lg p-2 shadow-lg">
                           <div className="text-lg font-medium text-foreground">{product.priceRange}</div>
-                          <div className="text-sm text-muted-foreground line-through">{product.originalPrice}</div>
+                          <div className="text-sm text-muted-red line-through">{product.originalPrice}</div>
                         </div>
                       </div>
                     </div>

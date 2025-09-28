@@ -18,6 +18,7 @@
   --secondary-foreground: #1a1a1a;
   --muted: #f8f9fa;
   --muted-foreground: #6c757d;
+  --muted-red: rgba(239, 68, 68, 0.6);
   --accent: #e8f5e8;
   --accent-foreground: #1a1a1a;
   --destructive: #dc3545;
@@ -2818,6 +2819,10 @@ html {
 
   .text-muted-foreground {
     color: var(--muted-foreground);
+  }
+
+  .text-muted-red {
+    color: var(--muted-red);
   }
 
   .text-orange-600 {
