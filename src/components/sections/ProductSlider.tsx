@@ -47,71 +47,70 @@ export function ProductSlider({ onNavigate }: ProductSliderProps) {
           <ImageWithFallback
             src={currentProduct.image}
             alt={currentProduct.name}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-fill"
           />
-          
-          {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-          
-          {/* Content overlay */}
-          <div className="absolute inset-0 flex items-end p-8">
-            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 max-w-md">
-              <div className="flex items-center gap-2 mb-3">
-                <Badge variant="secondary" className="text-xs">
-                  {currentProduct.category}
-                </Badge>
-                <Badge variant="outline" className="text-xs">
-                  {(t('FEATURED_PRODUCT'))}
-                </Badge>
-              </div>
-              
-              <h3 className="text-xl font-medium text-foreground mb-2">
-                {currentProduct.name}
-              </h3>
-              
-              <p className="text-sm text-muted-foreground mb-4">
-                {t(currentProduct.description_short)}
-              </p>
-              
-              <div className="flex items-center justify-between">
-                <div className="text-lg font-medium text-primary">
-                  {currentProduct.priceRange}
-                </div>
-                <Button 
-                  size="sm" 
-                  className="gap-2"
-                  onClick={() => onNavigate('products', currentProduct.id)}
-                >
-                  <Plus className="w-4 h-4" />
-                  {t('BUTTONS.VIEW_PRODUCTS')}
-                </Button>
-              </div>
-            </div>
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+      </div>
+
+      {/* Content overlay */}
+      <div className="absolute top-[65%] flex items-end p-8">
+        <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 max-w-md shadow-lg">
+          <div className="flex items-center gap-2 mb-3">
+            <Badge variant="secondary" className="text-xs">
+              {currentProduct.category}
+            </Badge>
+            <Badge variant="outline" className="text-xs">
+              {(t('FEATURED_PRODUCT'))}
+            </Badge>
           </div>
           
-          {/* Navigation arrows */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white/90"
-            onClick={prevSlide}
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </Button>
+          <h3 className="text-xl font-medium text-foreground mb-2">
+            {currentProduct.name}
+          </h3>
           
-          <Button
-            variant="ghost"
-            size="sm"
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white/90"
-            onClick={nextSlide}
-          >
-            <ChevronRight className="w-4 h-4" />
-          </Button>
+          <p className="text-sm text-muted-foreground mb-4">
+            {t(currentProduct.description_short)}
+          </p>
+          
+          <div className="flex items-center justify-between">
+            <div className="text-lg font-medium text-primary">
+              {currentProduct.priceRange}
+            </div>
+            <Button 
+              size="sm" 
+              className="gap-2"
+              onClick={() => onNavigate('products', currentProduct.id)}
+            >
+              <Plus className="w-4 h-4" />
+              {t('BUTTONS.VIEW_PRODUCTS')}
+            </Button>
+          </div>
         </div>
       </div>
       
+      {/* Navigation arrows */}
+      <Button
+        variant="ghost"
+        size="sm"
+        className="absolute left-4 top-[75%] -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white/90"
+        onClick={prevSlide}
+      >
+        <ChevronLeft className="w-4 h-4" />
+      </Button>
+
+      <Button
+        variant="ghost"
+        size="sm"
+        className="absolute right-4 top-[75%] -translate-y-1/2 bg-white/80 backdrop-blur-sm hover:bg-white/90"
+        onClick={nextSlide}
+      >
+        <ChevronRight className="w-4 h-4" />
+      </Button>
+      
       {/* Slide indicators */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="relative top-[198px] md:top-[130px] flex justify-center gap-2 mt-4">
         {products.map((_, index) => (
           <button
             key={index}
@@ -126,7 +125,7 @@ export function ProductSlider({ onNavigate }: ProductSliderProps) {
       </div>
 
       {/* Product counter */}
-      <div className="text-center mt-2">
+      <div className="relative top-[198px] md:top-[130px] text-center mt-2">
         <p className="text-sm text-muted-foreground">
           {currentIndex + 1} {t('OF')} {products.length}
         </p>

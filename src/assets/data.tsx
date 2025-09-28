@@ -570,7 +570,7 @@ export const products: Product[] = [
   {
     id: '3',
     image: Main_Shinny_Shower_Gel,
-    name: 'Shinny Shower Gell',
+    name: 'Shinny Shower Gel',
     category: 'Shower',
     description_short: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_SHORT',
     description_long: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_LONG',

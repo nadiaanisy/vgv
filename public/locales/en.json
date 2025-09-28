@@ -157,6 +157,7 @@
   "READY_TO_EXPERIENCE_THE_PRODUCT": "Ready to Experience This Product?",
   "READY_TO_EXPERIENCE_THE_PRODUCT_SUBTITLE": "Don't miss your chance!",
   "WELCOME_TOUR": "Welcome Tour",
+  "OPTION_SUBTITLE": "Please choose from the available list.",
   "BUSINESS_MODEL_SECTION": {
     "CHANNELS": "Channels",
     "CHANNELS_DESCRIPTION": "We reach our customers through multiple strategic channels to maximize market penetration. Our primary channel is direct-to-consumer online sales through our website, which allows us to maintain higher margins and direct customer relationships. We partner with premium surf shops and dive centers (50+ locations) to provide hands-on product experience and serve customers who prefer in-person shopping. We participate in major trade shows like DEMA, Surf Expo, and Outdoor Retailer to build brand awareness and establish industry connections. Additionally, we collaborate with marine training academies and certification centers to introduce our products to new water sports participants and professionals who need reliable gear for their training and work.",
@@ -193,6 +194,7 @@
     "SEND_EMAIL": "Send Email",
     "VIEW_OPTIONS": "View Options",
     "ORDER": "Order",
+    "ORDER_NOW": "Order Now",
     "FOLLOW_ON_INSTAGRAM": "Follow on Instagram",
     "PROCEED": "Proceed"
   },

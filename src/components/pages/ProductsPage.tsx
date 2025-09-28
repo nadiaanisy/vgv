@@ -17,6 +17,7 @@ import {
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger
@@ -200,37 +201,47 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                             >
                               <DialogHeader className="sticky top-0 z-10 bg-background py-4 border-b">
                                 <DialogTitle>{product.name} - {t('OPTIONS')}</DialogTitle>
+                                <DialogDescription>{t('OPTION_SUBTITLE')}</DialogDescription>
                               </DialogHeader>
                               <div className="space-y-4">
                                 {product.options?.map((option: any, idx: number) => (
                                   <Card key={idx} className="p-4">
-                                    <div className="space-y-2">
-                                      <h4 className="font-medium">{t(option.name)}</h4>
-                                      <p className="text-sm text-muted-foreground">{t(option.description)}</p>
-                                      <div className="flex items-center justify-between">
-                                        <div>
-                                          <span className="text-sm text-muted-foreground line-through">{t(option.originalPrice)}</span>
-                                          <span className="ml-2 font-medium text-primary">{t(option.salePrice)}</span>
-                                        </div>
-                                        <div className="flex gap-2">
-                                          <Button 
-                                            size="sm"
-                                            onClick={() => addToCart({
-                                              id: `${product.id}-${idx}`,
-                                              name: `${product.name} - ${option.name}`,
-                                              price: parseFloat(option.salePrice.replace('RM', '')),
-                                              image: option.image
-                                            })}
-                                          >
-                                            {t('BUTTONS.ADD_TO_CART')}
-                                          </Button>
-                                          <Button 
-                                            size="sm"
-                                            variant="outline"
-                                            onClick={() => handleWhatsAppOrder(`${product.name} - ${option.name}`, option.salePrice)}
-                                          >
-                                            {t('BUTTONS.ORDER')}
-                                          </Button>
+                                    <div className="space-y-3 grid md:grid-cols-2 md:gap-[0.75rem]">
+                                      <div className="aspect-square rounded-lg overflow-hidden">
+                                        <ImageWithFallback
+                                          src={option.image}
+                                          alt={product.name}
+                                          className="w-full h-full object-cover"
+                                        />
+                                      </div>
+                                      <div>
+                                        <h4 className="font-medium text-lg">{t(option.name)}</h4>
+                                        <p className="text-sm text-muted-foreground">{t(option.description)}</p>
+                                        <div className="flex flex-row md:flex-col md:gap-[0.75rem] items-center md:items-stretch justify-between">
+                                          <div>
+                                            <span className="text-sm text-muted-red line-through">{t(option.originalPrice)}</span>
+                                            <span className="ml-2 text-lg font-medium text-primary">{t(option.salePrice)}</span>
+                                          </div>
+                                          <div className="flex flex-col gap-2">
+                                            <Button 
+                                              className="flex-1 gap-2"
+                                              onClick={() => addToCart({
+                                                id: `${product.id}-${idx}`,
+                                                name: `${product.name} - ${option.name}`,
+                                                price: parseFloat(option.salePrice.replace('RM', '')),
+                                                image: option.image
+                                              })}
+                                            >
+                                              <ShoppingCart className="w-4 h-4" />
+                                              {t('BUTTONS.ADD_TO_CART')}
+                                            </Button>
+                                            <Button 
+                                              className="flex-1 gap-2 bg-green-600 hover:bg-green-700"
+                                              onClick={() => handleWhatsAppOrder(`${product.name} - ${option.name}`, option.salePrice)}
+                                            >
+                                              {t('BUTTONS.ORDER')}
+                                            </Button>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>

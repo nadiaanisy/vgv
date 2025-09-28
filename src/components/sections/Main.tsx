@@ -18,7 +18,7 @@ export function Main({ onNavigate }: MainProps) {
   const { t } = useCustomHook();
 
   return (
-    <section className="w-full py-16 bg-gradient-to-br from-primary/5 to-primary/10">
+    <section className="w-full bg-gradient-to-br from-primary/5 to-primary/10 py-[220px] md:py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
