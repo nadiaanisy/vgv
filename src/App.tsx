@@ -10,7 +10,9 @@ import { AboutUsPage } from './components/pages/AboutUsPage';
 import { ProductsPage } from './components/pages/ProductsPage';
 import { ContactUsPage } from './components/pages/ContactUsPage';
 import { CheckoutForm } from './components/sections/CheckoutForm';
+import { SplashScreen } from './components/sections/SplashScreen';
 import { TestimonialPage } from './components/pages/TestimonialPage';
+import { BackgroundMusic } from './components/sections/BackgroundMusic';
 
 export default function App() {
   const {
@@ -19,7 +21,11 @@ export default function App() {
     handleNavigate,
     currentLanguage,
     handleLanguageChange,
-    selectedProductId
+    selectedProductId,
+    showSplash,
+    setShowSplash,
+    splashCompleted,
+    setSplashCompleted
   } = useCustomHook();
 
   const [cartItems, setCartItems] = useState<CartItem[]>([])
@@ -83,6 +89,11 @@ export default function App() {
     clearCart()
   }
 
+  const handleSplashComplete = () => {
+    setShowSplash(false)
+    setSplashCompleted(true)
+  }
+
   const getTotalCartItems = () => {
     return cartItems.reduce((total, item) => total + item.quantity, 0)
   }
@@ -105,26 +116,41 @@ export default function App() {
 
   return (
     <div className="size-full min-h-screen bg-background">
-      <Header 
-        currentPage={currentPage} 
-        onNavigate={handleNavigate}
-        currentLanguage={currentLanguage}
-        onLanguageChange={handleLanguageChange}
-        cartItems={cartItems}
-        totalCartItems={getTotalCartItems()}
-        updateCartItem={updateCartItem}
-        onProceedToCheckout={handleProceedToCheckout}
-      />
-      {renderPage()}
-      
-      {/* Checkout Dialog */}
-      <CheckoutForm 
-        cartItems={cartItems}
-        isOpen={showCheckout}
-        onClose={handleCloseCheckout}
-      />
+      {/* Splash Screen */}
+      {showSplash && (
+        <SplashScreen onComplete={handleSplashComplete} />
+      )}
 
-      <Toaster position="top-right" richColors />
+      {/* Main App Content */}
+      {!showSplash && (
+        <>
+          <Header 
+            currentPage={currentPage} 
+            onNavigate={handleNavigate}
+            currentLanguage={currentLanguage}
+            onLanguageChange={handleLanguageChange}
+            cartItems={cartItems}
+            totalCartItems={getTotalCartItems()}
+            updateCartItem={updateCartItem}
+            onProceedToCheckout={handleProceedToCheckout}
+          />
+          {renderPage()}
+      
+          {/* Checkout Dialog */}
+          <CheckoutForm 
+            cartItems={cartItems}
+            isOpen={showCheckout}
+            onClose={handleCloseCheckout}
+          />
+
+        <Toaster position="top-right" richColors />
+      </>
+      )}
+
+      {/* Background Music - Always available after splash */}
+      {splashCompleted && (
+        <BackgroundMusic autoPlay={true} />
+      )}
     </div>
   )
 }

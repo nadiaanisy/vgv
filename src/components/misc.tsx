@@ -114,6 +114,8 @@ export const useCustomHook = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedOption, setSelectedOption] = useState<any>(null)
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+  const [splashCompleted, setSplashCompleted] = useState(false);
 
 
   /*Handle pages navigation*/
@@ -158,6 +160,10 @@ export const useCustomHook = () => {
     showSuccessDialog,
     setShowSuccessDialog,
     selectedOption,
-    setSelectedOption
+    setSelectedOption,
+    showSplash,
+    setShowSplash,
+    splashCompleted,
+    setSplashCompleted
   };
 }
