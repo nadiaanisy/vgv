@@ -158,6 +158,9 @@
   "READY_TO_EXPERIENCE_THE_PRODUCT_SUBTITLE": "Don't miss your chance!",
   "WELCOME_TOUR": "Welcome Tour",
   "OPTION_SUBTITLE": "Please choose from the available list.",
+  "SATISFACTION_GUARANTEED": "Satisfaction Guaranteed",
+  "MONEY_BACK_GUARANTEE": "30-day money back",
+  "100%_GUARANTEED": "100% Guaranteed",
   "BUSINESS_MODEL_SECTION": {
     "CHANNELS": "Channels",
     "CHANNELS_DESCRIPTION": "We reach our customers through multiple strategic channels to maximize market penetration. Our primary channel is direct-to-consumer online sales through our website, which allows us to maintain higher margins and direct customer relationships. We partner with premium surf shops and dive centers (50+ locations) to provide hands-on product experience and serve customers who prefer in-person shopping. We participate in major trade shows like DEMA, Surf Expo, and Outdoor Retailer to build brand awareness and establish industry connections. Additionally, we collaborate with marine training academies and certification centers to introduce our products to new water sports participants and professionals who need reliable gear for their training and work.",
@@ -196,7 +199,8 @@
     "ORDER": "Order",
     "ORDER_NOW": "Order Now",
     "FOLLOW_ON_INSTAGRAM": "Follow on Instagram",
-    "PROCEED": "Proceed"
+    "PROCEED": "Proceed",
+    "INQUIRIES": "Inquiries"
   },
   "MENU_LIST": {
     "HOME": "Home",
@@ -231,8 +235,8 @@
   },
   "PRODUCT_SECTION": {
     "PRODUCT_1": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 aren’t just for diaper changes—they’re perfect for cleaning after breastfeeding, sticky surfaces, pacifiers, toys, food mess, and more. Moms use them as makeup removers, and dads keep them in the car. Versatile and ready for anything!",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 is a multi-purpose wipe – perfect for diaper changes, post-feeding clean-ups, sticky surfaces, makeup removal, and daily use. A must-have for every family!",
+      "DESCRIPTION_LONG": "WETTY WET TISSUE aren’t just for diaper changes—they’re perfect for cleaning after breastfeeding, sticky surfaces, pacifiers, toys, food mess, and more. Moms use them as makeup removers, and dads keep them in the car. Versatile and ready for anything!",
+      "DESCRIPTION_SHORT": "Perfect for diaper changes, post-feeding clean-ups, sticky surfaces, makeup removal, and daily use. A must-have for every family!",
       "WHY_CHOSEN": "Entry-level product that introduces customers to Wetty brand quality at an accessible price point. High-margin consumable product that encourages repeat purchases and builds brand loyalty before investing in higher-ticket items.",
       "TARGET_MARKET": {
         "1": "Budget-conscious customers",
@@ -260,8 +264,8 @@
       }
     },
     "PRODUCT_2": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 (5x30's) offers the same versatile cleaning power as the original Wetty wipes, now in a convenient multi-pack. Ideal for families, students, and on-the-go use, these wipes handle diaper changes, sticky messes, post-meal clean-ups, makeup removal, and more. Stock up and never run out of your essential wipes!",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 (5x30's) – convenient multi-pack for all your cleaning needs, from diaper changes to daily use. Perfect for home, travel, and outdoor activities.",
+      "DESCRIPTION_LONG": "WETTY WET TISSUE offers the same versatile cleaning power as the original Wetty wipes, now in a convenient multi-pack. Ideal for families, students, and on-the-go use, these wipes handle diaper changes, sticky messes, post-meal clean-ups, makeup removal, and more. Stock up and never run out of your essential wipes!",
+      "DESCRIPTION_SHORT": "Convenient multi-pack for all your cleaning needs, from diaper changes to daily use. Perfect for home, travel, and outdoor activities.",
       "WHY_CHOSEN": "Multi-pack format encourages bulk purchasing, ideal for frequent users and families. Provides better value per unit while maintaining brand quality. Strengthens customer loyalty by offering convenience and consistent performance.",
       "TARGET_MARKET": {
         "1": "Families with babies and young children",
@@ -269,13 +273,16 @@
         "3": "Active individuals who need portable cleaning wipes"
       },
       "BENEFITS": {
-        "1": "Pack of 5 with 30 wipes each – longer-lasting supply",
+        "1": "Longer-lasting supply",
         "2": "Gentle on skin with premium materials",
         "3": "Compact and portable for home, school, or travel",
         "4": "Multiple fragrance options to suit every preference",
         "5": "Reliable for sticky messes, spills, and daily hygiene"
       },
       "OPTIONS": {
+        "1x30PCS": "1 x 30PCS/Pack",
+        "3x30PCS": "3 x 30PCS/Pack",
+        "3x80PCS": "3 x 80PCS/Pack",
         "FRAGRANCE_FREE": "Fragrance Free",
         "FRAGRANCE_LAVENDER": "Lavender Fragrance",
         "FRAGRANCE_ROSE": "Rose Fragrance",
@@ -291,8 +298,8 @@
       }
     },
     "PRODUCT_3": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Fragrance Free Menthol Cooling Feel Wipes are specially designed for an active lifestyle. These wipes provide a refreshing menthol cooling sensation, perfect for use after sports, outdoor activities, or in hot weather. Fragrance-free and gentle on the skin – ideal for those who need instant freshness anytime, anywhere.",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Fragrance Free Menthol Cooling Wipes – your go-to wipe for post-workout refreshment. Cooling feel, fragrance-free, and skin-friendly.",
+      "DESCRIPTION_LONG": "WETTY SPORT Fragrance Free Menthol Cooling Feel Wipes are specially designed for an active lifestyle. These wipes provide a refreshing menthol cooling sensation, perfect for use after sports, outdoor activities, or in hot weather. Fragrance-free and gentle on the skin – ideal for those who need instant freshness anytime, anywhere.",
+      "DESCRIPTION_SHORT": "Your go-to wipe for post-workout refreshment. Cooling feel, fragrance-free, and skin-friendly.",
       "WHY_CHOSEN": "This product is tailored for active individuals who seek quick freshness and skin comfort after physical activity. With a menthol cooling effect and no added fragrance, it's suitable even for sensitive skin.",
       "TARGET_MARKET": {
         "1": "Active individuals and athletes",
@@ -308,8 +315,8 @@
       }
     },
     "PRODUCT_4": {
-      "DESCRIPTION_LONG": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel combines the calming scent of freesia with the nourishing power of aloe vera to leave your skin feeling refreshed, clean, and cared for. This fragrant body wash creates a rich lather that gently cleanses without drying out your skin. Suitable for all skin types and ideal for daily use.",
-      "DESCRIPTION_SHORT": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel – refreshing, fragrant, and gentle on skin. Daily body wash with aloe vera and freesia scent for a soothing shower experience.",
+      "DESCRIPTION_LONG": "SHINNY Freesia Aloe Shower Gel combines the calming scent of freesia with the nourishing power of aloe vera to leave your skin feeling refreshed, clean, and cared for. This fragrant body wash creates a rich lather that gently cleanses without drying out your skin. Suitable for all skin types and ideal for daily use.",
+      "DESCRIPTION_SHORT": "Refreshing, fragrant, and gentle on skin. Daily body wash with aloe vera and freesia scent for a soothing shower experience.",
       "WHY_CHOSEN": "An affordable, everyday self-care essential that combines fragrance, skin comfort, and value. Encourages repeat use with its skin-friendly ingredients and pleasant aroma.",
       "TARGET_MARKET": {
         "1": "Students and young adults",
@@ -325,8 +332,8 @@
       }
     },
     "PRODUCT_5": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) instantly revitalizes your fabrics with long-lasting freshness. Just a few sprays can eliminate unpleasant odors and leave behind a soft, lingering scent. Perfect for clothes, curtains, upholstery, bedding, gym bags, and more. Available in three signature scents – Twilight, Sunset, and Morning Dew – to suit your mood and lifestyle.",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) – spray to refresh clothes, curtains, or upholstery. Choose from Twilight, Sunset, or Morning Dew for instant freshness.",
+      "DESCRIPTION_LONG": "WETTY Fabric Freshener (400ml) instantly revitalizes your fabrics with long-lasting freshness. Just a few sprays can eliminate unpleasant odors and leave behind a soft, lingering scent. Perfect for clothes, curtains, upholstery, bedding, gym bags, and more. Available in three signature scents – Twilight, Sunset, and Morning Dew – to suit your mood and lifestyle.",
+      "DESCRIPTION_SHORT": "Spray to refresh clothes, curtains, or upholstery. Choose from Twilight, Sunset, or Morning Dew for instant freshness.",
       "WHY_CHOSEN": "A lifestyle enhancer that helps users maintain fresh-smelling environments and fabrics effortlessly. High repeat potential due to everyday use across households, offices, and even in vehicles.",
       "TARGET_MARKET": {
         "1": "Homeowners and homemakers",
@@ -352,8 +359,8 @@
       }
     },
     "PRODUCT_6": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream is specially formulated to cleanse deeply while protecting your skin from harmful bacteria. Enriched with moisturizing agents, it leaves your skin soft, refreshed, and hygienically clean after every shower. Ideal for daily use by the whole family, especially in hot and humid climates.",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream – gentle yet powerful protection against germs with every wash. Keeps skin clean, soft, and refreshed.",
+      "DESCRIPTION_LONG": "WETTY Antibacterial Shower Cream is specially formulated to cleanse deeply while protecting your skin from harmful bacteria. Enriched with moisturizing agents, it leaves your skin soft, refreshed, and hygienically clean after every shower. Ideal for daily use by the whole family, especially in hot and humid climates.",
+      "DESCRIPTION_SHORT": "Gentle yet powerful protection against germs with every wash. Keeps skin clean, soft, and refreshed.",
       "WHY_CHOSEN": "An essential hygiene product for modern families, combining antibacterial protection with skin-loving ingredients. Its value and effectiveness make it a strong everyday repeat purchase item.",
       "TARGET_MARKET": {
         "1": "Families seeking daily antibacterial body care",
@@ -366,6 +373,10 @@
         "3": "Gentle enough for daily use by all skin types",
         "4": "Ideal for humid, sweat-prone environments",
         "5": "Affordable hygiene solution for the whole family"
+      },
+      "OPTIONS": {
+        "900ML": "Wetty Antibacterial Shower (900ml)",
+        "2000ML": "Wetty Antibacterial Shower (2000ml)"
       }
     }
   },

@@ -29,13 +29,15 @@ export interface Product {
   whyChosen: string
   targetMarket: any
   benefits: any
-  hasOptions: boolean,
-  salePrice: number
+  hasOptions: boolean
+  salePrice?: number
+  shopeeLink?: string
   options?: {
-    name: string;
-    originalPrice: string;
-    salePrice: string;
-    description: string;
-    image: any
+    name?: string;
+    originalPrice?: string;
+    salePrice?: string;
+    description?: string;
+    image?: any,
+    shopeeLink?: string
   }[];
 }

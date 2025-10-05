@@ -18,7 +18,7 @@ export function Main({ onNavigate }: MainProps) {
   const { t } = useCustomHook();
 
   return (
-    <section className="w-full bg-gradient-to-br from-primary/5 to-primary/10 py-[220px] md:py-16">
+    <section className="w-full bg-gradient-to-br from-primary/5 to-primary/10 pt-5 md:pt-16 pb-4 md:pb-[136px]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -38,7 +38,7 @@ export function Main({ onNavigate }: MainProps) {
             </div>
 
             {/* Trust Signals */}
-            <div className="bg-white/80 rounded-lg p-6 space-y-4">
+            {/* <div className="bg-white/80 rounded-lg p-6 space-y-4">
               <h3 className="font-medium text-foreground">{t('HERO.WHY_TITLE')}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                 <div className="text-center">
@@ -54,7 +54,7 @@ export function Main({ onNavigate }: MainProps) {
                   <div className="text-muted-foreground">(NEED UPDATE) 100% Quality Assured</div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Strong Call-to-Action */}
             <div className="flex flex-col sm:flex-row gap-4">

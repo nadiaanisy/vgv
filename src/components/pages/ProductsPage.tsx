@@ -35,7 +35,8 @@ import {
   BarChart3,
   Calendar,
   Eye,
-  ShoppingCart
+  // ShoppingCart,
+  SquareArrowOutUpRight
 } from 'lucide-react';
 import {
   products,
@@ -223,7 +224,7 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                                             <span className="ml-2 text-lg font-medium text-primary">{t(option.salePrice)}</span>
                                           </div>
                                           <div className="flex flex-col gap-2">
-                                            <Button 
+                                            {/* <Button 
                                               className="flex-1 gap-2"
                                               onClick={() => addToCart({
                                                 id: `${product.id}-${idx}`,
@@ -234,12 +235,13 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                                             >
                                               <ShoppingCart className="w-4 h-4" />
                                               {t('BUTTONS.ADD_TO_CART')}
-                                            </Button>
+                                            </Button> */}
                                             <Button 
                                               className="flex-1 gap-2 bg-green-600 hover:bg-green-700"
-                                              onClick={() => handleWhatsAppOrder(`${product.name} - ${option.name}`, option.salePrice)}
+                                              onClick={() => window.open(option.shopeeLink, "_blank")}
+                                              // onClick={() => handleWhatsAppOrder(`${product.name} - ${option.name}`, option.salePrice)}
                                             >
-                                              {t('BUTTONS.ORDER')}
+                                              {t('BUTTONS.ORDER_NOW')}
                                             </Button>
                                           </div>
                                         </div>
@@ -251,36 +253,31 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                             </DialogContent>
                           </Dialog>
                           <Button 
-                            onClick={() => handleWhatsAppOrder(product.name, product.priceRange)}
+                            onClick={() => handleWhatsAppOrder('products', '', product.name, product.priceRange)}
                             className="w-full sm:flex-1 bg-green-600 hover:bg-green-700"
                             size="lg"
                           >
                             <MessageCircle className="w-5 h-5" />
-                            {t('BUTTONS.ORDER_VIA_WHATSAPP')}
+                            {t('BUTTONS.INQUIRIES')}
                           </Button>
                         </div>
                       ) : (
                         <div className="flex gap-3">
-                          <Button 
-                            onClick={() => addToCart({
-                              id: product.id,
-                              name: product.name,
-                              price: product.salePrice,
-                              image: product.image
-                            })}
-                            className="flex-1 gap-2"
+                          <Button
+                            onClick={() => window.open(product.shopeeLink, "_blank")}
+                            className="flex-1 gap-2 bg-[#fd7e14]"
                             size="lg"
                           >
-                            <ShoppingCart className="w-5 h-5" />
-                            {t('BUTTONS.ADD_TO_CART')}
+                            <SquareArrowOutUpRight className="w-5 h-5" />
+                            {t('BUTTONS.ORDER_NOW')}
                           </Button>
-                          <Button 
-                            onClick={() => handleWhatsAppOrder(product.name, product.priceRange)}
+                          <Button
+                            onClick={() => handleWhatsAppOrder('products', '', product.name, product.priceRange)}
                             className="flex-1 gap-2 bg-green-600 hover:bg-green-700"
                             size="lg"
                           >
                             <MessageCircle className="w-5 h-5" />
-                            {t('BUTTONS.ORDER_VIA_WHATSAPP')}
+                            {t('BUTTONS.INQUIRIES')}
                           </Button>
                         </div>
                       )}

@@ -15,7 +15,6 @@ export function TrustSignals() {
 
   return (
     <section className="w-full py-16 bg-muted/30">
-      <div>THIS SECTION IS OPTIONAL IF YOU CHOOSE THE FIRST ONE @ SLIDERS</div>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-medium text-foreground mb-4">{t('TRUST_SIGNALS.TITLE')}</h2>
@@ -54,11 +53,11 @@ export function TrustSignals() {
               <Award className="w-8 h-8 text-primary" />
             </div>
             <div>
-              <h3 className="font-medium text-foreground">(NEED UPDATE)Satisfaction Guarantee</h3>
-              <p className="text-sm text-muted-foreground">(NEED UPDATE)30-day money back</p>
+              <h3 className="font-medium text-foreground">{t('SATISFACTION_GUARANTEED')}</h3>
+              <p className="text-sm text-muted-foreground">{t('MONEY_BACK_GUARANTEE')}</p>
               <div className="flex items-center justify-center gap-1 mt-2">
                 <CheckCircle className="w-4 h-4 text-green-600" />
-                <span className="text-sm text-green-600">100% Guaranteed</span>
+                <span className="text-sm text-green-600">{t('100%_GUARANTEED')}</span>
               </div>
             </div>
           </div>

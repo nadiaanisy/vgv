@@ -52,6 +52,8 @@ export function handleClicks(type: string) {
     window.open(`https://instagram.com/${instagramHandle.replace('@', '')}`, '_blank');
   } else if (type === 'tiktok') {
     window.open(`https://tiktok.com/${titktokHandle.replace('@', '')}`, '_blank');
+  } else if (type === 'fb'){
+    window.open(`https://www.facebook.com/share/1AsNBwPqTN/?mibextid=wwXIfr`, '_blank');
   } else {
     window.open(`mailto:${email}`, '_blank');
   }

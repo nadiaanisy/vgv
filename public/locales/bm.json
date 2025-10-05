@@ -158,6 +158,9 @@
   "READY_TO_EXPERIENCE_THE_PRODUCT_SUBTITLE": "Jangan lepaskan peluang anda!",
   "WELCOME_TOUR": "Selamat Datang",
   "OPTION_SUBTITLE": "Sila pilih daripada senarai yang tersedia.",
+  "SATISFACTION_GUARANTEED": "Jaminan Kepuasan",
+  "MONEY_BACK_GUARANTEE": "wang dikembalikan 30 hari",
+  "100%_GUARANTEED": "100% Dijamin",
   "BUSINESS_MODEL_SECTION": {
     "CHANNELS": "Saluran",
     "CHANNELS_DESCRIPTION": "Kami menjangkau pelanggan kami melalui berbilang saluran strategik untuk memaksimumkan penembusan pasaran. Saluran utama kami ialah jualan dalam talian terus kepada pengguna melalui tapak web kami, yang membolehkan kami mengekalkan margin yang lebih tinggi dan hubungan pelanggan langsung. Kami bekerjasama dengan kedai-kedai luncur air dan pusat menyelam premium (50+ lokasi) untuk menyediakan pengalaman produk langsung kepada pengguna dan memberi perkhidmatan kepada pelanggan yang lebih suka pameran perdagangan secara langsung, Surpo Expo dan memberi perkhidmatan kepada pelanggan seperti DEMA secara langsung dan peribadi. Peruncit untuk membina kesedaran jenama dan mewujudkan hubungan industri Selain itu, kami bekerjasama dengan akademi latihan marin dan pusat pensijilan untuk memperkenalkan produk kami kepada peserta sukan air baharu dan profesional yang memerlukan peralatan yang boleh dipercayai untuk latihan dan kerja mereka.",
@@ -196,7 +199,8 @@
     "ORDER": "Pesan",
     "ORDER_NOW": "Pesan Sekarang",
     "FOLLOW_ON_INSTAGRAM": "Ikuti di Instagram",
-    "PROCEED": "Teruskan"
+    "PROCEED": "Teruskan",
+    "INQUIRIES": "Pertanyaan"
   },
   "MENU_LIST": {
     "HOME": "Utama",
@@ -231,8 +235,8 @@
   },
   "PRODUCT_SECTION": {
     "PRODUCT_1": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 bukan sekadar untuk menukar lampin—ia sesuai untuk membersihkan selepas menyusu, permukaan melekit, puting, mainan, makanan bersepah dan banyak lagi. Ibu menggunakannya sebagai penanggal solek, dan ayah menyimpannya di dalam kereta. Serbaguna dan sedia untuk apa sahaja!",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 ialah lap pelbagai guna – sesuai untuk menukar lampin, pembersihan selepas penyusuan, permukaan melekit, menanggalkan solek dan kegunaan harian. Wajib ada untuk setiap keluarga!",
+      "DESCRIPTION_LONG": "WETTY WET TISSUE bukan sekadar untuk menukar lampin—ia sesuai untuk membersihkan selepas menyusu, permukaan melekit, puting, mainan, makanan bersepah dan banyak lagi. Ibu menggunakannya sebagai penanggal solek, dan ayah menyimpannya di dalam kereta. Serbaguna dan sedia untuk apa sahaja!",
+      "DESCRIPTION_SHORT": "Sesuai untuk menukar lampin, pembersihan selepas penyusuan, permukaan melekit, menanggalkan solek dan kegunaan harian. Wajib ada untuk setiap keluarga!",
       "WHY_CHOSEN": "Produk peringkat permulaan yang memperkenalkan pelanggan kepada kualiti jenama Wetty pada harga yang berpatutan. Produk boleh guna dengan margin tinggi yang menggalakkan pembelian berulang dan membina kesetiaan jenama sebelum melabur dalam barangan yang lebih mahal.",
       "TARGET_MARKET": {
         "1": "Pelanggan yang mementingkan bajet",
@@ -260,8 +264,8 @@
       }
     },
     "PRODUCT_2": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 (5x30's) menawarkan kuasa pembersihan serbaguna yang sama seperti tisu Wetty asal, kini dalam pek multi-selesa. Sesuai untuk keluarga, pelajar, dan mereka yang aktif di luar rumah, tisu ini sesuai untuk menukar lampin, membersihkan kekotoran melekit, selepas makan, menanggalkan solekan, dan banyak lagi. Simpan stok dan pastikan tisu penting anda sentiasa tersedia!",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐖𝐄𝐓 𝐓𝐈𝐒𝐒𝐔𝐄 (5x30's) – pek multi-selesa untuk semua keperluan pembersihan anda, daripada menukar lampin hingga penggunaan harian. Sesuai untuk rumah, perjalanan, dan aktiviti luar.",
+      "DESCRIPTION_LONG": "WETTY WET TISSUE menawarkan kuasa pembersihan serbaguna yang sama seperti tisu Wetty asal, kini dalam pek multi-selesa. Sesuai untuk keluarga, pelajar, dan mereka yang aktif di luar rumah, tisu ini sesuai untuk menukar lampin, membersihkan kekotoran melekit, selepas makan, menanggalkan solekan, dan banyak lagi. Simpan stok dan pastikan tisu penting anda sentiasa tersedia!",
+      "DESCRIPTION_SHORT": "Pek multi-selesa untuk semua keperluan pembersihan anda, daripada menukar lampin hingga penggunaan harian. Sesuai untuk rumah, perjalanan, dan aktiviti luar.",
       "WHY_CHOSEN": "Pek multi-selesa menggalakkan pembelian pukal, sesuai untuk pengguna kerap dan keluarga. Memberi nilai lebih setiap unit sambil mengekalkan kualiti jenama. Memperkuat kesetiaan pelanggan dengan menawarkan kemudahan dan prestasi konsisten.",
       "TARGET_MARKET": {
         "1": "Keluarga dengan bayi dan kanak-kanak kecil",
@@ -269,13 +273,16 @@
         "3": "Individu aktif yang memerlukan tisu mudah alih"
       },
       "BENEFITS": {
-        "1": "Pek 5 x 30 tisu – bekalan lebih lama",
+        "1": "Bekalan lebih lama",
         "2": "Mesra kulit dengan bahan berkualiti premium",
         "3": "Kompak dan mudah dibawa untuk rumah, sekolah, atau perjalanan",
         "4": "Beberapa pilihan wangian mengikut citarasa",
         "5": "Boleh dipercayai untuk kekotoran melekit, tumpahan, dan kebersihan harian"
       },
       "OPTIONS": {
+        "1x30PCS": "1 x 30PCS/Pek",
+        "3x30PCS": "3 x 30PCS/Pek",
+        "3x80PCS": "3 x 80PCS/Pek",
         "FRAGRANCE_FREE": "Tiada Wangian",
         "FRAGRANCE_LAVENDER": "Wangian Lavender",
         "FRAGRANCE_ROSE": "Wangian Mawar",
@@ -291,8 +298,8 @@
       }
     },
     "PRODUCT_3": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Fragrance Free Menthol Cooling Feel Wipes direka khas untuk gaya hidup aktif. Tisu ini memberikan rasa sejuk menyegarkan mentol yang sesuai digunakan selepas bersukan, aktiviti luar, atau semasa cuaca panas. Bebas wangian dan lembut pada kulit – sesuai untuk mereka yang aktif dan mahukan kesegaran segera di mana-mana.",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 𝐒𝐏𝐎𝐑𝐓 Tisu Basah Bebas Wangian dengan Rasa Sejuk Mentol – pilihan ideal selepas bersenam atau aktiviti luar. Rasa sejuk menyegarkan tanpa wangian tambahan.",
+      "DESCRIPTION_LONG": "WETTY SPORT Fragrance Free Menthol Cooling Feel Wipes direka khas untuk gaya hidup aktif. Tisu ini memberikan rasa sejuk menyegarkan mentol yang sesuai digunakan selepas bersukan, aktiviti luar, atau semasa cuaca panas. Bebas wangian dan lembut pada kulit – sesuai untuk mereka yang aktif dan mahukan kesegaran segera di mana-mana.",
+      "DESCRIPTION_SHORT": "Tisu Basah Bebas Wangian dengan Rasa Sejuk Mentol – pilihan ideal selepas bersenam atau aktiviti luar. Rasa sejuk menyegarkan tanpa wangian tambahan.",
       "WHY_CHOSEN": "Produk ini direka untuk memenuhi keperluan golongan aktif yang mahukan kesegaran segera dan kelembutan pada kulit selepas aktiviti fizikal. Dengan mentol yang menyegarkan dan bebas wangian, ia sesuai untuk semua jenis kulit termasuk kulit sensitif.",
       "TARGET_MARKET": {
         "1": "Individu aktif dan ahli sukan",
@@ -308,8 +315,8 @@
       }
     },
     "PRODUCT_4": {
-      "DESCRIPTION_LONG": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel menggabungkan haruman menenangkan freesia dengan khasiat aloe vera untuk memberikan kesegaran, kebersihan dan penjagaan pada kulit anda. Mandian badan yang harum ini menghasilkan buih yang mewah dan membersih dengan lembut tanpa mengeringkan kulit. Sesuai untuk semua jenis kulit dan digunakan setiap hari.",
-      "DESCRIPTION_SHORT": "𝐒𝐇𝐈𝐍𝐍𝐘 Freesia Aloe Shower Gel – menyegarkan, wangi, dan lembut pada kulit. Mandian harian dengan aloe vera dan haruman freesia untuk pengalaman mandi yang menenangkan.",
+      "DESCRIPTION_LONG": "SHINNY Freesia Aloe Shower Gel menggabungkan haruman menenangkan freesia dengan khasiat aloe vera untuk memberikan kesegaran, kebersihan dan penjagaan pada kulit anda. Mandian badan yang harum ini menghasilkan buih yang mewah dan membersih dengan lembut tanpa mengeringkan kulit. Sesuai untuk semua jenis kulit dan digunakan setiap hari.",
+      "DESCRIPTION_SHORT": "Menyegarkan, wangi, dan lembut pada kulit. Mandian harian dengan aloe vera dan haruman freesia untuk pengalaman mandi yang menenangkan.",
       "WHY_CHOSEN": "Produk penjagaan diri harian yang mampu milik, menggabungkan keharuman, kelembutan kulit, dan nilai. Menggalakkan penggunaan berulang dengan ramuan mesra kulit dan aroma yang menyenangkan.",
       "TARGET_MARKET": {
         "1": "Pelajar dan golongan muda",
@@ -325,8 +332,8 @@
       }
     },
     "PRODUCT_5": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) menyegarkan fabrik anda serta-merta dengan haruman tahan lama. Hanya beberapa semburan mampu menghilangkan bau yang tidak menyenangkan dan menggantikannya dengan aroma yang lembut dan menenangkan. Sesuai digunakan pada pakaian, langsir, perabot kain, cadar, beg gim, dan banyak lagi. Terdapat dalam tiga haruman eksklusif – Twilight, Sunset, dan Morning Dew – mengikut cita rasa dan suasana anda.",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Fabric Freshener (400ml) – sembur untuk menyegarkan pakaian, langsir, atau fabrik. Pilih antara Twilight, Sunset, atau Morning Dew untuk bau segar serta-merta.",
+      "DESCRIPTION_LONG": "WETTY Fabric Freshener (400ml) menyegarkan fabrik anda serta-merta dengan haruman tahan lama. Hanya beberapa semburan mampu menghilangkan bau yang tidak menyenangkan dan menggantikannya dengan aroma yang lembut dan menenangkan. Sesuai digunakan pada pakaian, langsir, perabot kain, cadar, beg gim, dan banyak lagi. Terdapat dalam tiga haruman eksklusif – Twilight, Sunset, dan Morning Dew – mengikut cita rasa dan suasana anda.",
+      "DESCRIPTION_SHORT": "Sembur untuk menyegarkan pakaian, langsir, atau fabrik. Pilih antara Twilight, Sunset, atau Morning Dew untuk bau segar serta-merta.",
       "WHY_CHOSEN": "Produk gaya hidup yang membantu pengguna mengekalkan kesegaran fabrik dan persekitaran dengan mudah. Potensi pembelian berulang tinggi kerana boleh digunakan setiap hari di rumah, pejabat, atau kenderaan.",
       "TARGET_MARKET": {
         "1": "Pemilik rumah dan suri rumah",
@@ -352,8 +359,8 @@
       }
     },
     "PRODUCT_6": {
-      "DESCRIPTION_LONG": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream diformulasikan khas untuk membersih secara mendalam sambil melindungi kulit anda daripada bakteria berbahaya. Diperkaya dengan agen pelembap, ia menjadikan kulit anda lembut, segar, dan bersih selepas setiap mandi. Sesuai untuk kegunaan harian oleh seisi keluarga, terutamanya dalam cuaca panas dan lembap.",
-      "DESCRIPTION_SHORT": "𝐖𝐄𝐓𝐓𝐘 Antibacterial Shower Cream – perlindungan lembut tetapi berkesan terhadap kuman setiap kali mandi. Menjadikan kulit bersih, lembut dan segar.",
+      "DESCRIPTION_LONG": "WETTY Antibacterial Shower Cream diformulasikan khas untuk membersih secara mendalam sambil melindungi kulit anda daripada bakteria berbahaya. Diperkaya dengan agen pelembap, ia menjadikan kulit anda lembut, segar, dan bersih selepas setiap mandi. Sesuai untuk kegunaan harian oleh seisi keluarga, terutamanya dalam cuaca panas dan lembap.",
+      "DESCRIPTION_SHORT": "Perlindungan lembut tetapi berkesan terhadap kuman setiap kali mandi. Menjadikan kulit bersih, lembut dan segar.",
       "WHY_CHOSEN": "Produk penjagaan kebersihan penting untuk keluarga moden, menggabungkan perlindungan anti-bakteria dengan ramuan mesra kulit. Nilai dan keberkesanannya menjadikannya pilihan harian yang berulang.",
       "TARGET_MARKET": {
         "1": "Keluarga yang mencari penjagaan badan anti-bakteria harian",
@@ -366,6 +373,10 @@
         "3": "Lembut dan sesuai untuk semua jenis kulit",
         "4": "Ideal untuk persekitaran panas dan lembap",
         "5": "Penyelesaian kebersihan mampu milik untuk seisi keluarga"
+      },
+      "OPTIONS": {
+        "900ML": "Wetty Antibacterial Shower (900ml)",
+        "2000ML": "Wetty Antibacterial Shower (2000ml)"
       }
     }
   },
