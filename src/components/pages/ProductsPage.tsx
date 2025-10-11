@@ -44,14 +44,14 @@ import {
 } from '../../assets/data';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
-import { CartItem } from '../interface';
+// import { CartItem } from '../interface';
 
 interface ProductsPageProps {
   onNavigate: (page: string) => void
-  addToCart: (item: Omit<CartItem, 'quantity'>) => void
+  // addToCart: (item: Omit<CartItem, 'quantity'>) => void
   selectedProductId?: string | null
 }
-export function ProductsPage({ onNavigate, addToCart, selectedProductId }: ProductsPageProps) {
+export function ProductsPage({ onNavigate, selectedProductId }: ProductsPageProps) {
   const { t } = useCustomHook();
   const productRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
 
@@ -201,7 +201,7 @@ export function ProductsPage({ onNavigate, addToCart, selectedProductId }: Produ
                               onInteractOutside={(e) => e.preventDefault()}
                             >
                               <DialogHeader className="sticky top-0 z-10 bg-background py-4 border-b">
-                                <DialogTitle>{product.name} - {t('OPTIONS')}</DialogTitle>
+                                <DialogTitle>{product.name}</DialogTitle>
                                 <DialogDescription>{t('OPTION_SUBTITLE')}</DialogDescription>
                               </DialogHeader>
                               <div className="space-y-4">

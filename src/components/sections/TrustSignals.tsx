@@ -53,11 +53,11 @@ export function TrustSignals() {
               <Award className="w-8 h-8 text-primary" />
             </div>
             <div>
-              <h3 className="font-medium text-foreground">{t('SATISFACTION_GUARANTEED')}</h3>
-              <p className="text-sm text-muted-foreground">{t('MONEY_BACK_GUARANTEE')}</p>
+              <h3 className="font-medium text-foreground">{t('TRUST_SIGNALS.SATISFACTION_GUARANTEED.TITLE')}</h3>
+              <p className="text-sm text-muted-foreground">{t('TRUST_SIGNALS.SATISFACTION_GUARANTEED.DESCRIPTION')}</p>
               <div className="flex items-center justify-center gap-1 mt-2">
                 <CheckCircle className="w-4 h-4 text-green-600" />
-                <span className="text-sm text-green-600">{t('100%_GUARANTEED')}</span>
+                <span className="text-sm text-green-600">{t('TRUST_SIGNALS.SATISFACTION_GUARANTEED.SUB_DESCRIPTION')}</span>
               </div>
             </div>
           </div>

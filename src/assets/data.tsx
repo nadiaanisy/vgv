@@ -35,18 +35,22 @@ import christineAvatar from './images/teams/christine.jpg';
 
 /* -- PRODUCTS -- */
 /* -- MAIN PRODUCTS -- */
-import Main_Mini_Wet_Wipes from './images/products/1.jpeg';
+// import Main_Mini_Wet_Wipes from './images/products/1.jpeg';
 import Main_Wet_Wipes from './images/products/2.jpeg';
 import Main_Sport_wipes from './images/products/3.jpeg';
-import Main_Shinny_Shower_Gel from './images/products/4.jpeg';
+// import Main_Shinny_Shower_Gel from './images/products/4.jpeg' // tunggu gambar baru
 import Main_Fabric_Spray from './images/products/5.jpeg';
-import Main_Antibacteria_Shower_Cream from './images/products/6.jpeg';
+// import Main_Antibacteria_Shower_Cream from './images/products/6.jpeg';
 
 /* -- SUB PRODUCTS -- */
-import option1MiniWipes from './images/products/1.1.webp';
-import option2MiniWipes from './images/products/1.2.webp';
-import option3MiniWipes from './images/products/1.3.webp';
-import option4MiniWipes from './images/products/1.4.webp';
+import Wet_Wipes_30 from './images/products/2.1.jpeg';
+import Wet_Wipes_80 from './images/products/2.2.jpeg';
+// import Antibacteria_Shower_Cream_200ml from './images/products/6.2.jpeg';
+import Antibacteria_Shower_Cream_900ml from './images/products/6.1.jpeg';
+// import option1MiniWipes from './images/products/1.1.webp';
+// import option2MiniWipes from './images/products/1.2.webp';
+// import option3MiniWipes from './images/products/1.3.webp';
+// import option4MiniWipes from './images/products/1.4.webp';
 // import option1Wipes from './images/products/2.1.webp';
 // import option2Wipes from './images/products/2.2.webp';
 // import option3Wipes from './images/products/2.3.webp';
@@ -67,51 +71,6 @@ export const ERROR_IMG_SRC = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhl
 export const languages = [
   { code: 'EN', name: 'English'},
   { code: 'BM', name: 'Bahasa Malaysia'}
-];
-
-export const navigationItems = [
-  { key: 'home', label: 'MENU_LIST.HOME' },
-  { key: 'about-us', label: 'MENU_LIST.ABOUT_US' },
-  { key: 'products', label: 'MENU_LIST.PRODUCTS' },
-  { key: 'testimonial', label: 'MENU_LIST.TESTIMONIAL' },
-  { key: 'contact-us', label: 'MENU_LIST.CONTACT_US' }
-];
-
-export const malaysianStates = [
-  'Johor', 'Kedah', 'Kelantan', 'Kuala Lumpur', 'Labuan', 'Melaka', 
-  'Negeri Sembilan', 'Pahang', 'Penang', 'Perak', 'Perlis', 'Putrajaya',
-  'Sabah', 'Sarawak', 'Selangor', 'Terengganu'
-];
-
-export const welcomeOverlaySlides = [
-  {
-    title: "Family Adventures Begin",
-    subtitle: "Where every family creates unforgettable water memories",
-    image: "https://images.unsplash.com/photo-1652535873270-2144d2c52d8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMHN3aW1taW5nJTIwdG9nZXRoZXJ8ZW58MXx8fHwxNzU4OTc2ODkyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    icon: Users,
-    color: "from-blue-400 to-blue-600"
-  },
-  {
-    title: "Mother & Baby Care",
-    subtitle: "Gentle protection for life's most precious moments",
-    image: "https://images.unsplash.com/photo-1721571389052-9f65bc5f24b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3RoZXIlMjBiYWJ5JTIwd2F0ZXIlMjBzcG9ydHN8ZW58MXx8fHwxNzU4OTc2ODk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    icon: Baby,
-    color: "from-pink-400 to-purple-600"
-  },
-  {
-    title: "Sports Excellence",
-    subtitle: "Performance gear for champions and enthusiasts",
-    image: "https://images.unsplash.com/photo-1581560573661-974b0012185c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHNwb3J0cyUyMGZhbWlseSUyMHN1cmZpbmd8ZW58MXx8fHwxNzU4OTc2ODk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    icon: Waves,
-    color: "from-green-400 to-teal-600"
-  },
-  {
-    title: "Adventure Awaits",
-    subtitle: "Discover the depths with confidence and comfort",
-    image: "https://images.unsplash.com/photo-1588732722208-4b86b49699a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXRzdWl0JTIwZGl2aW5nJTIwYWR2ZW50dXJlfGVufDF8fHx8MTc1ODk3Njg5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    icon: Heart,
-    color: "from-orange-400 to-red-600"
-  }
 ];
 
 export const businessHours = [
@@ -170,6 +129,386 @@ export const contactMethods = [
     color: "text-blue-600",
     bgColor: "bg-blue-100",
     responseTime: "USUALLY_IN_24_HOURS"
+  }
+];
+
+export const teamMembers = [
+  {
+    name: "Noor Zawatil Isyqi Binti Saiful Bahri",
+    role: "TEAM.CEO",
+    avatar: isyqiAvatar,
+    initials: "IS",
+    assignmentInsight: "TEAM.CEO_INSIGHT",
+    keyStrengths: ["STRATEGIC_VISION", "TEAM_LEADERSHIP", "BUSINESS_DEVELOPMENT"]
+  },
+  {
+    name: "Norhayati Binti Yahya",
+    role: "TEAM.COO",
+    avatar: yatiAvatar,
+    initials: "YY",
+    assignmentInsight: "TEAM.COO_INSIGHT",
+    keyStrengths: ["STRATEGIC_PLANNING", "OPERATIONAL_EFFICIENCY", "CREATIVE_CRITICAL_THINKING"]
+  },
+  {
+    name: "Etengah Bin Ebung",
+    role: "TEAM.MARKETING_BRANDING_MANAGER",
+    avatar: etengahAvatar,
+    initials: "EE",
+    assignmentInsight: "TEAM.MARKETING_BRANDING_MANAGER_INSIGHT",
+    keyStrengths: ["SOCIAL_MEDIA_STRATEGY", "BRAND_COMMUNICATIONS", "CUSTOMER_ENGAGEMENT"]
+  },
+  {
+    name: "Christine Bernadette A/P Francis",
+    role: "TEAM.SALES_MANAGER", 
+    avatar: christineAvatar,
+    initials: "CB",
+    assignmentInsight: "TEAM.SALES_MANAGER_INSIGHT",
+    keyStrengths: ["CUSTOMER_RELATIONS", "SALES_STRATEGY", "MARKET_ANALYSIS"]
+  },
+  {
+    name: "Nurkaliman Bin Mohamed Hamden",
+    role: "TEAM.FINANCE_DATA_ANALYST", 
+    avatar: kalimanAvatar,
+    initials: "NM",
+    assignmentInsight: "TEAM.FINANCE_DATA_ANALYST_INSIGHT",
+    keyStrengths: ["FINANCIAL_PLANNING", "DATA_ANALYSIS", "PERFORMANCE_TRACKING"]
+  },
+  {
+    name: "Amirah Farah Diyana Binti Mohd Razali",
+    role: "TEAM.TECH_WEBSITE_DEVELOPER", 
+    avatar: amirahAvatar,
+    initials: "AF",
+    assignmentInsight: "TEAM.TECH_WEBSITE_DEVELOPER_INSIGHT",
+    keyStrengths: ["TECHNICAL_PROFICIENCY", "PROBLEM_SOLVING", "DETAIL_ORIENTED"]
+  }
+];
+
+export const navigationItems = [
+  { key: 'home', label: 'MENU_LIST.HOME' },
+  { key: 'about-us', label: 'MENU_LIST.ABOUT_US' },
+  { key: 'products', label: 'MENU_LIST.PRODUCTS' },
+  { key: 'testimonial', label: 'MENU_LIST.TESTIMONIAL' },
+  { key: 'contact-us', label: 'MENU_LIST.CONTACT_US' }
+];
+
+export const products: Product[] = [
+  {
+    id: '0',
+    image: '',
+    name: 'Wetty Mini Wet Wipes',
+    category: 'Wetty Mini Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_LONG',
+    priceRange: "RM3.90 - RM4.90",
+    originalPrice: "RM6.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_1.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FRESH_APPLE",
+        originalPrice: "RM6.90", 
+        salePrice: "RM3.90",
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FRESH_APPLE_DESC",
+        image: ''
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FREE",
+        originalPrice: "RM6.90",
+        salePrice: "RM3.90",
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
+        image: ''
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_ROSE",
+        originalPrice: "RM6.90",
+        salePrice: "RM3.90", 
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_ROSE_DESC",
+        image: ''
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_ANTIBACTERIAL",
+        originalPrice: "RM6.90",
+        salePrice: "RM4.20",
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
+        image: ''
+      }
+    ],
+    salePrice: 0.00,
+    shopeeLink: ''
+  },
+  {
+    id: '1',
+    image: Main_Wet_Wipes,
+    name: 'Wetty Wet Tissue',
+    category: 'Wetty Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_LONG',
+    priceRange: "RM1.00 - RM11.00",
+    originalPrice: "RM3.62 - RM18.50",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_2.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.1x30PCS",
+        image: Wet_Wipes_30,
+        originalPrice: "RM3.62",
+        salePrice: "RM0.00",
+        shopeeLink: 'https://s.shopee.com.my/5L2f1F8Ln0'
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.3x30PCS",
+        image: Wet_Wipes_30,
+        originalPrice: "RM10.25",
+        salePrice: "RM6.40",
+        shopeeLink: 'https://s.shopee.com.my/5AjEoxVXfV'
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.3x80PCS",
+        image: Wet_Wipes_80,
+        originalPrice: "RM18.50",
+        salePrice: "RM11.00",
+        shopeeLink: 'https://s.shopee.com.my/5pyvbw8fI0'
+      },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_FREE",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM11.65",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
+      //   image: option1Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_LAVENDER",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_LAVENDER_DESC",
+      //   image: option2Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ROSE",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ROSE_DESC",
+      //   image: option3Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
+      //   image: option4Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL_FREE",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_FREE_DESC",
+      //   image: option5Wipes
+      // },
+    ]
+  },
+  {
+    id: '2',
+    image: Main_Sport_wipes,
+    name: 'Wetty Sports Wipes',
+    category: 'Wetty Sport Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_LONG',
+    priceRange: "RM8.68",
+    originalPrice: "RM16.65",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_3.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.5"
+    ],
+    hasOptions: false,
+    salePrice: 8.68,
+    shopeeLink: 'https://s.shopee.com.my/BKYrZWo5h'
+  },
+  {
+    id: '3',
+    image: '',
+    name: 'Shinny Shower Gel',
+    category: 'Shower',
+    description_short: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_LONG',
+    priceRange: "RM7.80",
+    originalPrice: "RM18.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_4.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.5"
+    ],
+    hasOptions: false,
+    salePrice: 7.80,
+    shopeeLink: 'https://s.shopee.com.my/2LP7xwyAcE'
+  },
+  {
+    id: '4',
+    image: Main_Fabric_Spray,
+    name: 'Wetty Fabric Freshener (400ml)',
+    category: 'Wetty Fabric Freshener',
+    description_short: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_LONG',
+    priceRange: "RM11.90",
+    originalPrice: "RM12.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_5.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.5"
+    ],
+    hasOptions: false,
+    // options: [
+    //   {
+    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.TWILIGHT",
+    //     originalPrice: "RM12.90",
+    //     salePrice: "RM8.00",
+    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.TWILIGHT_DESC",
+    //     image: optionFabric1
+    //   },
+    //   {
+    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.SUNSET",
+    //     originalPrice: "RM12.90",
+    //     salePrice: "RM8.00",
+    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.SUNSET_DESC",
+    //     image: optionFabric2
+    //   },
+    //   {
+    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.MORNING_DEW",
+    //     originalPrice: "RM12.90",
+    //     salePrice: "RM8.00",
+    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.MORNING_DEW_DESC",
+    //     image: optionFabric3
+    //   }
+    // ],
+    shopeeLink: 'https://s.shopee.com.my/6AbpfoQbrj'
+  },
+  {
+    id: '5',
+    image: '',
+    name: 'Wetty Antibacterial Shower Cream',
+    category: 'Shower',
+    description_short: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_LONG',
+    priceRange: "RM9.90",
+    originalPrice: "RM18.30",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_6.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_6.OPTIONS.900ML",
+        image: Antibacteria_Shower_Cream_900ml,
+        originalPrice: "RM18.30",
+        salePrice: "RM9.90",
+        shopeeLink: 'https://s.shopee.com.my/BKYrq8klH'
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_6.OPTIONS.2000ML",
+        image: '',
+        originalPrice: "RM20.00",
+        salePrice: "RM9.65",
+        shopeeLink: 'https://s.shopee.com.my/AUl937BNsP'
+      },
+    ],
+    salePrice: 9.65,
+    shopeeLink: 'https://s.shopee.com.my/2LP7xwyAcE'
+  },
+];
+
+/*NEEDED INPUT*/
+export const malaysianStates = [
+  'Johor', 'Kedah', 'Kelantan', 'Kuala Lumpur', 'Labuan', 'Melaka', 
+  'Negeri Sembilan', 'Pahang', 'Penang', 'Perak', 'Perlis', 'Putrajaya',
+  'Sabah', 'Sarawak', 'Selangor', 'Terengganu'
+];
+
+export const welcomeOverlaySlides = [
+  {
+    title: "Family Adventures Begin",
+    subtitle: "Where every family creates unforgettable water memories",
+    image: "https://images.unsplash.com/photo-1652535873270-2144d2c52d8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMHN3aW1taW5nJTIwdG9nZXRoZXJ8ZW58MXx8fHwxNzU4OTc2ODkyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Users,
+    color: "from-blue-400 to-blue-600"
+  },
+  {
+    title: "Mother & Baby Care",
+    subtitle: "Gentle protection for life's most precious moments",
+    image: "https://images.unsplash.com/photo-1721571389052-9f65bc5f24b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3RoZXIlMjBiYWJ5JTIwd2F0ZXIlMjBzcG9ydHN8ZW58MXx8fHwxNzU4OTc2ODk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Baby,
+    color: "from-pink-400 to-purple-600"
+  },
+  {
+    title: "Sports Excellence",
+    subtitle: "Performance gear for champions and enthusiasts",
+    image: "https://images.unsplash.com/photo-1581560573661-974b0012185c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHNwb3J0cyUyMGZhbWlseSUyMHN1cmZpbmd8ZW58MXx8fHwxNzU4OTc2ODk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Waves,
+    color: "from-green-400 to-teal-600"
+  },
+  {
+    title: "Adventure Awaits",
+    subtitle: "Discover the depths with confidence and comfort",
+    image: "https://images.unsplash.com/photo-1588732722208-4b86b49699a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXRzdWl0JTIwZGl2aW5nJTIwYWR2ZW50dXJlfGVufDF8fHx8MTc1ODk3Njg5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Heart,
+    color: "from-orange-400 to-red-600"
   }
 ];
 
@@ -358,57 +697,6 @@ export const whatDidntWork = [
   }
 ];
 
-export const teamMembers = [
-  {
-    name: "Noor Zawatil Isyqi Binti Saiful Bahri",
-    role: "TEAM.CEO",
-    avatar: isyqiAvatar,
-    initials: "IS",
-    assignmentInsight: "TEAM.CEO_INSIGHT",
-    keyStrengths: ["STRATEGIC_VISION", "TEAM_LEADERSHIP", "BUSINESS_DEVELOPMENT"]
-  },
-  {
-    name: "Norhayati Binti Yahya",
-    role: "TEAM.COO",
-    avatar: yatiAvatar,
-    initials: "YY",
-    assignmentInsight: "TEAM.COO_INSIGHT",
-    keyStrengths: ["STRATEGIC_PLANNING", "OPERATIONAL_EFFICIENCY", "CREATIVE_CRITICAL_THINKING"]
-  },
-  {
-    name: "Etengah Bin Ebung",
-    role: "TEAM.MARKETING_BRANDING_MANAGER",
-    avatar: etengahAvatar,
-    initials: "EE",
-    assignmentInsight: "TEAM.MARKETING_BRANDING_MANAGER_INSIGHT",
-    keyStrengths: ["SOCIAL_MEDIA_STRATEGY", "BRAND_COMMUNICATIONS", "CUSTOMER_ENGAGEMENT"]
-  },
-  {
-    name: "Christine Bernadette A/P Francis",
-    role: "TEAM.SALES_MANAGER", 
-    avatar: christineAvatar,
-    initials: "CB",
-    assignmentInsight: "TEAM.SALES_MANAGER_INSIGHT",
-    keyStrengths: ["CUSTOMER_RELATIONS", "SALES_STRATEGY", "MARKET_ANALYSIS"]
-  },
-  {
-    name: "Nurkaliman Bin Mohamed Hamden",
-    role: "TEAM.FINANCE_DATA_ANALYST", 
-    avatar: kalimanAvatar,
-    initials: "NM",
-    assignmentInsight: "TEAM.FINANCE_DATA_ANALYST_INSIGHT",
-    keyStrengths: ["FINANCIAL_PLANNING", "DATA_ANALYSIS", "PERFORMANCE_TRACKING"]
-  },
-  {
-    name: "Amirah Farah Diyana Binti Mohd Razali",
-    role: "TEAM.TECH_WEBSITE_DEVELOPER", 
-    avatar: amirahAvatar,
-    initials: "AF",
-    assignmentInsight: "TEAM.TECH_WEBSITE_DEVELOPER_INSIGHT",
-    keyStrengths: ["TECHNICAL_PROFICIENCY", "PROBLEM_SOLVING", "DETAIL_ORIENTED"]
-  }
-];
-
 export const experiments = [
   {
     icon: <Instagram className="w-6 h-6" />,
@@ -434,287 +722,4 @@ export const experiments = [
     results: "25 direct sales through team connections, $18,750 in revenue",
     learnings: "Personal recommendations are our highest-converting channel (35% conversion rate). Trust is the biggest factor in purchase decisions."
   }
-];
-
-export const products: Product[] = [
-  {
-    id: '0',
-    image: Main_Mini_Wet_Wipes,
-    name: 'Wetty Mini Wet Wipes (3 Pack x8\'s)',
-    category: 'Wetty Mini Wipes',
-    description_short: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_SHORT',
-    description_long: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_LONG',
-    priceRange: "RM3.90 - RM4.90",
-    originalPrice: "RM6.90",
-    whyChosen: "PRODUCT_SECTION.PRODUCT_1.WHY_CHOSEN",
-    targetMarket: [
-      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.1",
-      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.2",
-      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.3"
-    ],
-    benefits: [
-      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.1",
-      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.2",
-      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.3",
-      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.4",
-      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.5"
-    ],
-    hasOptions: true,
-    options: [
-      {
-        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FRESH_APPLE",
-        originalPrice: "RM6.90", 
-        salePrice: "RM3.90",
-        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FRESH_APPLE_DESC",
-        image: option2MiniWipes
-      },
-      {
-        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FREE",
-        originalPrice: "RM6.90",
-        salePrice: "RM3.90",
-        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
-        image: option1MiniWipes
-      },
-      {
-        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_ROSE",
-        originalPrice: "RM6.90",
-        salePrice: "RM3.90", 
-        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_ROSE_DESC",
-        image: option3MiniWipes
-      },
-      {
-        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_ANTIBACTERIAL",
-        originalPrice: "RM6.90",
-        salePrice: "RM4.20",
-        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
-        image: option4MiniWipes
-      }
-    ],
-    salePrice: 0.00,
-    shopeeLink: ''
-  },
-  {
-    id: '1',
-    image: '',
-    name: 'Wetty Wet Tissue',
-    category: 'Wetty Wipes',
-    description_short: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_SHORT',
-    description_long: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_LONG',
-    priceRange: "RM1.00 - RM11.00",
-    originalPrice: "RM3.62 - RM18.50",
-    whyChosen: "PRODUCT_SECTION.PRODUCT_2.WHY_CHOSEN",
-    targetMarket: [
-      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.1",
-      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.2",
-      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.3"
-    ],
-    benefits: [
-      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.1",
-      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.2",
-      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.3",
-      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.4",
-      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.5"
-    ],
-    hasOptions: true,
-    options: [
-      {
-        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.1x30PCS",
-        image: '',
-        originalPrice: "RM3.62",
-        salePrice: "RM0.00",
-        shopeeLink: 'https://s.shopee.com.my/5L2f1F8Ln0'
-      },
-      {
-        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.3x30PCS",
-        image: '',
-        originalPrice: "RM10.25",
-        salePrice: "RM6.40",
-        shopeeLink: 'https://s.shopee.com.my/5AjEoxVXfV'
-      },
-      {
-        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.3x80PCS",
-        image: Main_Wet_Wipes,
-        originalPrice: "RM18.50",
-        salePrice: "RM11.00",
-        shopeeLink: 'https://s.shopee.com.my/5pyvbw8fI0'
-      },
-      // {
-      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_FREE",
-      //   originalPrice: "RM18.50",
-      //   salePrice: "RM11.65",
-      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
-      //   image: option1Wipes
-      // },
-      // {
-      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_LAVENDER",
-      //   originalPrice: "RM18.50",
-      //   salePrice: "RM13.89",
-      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_LAVENDER_DESC",
-      //   image: option2Wipes
-      // },
-      // {
-      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ROSE",
-      //   originalPrice: "RM18.50",
-      //   salePrice: "RM13.89",
-      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ROSE_DESC",
-      //   image: option3Wipes
-      // },
-      // {
-      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL",
-      //   originalPrice: "RM18.50",
-      //   salePrice: "RM13.89",
-      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
-      //   image: option4Wipes
-      // },
-      // {
-      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL_FREE",
-      //   originalPrice: "RM18.50",
-      //   salePrice: "RM13.89",
-      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_FREE_DESC",
-      //   image: option5Wipes
-      // },
-    ]
-  },
-  {
-    id: '2',
-    image: Main_Sport_wipes,
-    name: 'Wetty Sports Wipes',
-    category: 'Wetty Sport Wipes',
-    description_short: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_SHORT',
-    description_long: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_LONG',
-    priceRange: "RM8.68",
-    originalPrice: "RM16.65",
-    whyChosen: "PRODUCT_SECTION.PRODUCT_3.WHY_CHOSEN",
-    targetMarket: [
-      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.1",
-      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.2",
-      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.3"
-    ],
-    benefits: [
-      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.1",
-      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.2",
-      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.3",
-      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.4",
-      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.5"
-    ],
-    hasOptions: false,
-    salePrice: 8.68,
-    shopeeLink: 'https://s.shopee.com.my/BKYrZWo5h'
-  },
-  {
-    id: '3',
-    image: Main_Shinny_Shower_Gel,
-    name: 'Shinny Shower Gel',
-    category: 'Shower',
-    description_short: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_SHORT',
-    description_long: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_LONG',
-    priceRange: "RM7.80",
-    originalPrice: "RM18.90",
-    whyChosen: "PRODUCT_SECTION.PRODUCT_4.WHY_CHOSEN",
-    targetMarket: [
-      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.1",
-      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.2",
-      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.3"
-    ],
-    benefits: [
-      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.1",
-      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.2",
-      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.3",
-      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.4",
-      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.5"
-    ],
-    hasOptions: false,
-    salePrice: 7.80,
-    shopeeLink: 'https://s.shopee.com.my/2LP7xwyAcE'
-  },
-  {
-    id: '4',
-    image: Main_Fabric_Spray,
-    name: 'Wetty Fabric Freshener (400ml)',
-    category: 'Wetty Fabric Freshener',
-    description_short: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_SHORT',
-    description_long: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_LONG',
-    priceRange: "RM11.90",
-    originalPrice: "RM12.90",
-    whyChosen: "PRODUCT_SECTION.PRODUCT_5.WHY_CHOSEN",
-    targetMarket: [
-      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.1",
-      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.2",
-      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.3"
-    ],
-    benefits: [
-      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.1",
-      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.2",
-      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.3",
-      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.4",
-      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.5"
-    ],
-    hasOptions: false,
-    // options: [
-    //   {
-    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.TWILIGHT",
-    //     originalPrice: "RM12.90",
-    //     salePrice: "RM8.00",
-    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.TWILIGHT_DESC",
-    //     image: optionFabric1
-    //   },
-    //   {
-    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.SUNSET",
-    //     originalPrice: "RM12.90",
-    //     salePrice: "RM8.00",
-    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.SUNSET_DESC",
-    //     image: optionFabric2
-    //   },
-    //   {
-    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.MORNING_DEW",
-    //     originalPrice: "RM12.90",
-    //     salePrice: "RM8.00",
-    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.MORNING_DEW_DESC",
-    //     image: optionFabric3
-    //   }
-    // ],
-    shopeeLink: 'https://s.shopee.com.my/6AbpfoQbrj'
-  },
-  {
-    id: '5',
-    image: '',
-    name: 'Wetty Antibacterial Shower Cream',
-    category: 'Shower',
-    description_short: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_SHORT',
-    description_long: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_LONG',
-    priceRange: "RM9.90",
-    originalPrice: "RM18.30",
-    whyChosen: "PRODUCT_SECTION.PRODUCT_6.WHY_CHOSEN",
-    targetMarket: [
-      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.1",
-      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.2",
-      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.3"
-    ],
-    benefits: [
-      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.1",
-      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.2",
-      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.3",
-      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.4",
-      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.5"
-    ],
-    hasOptions: true,
-    options: [
-      {
-        name: "PRODUCT_SECTION.PRODUCT_6.OPTIONS.900ML",
-        image: Main_Antibacteria_Shower_Cream,
-        originalPrice: "RM18.30",
-        salePrice: "RM9.90",
-        shopeeLink: 'https://s.shopee.com.my/BKYrq8klH'
-      },
-      {
-        name: "PRODUCT_SECTION.PRODUCT_6.OPTIONS.2000ML",
-        image: '',
-        originalPrice: "RM20.00",
-        salePrice: "RM9.65",
-        shopeeLink: 'https://s.shopee.com.my/AUl937BNsP'
-      },
-    ],
-    salePrice: 9.65,
-    shopeeLink: 'https://s.shopee.com.my/2LP7xwyAcE'
-  },
 ];

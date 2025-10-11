@@ -7,9 +7,9 @@ import {
     ImageWithFallback
 } from '../misc';
 import {
-    Plus,
-    ChevronLeft,
-    ChevronRight
+  Eye,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
@@ -45,8 +45,8 @@ export function ProductSlider({ onNavigate }: ProductSliderProps) {
         <div className="relative h-[500px]">
           {/* Background image */}
           <ImageWithFallback
-            src={currentProduct.image}
-            alt={currentProduct.name}
+            src={currentProduct?.image}
+            alt={currentProduct?.name}
             className="absolute inset-0 w-full h-full object-fill"
           />
         </div>
@@ -83,7 +83,7 @@ export function ProductSlider({ onNavigate }: ProductSliderProps) {
               className="gap-2"
               onClick={() => onNavigate('products', currentProduct.id)}
             >
-              <Plus className="w-4 h-4" />
+              <Eye className="w-4 h-4" />
               {t('BUTTONS.VIEW_PRODUCTS')}
             </Button>
           </div>

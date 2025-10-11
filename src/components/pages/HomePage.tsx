@@ -70,7 +70,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           title="Replay welcome animation (Ctrl+Shift+W)"
         >
           <Info className="w-4 h-4 mr-2" />
-          {t('WELCOME_TOUR')}
+          {t('WELCOME_TOUR_TITLE')}
         </Button>
       )}
       

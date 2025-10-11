@@ -1,174 +1,114 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '../ui/button'
 import { Volume2, VolumeX, Music } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 
 interface BackgroundMusicProps {
+  youtubeId: string // YouTube video ID
   autoPlay?: boolean
+  initialVolume?: number // 0 to 1
 }
 
-export function BackgroundMusic({ autoPlay = true }: BackgroundMusicProps) {
-  const audioRef = useRef<HTMLAudioElement>(null)
+export function BackgroundMusic({
+  youtubeId,
+  autoPlay = true,
+  initialVolume = 0.3,
+}: BackgroundMusicProps) {
+  const [player, setPlayer] = useState<any>(null)
   const [isPlaying, setIsPlaying] = useState(true)
   const [isMuted, setIsMuted] = useState(false)
   const [showControls, setShowControls] = useState(false)
-  const [volume, setVolume] = useState(0.3) // Start with lower volume
-  const [hasUserInteracted, setHasUserInteracted] = useState(false)
+  const [volume, setVolume] = useState(initialVolume)
 
-  // Create a simple ambient tone using Web Audio API as a fallback
-  const [audioContext, setAudioContext] = useState<AudioContext | null>(null)
-  const [oscillator, setOscillator] = useState<OscillatorNode | null>(null)
-  const [gainNode, setGainNode] = useState<GainNode | null>(null)
-
-  // Music URL - You can replace this with your actual music file URL
-  // For demo purposes, we'll create a simple ambient tone
-  const musicUrl = "" // Leave empty to use generated audio
-
-  // Initialize Web Audio API for generated ambient sound
+  // Load YouTube IFrame API
   useEffect(() => {
-    if (!musicUrl) {
-      try {
-        const ctx = new (window.AudioContext || (window as any).webkitAudioContext)()
-        setAudioContext(ctx)
-        
-        const gain = ctx.createGain()
-        gain.gain.setValueAtTime(volume * 0.5, ctx.currentTime) // Softer volume for ambient sound
-        gain.connect(ctx.destination)
-        setGainNode(gain)
-      } catch (error) {
-        console.warn('Web Audio API not supported:', error)
-      }
+    if ((window as any).YT) return
+
+    const tag = document.createElement('script')
+    tag.src = 'https://www.youtube.com/iframe_api'
+    document.body.appendChild(tag)
+  }, [])
+
+  // Initialize player after API is ready
+  useEffect(() => {
+    (window as any).onYouTubeIframeAPIReady = () => {
+      const ytPlayer = new (window as any).YT.Player('yt-player', {
+        height: '0',
+        width: '0',
+        videoId: youtubeId,
+        playerVars: {
+          autoplay: autoPlay ? 1 : 0,
+          controls: 0,
+          loop: 1,
+          playlist: youtubeId,
+          modestbranding: 1,
+          origin: window.location.origin, // avoids postMessage error
+          mute: autoPlay ? 1 : 0,        // mute initially if autoplay
+        },
+        events: {
+          onReady: (event: any) => {
+            setPlayer(event.target)
+            event.target.setVolume(initialVolume * 100)
+            if (autoPlay) {
+              event.target.playVideo()
+              setIsPlaying(true)
+            }
+          },
+          onStateChange: (event: any) => {
+            setIsPlaying(event.data === 1)
+          },
+        },
+      })
     }
+  }, [youtubeId, autoPlay, initialVolume])
 
-    const audio = audioRef.current
-    if (!audio) return
+  const togglePlay = () => {
+    if (!player) return
+    const state = player.getPlayerState()
+    if (state === 1) player.pauseVideo()
+    else player.playVideo()
+    setIsPlaying(!isPlaying)
+  }
 
-    // Set initial audio properties
-    audio.loop = true
-    audio.volume = volume
-    audio.muted = isMuted
-
-    // Handle audio events
-    const handlePlay = () => setIsPlaying(true)
-    const handlePause = () => setIsPlaying(false)
-    const handleError = (e: Event) => {
-      console.warn('Audio playback error:', e)
-      setIsPlaying(false)
+  const toggleMute = () => {
+    if (!player) return
+    if (isMuted) {
+      player.unMute()
+    } else {
+      player.mute()
     }
+    setIsMuted(!isMuted)
+  }
 
-    audio.addEventListener('play', handlePlay)
-    audio.addEventListener('pause', handlePause)
-    audio.addEventListener('error', handleError)
+  const handleVolumeChange = (newVolume: number) => {
+    setVolume(newVolume)
+    if (player && !isMuted) player.setVolume(newVolume * 100)
+  }
 
-    return () => {
-      audio.removeEventListener('play', handlePlay)
-      audio.removeEventListener('pause', handlePause)
-      audio.removeEventListener('error', handleError)
-    }
-  }, [volume, isMuted, musicUrl])
-
-  const playAudio = useCallback(async () => {
-    try {
-      if (musicUrl && audioRef.current) {
-        await audioRef.current.play()
-      } else if (audioContext && gainNode && !oscillator) {
-        const osc = audioContext.createOscillator()
-        const osc2 = audioContext.createOscillator()
-
-        osc.type = 'sine'
-        osc.frequency.setValueAtTime(220, audioContext.currentTime)
-        osc2.type = 'sine'
-        osc2.frequency.setValueAtTime(330, audioContext.currentTime)
-
-        const gain2 = audioContext.createGain()
-        gain2.gain.setValueAtTime(0.3, audioContext.currentTime)
-
-        osc.connect(gainNode)
-        osc2.connect(gain2)
-        gain2.connect(gainNode)
-
-        osc.start()
-        osc2.start()
-
-        setOscillator(osc)
+  // Optional: handle user interaction for autoplay in browsers
+  useEffect(() => {
+    const handleUserInteraction = () => {
+      if (player && autoPlay && !isPlaying) {
+        player.playVideo()
         setIsPlaying(true)
       }
-    } catch (error) {
-      console.warn('Could not play audio:', error)
-    }
-  }, [musicUrl, audioContext, gainNode, oscillator])
-
-  // Handle user interaction to enable autoplay
-  useEffect(() => {
-    void hasUserInteracted
-    const handleUserInteraction = () => {
-      setHasUserInteracted(true)
-      if (autoPlay && !isPlaying && audioRef.current) {
-        playAudio()
-      }
     }
 
-    document.addEventListener('click', handleUserInteraction, { once: true })
-    document.addEventListener('keydown', handleUserInteraction, { once: true })
-    document.addEventListener('touchstart', handleUserInteraction, { once: true })
+    document.addEventListener('click', handleUserInteraction, { once: true, passive: true })
+    document.addEventListener('keydown', handleUserInteraction, { once: true, passive: true })
+    document.addEventListener('touchstart', handleUserInteraction, { once: true, passive: true })
 
     return () => {
       document.removeEventListener('click', handleUserInteraction)
       document.removeEventListener('keydown', handleUserInteraction)
       document.removeEventListener('touchstart', handleUserInteraction)
     }
-  }, [autoPlay, isPlaying, playAudio, hasUserInteracted])
-
-
-  const pauseAudio = () => {
-    if (musicUrl && audioRef.current) {
-      audioRef.current.pause()
-    } else if (oscillator) {
-      oscillator.stop()
-      setOscillator(null)
-      setIsPlaying(false)
-    }
-  }
-
-  const togglePlay = () => {
-    if (isPlaying) {
-      pauseAudio()
-    } else {
-      playAudio()
-    }
-  }
-
-  const toggleMute = () => {
-    if (audioRef.current) {
-      const newMutedState = !isMuted
-      audioRef.current.muted = newMutedState
-      setIsMuted(newMutedState)
-    }
-  }
-
-  const handleVolumeChange = (newVolume: number) => {
-    setVolume(newVolume)
-    if (audioRef.current) {
-      audioRef.current.volume = newVolume
-    }
-    if (gainNode) {
-      gainNode.gain.setValueAtTime(newVolume * 0.5, audioContext?.currentTime || 0)
-    }
-  }
+  }, [player, autoPlay, isPlaying])
 
   return (
-    <div className="fixed top-4 right-4 z-40">
-      {/* Audio Element - Only used if musicUrl is provided */}
-      {musicUrl && (
-        <audio
-          ref={audioRef}
-          preload="auto"
-        >
-          <source src={musicUrl} type="audio/mpeg" />
-          <source src={musicUrl} type="audio/wav" />
-          Your browser does not support the audio element.
-        </audio>
-      )}
+    <div className="fixed bottom-[60px] right-4 z-40">
+      {/* Hidden YouTube iframe */}
+      <div id="yt-player"></div>
 
       {/* Music Control Button */}
       <div className="relative">
@@ -199,7 +139,7 @@ export function BackgroundMusic({ autoPlay = true }: BackgroundMusicProps) {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-14 right-0 bg-white rounded-lg shadow-xl border p-4 min-w-[200px]"
+              className="absolute top-[-195px] right-0 bg-white rounded-lg shadow-xl border p-4 min-w-[200px]"
             >
               <div className="space-y-3">
                 {/* Play/Pause and Mute */}
@@ -233,7 +173,7 @@ export function BackgroundMusic({ autoPlay = true }: BackgroundMusicProps) {
                     type="range"
                     min="0"
                     max="1"
-                    step="0.1"
+                    step="0.05"
                     value={volume}
                     onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"

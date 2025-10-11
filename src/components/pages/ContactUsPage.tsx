@@ -25,7 +25,8 @@ import {
 } from 'lucide-react'
 import {
   businessHours,
-  contactMethods
+  contactMethods,
+  whatsappNumber
 } from '../../assets/data';
 import { toast } from 'sonner';
 import { useState } from 'react';
@@ -60,15 +61,24 @@ export function ContactUsPage({ onNavigate }: ContactUsPageProps) {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    // Simulate form submission
+    const { name, email, message } = formData;
+
+    // Construct the message
+    const text = `Hi! I have an inquiries.\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
+    const encodedText = encodeURIComponent(text)
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`
+
+    // Open WhatsApp link in new tab
+    window.open(whatsappUrl, '_blank')
+
+    // Reset form and state
     setTimeout(() => {
-      const msg = t('SUBMIT_FORM_MESSAGE');
-      toast.success(msg)
       setFormData({ name: '', email: '', message: '' })
       setIsSubmitting(false)
+      toast.success(t('SUBMIT_FORM_MESSAGE'));
     }, 1500)
   }
 
@@ -121,16 +131,16 @@ export function ContactUsPage({ onNavigate }: ContactUsPageProps) {
                   <CardTitle className="text-xl">{t(method.title)}</CardTitle>
                   <p className="text-muted-foreground text-sm">{t(method.description)}</p>
                 </CardHeader>
-                
+
                 <CardContent className="text-center space-y-4">
-                  <div className="font-medium text-foreground">
+                  {/* <div className="font-medium text-foreground">
                     {method.contact}
-                  </div>
+                  </div> */}
                   
                   <div className="text-sm text-muted-foreground">
                     {t(method.responseTime)}
                   </div>
-                  
+
                   <Button className="w-full gap-2" onClick={method.action}>
                     <ExternalLink className="w-4 h-4" />
                     {t('CONTACT_VIA')} {t(method.title)}
@@ -151,9 +161,7 @@ export function ContactUsPage({ onNavigate }: ContactUsPageProps) {
               <Badge variant="secondary">{t('CONTACT_FORM')}</Badge>
             </div>
             <h2 className="text-3xl font-medium text-foreground mb-4">{t("SEND_US_A_MESSAGE")}</h2>
-            <p className="text-muted-foreground">
-              {t('FILL_OUT_FORM_BELOW')}
-            </p>
+            <p className="text-muted-foreground">{t('FILL_OUT_FORM_BELOW')}</p>
           </div>
 
           <Card className="max-w-2xl mx-auto">

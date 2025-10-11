@@ -9,17 +9,17 @@ import {
   SheetContent,
   SheetTrigger
 } from '../ui/sheet';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger
-} from '../ui/popover';
+// import {
+//   Popover,
+//   PopoverContent,
+//   PopoverTrigger
+// } from '../ui/popover';
 import {
   Menu,
   Check,
   Globe,
   ChevronDown,
-  ShoppingCart
+  // ShoppingCart
 } from 'lucide-react';
 import {
   languages,
@@ -31,32 +31,35 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger
 } from '../ui/dropdown-menu';
-import { Cart } from './Cart';
-import { Badge } from '../ui/badge';
+// import { Cart } from './Cart';
+// import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
-import { CartItem } from '../interface';
+// import { CartItem } from '../interface';
 import vlogo from '../../assets/images/others/vlogo.png';
-import { useState } from 'react'
+// import { useState } from 'react'
 
 interface HeaderProps {
   currentPage: string
   onNavigate: (page: string) => void
   currentLanguage: string
   onLanguageChange: (language: string) => void
-  cartItems: CartItem[]
-  totalCartItems: number
-  updateCartItem: (id: string, quantity: number) => void
-  onProceedToCheckout: () => void
+  // cartItems: CartItem[]
+  // totalCartItems: number
+  // updateCartItem: (id: string, quantity: number) => void
+  // onProceedToCheckout: () => void
 }
-export function Header({ currentPage, onNavigate, currentLanguage, onLanguageChange, cartItems, totalCartItems, updateCartItem, onProceedToCheckout }: HeaderProps) {
+export function Header({ currentPage, onNavigate, currentLanguage, onLanguageChange }: HeaderProps) {
   const {
     t,
     mobileMenuOpen,
     setMobileMenuOpen,
     getCurrentLanguage
   } = useCustomHook();
-  const [cartPopoverOpen, 
-    setCartPopoverOpen] = useState(false)
+
+  // const [
+  //   cartPopoverOpen, 
+  //   setCartPopoverOpen
+  // ] = useState(false)
 
   const handleNavigateAndClose = (page: string) => {
     onNavigate(page)
@@ -78,8 +81,12 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
             <SheetContent side="left" className="w-80 sm:w-96">
               <SheetHeader className="pb-6">
                 <SheetTitle className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                    <span className="text-primary-foreground font-medium text-sm">V</span>
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                    <ImageWithFallback 
+                      src={vlogo}
+                      alt="Veyra Global Ventures Logo"
+                      className="w-full h-full object-cover rounded-sm"
+                    />
                   </div>
                   {t('COMPANY_NAME')}
                 </SheetTitle>
@@ -101,7 +108,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
 
               {/* Mobile Language Selector */}
               <div className="mt-8 pt-6 border-t border-border">
-                <div className="text-sm font-medium text-muted-foreground mb-3 m-[10px]">{t('CHOICE_OF_LANGUAGE')}</div>
+                <div className="text-sm font-bold text-muted-foreground mb-3 m-[10px]">{t('CHOICE_OF_LANGUAGE')}</div>
                 <div className="space-y-2">
                   {languages.map((language) => (
                     <Button
@@ -124,7 +131,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
           </Sheet>
 
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 hover:cursor-pointer" onClick={() => onNavigate('home')}>
             <div className="w-10 h-10 rounded-lg flex items-center justify-center p-1 overflow-hidden">
               <ImageWithFallback 
                 src={vlogo}
@@ -153,7 +160,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
           </nav>
 
           {/* Cart Button */}
-          <div className="border-l border-border pl-4">
+          {/* <div className="border-l border-border pl-4">
             <Popover open={cartPopoverOpen} onOpenChange={setCartPopoverOpen}>
               <PopoverTrigger asChild>
                 <Button variant="ghost" className="relative px-3 text-sm">
@@ -177,7 +184,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
                 />
               </PopoverContent>
             </Popover>
-          </div>
+          </div> */}
 
           {/* Desktop Language Selector */}
           <div className="border-l border-border pl-4">
@@ -214,11 +221,9 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
         </div>
 
         {/* Mobile Cart and Language Selector */}
-        <div className="lg:hidden flex items-center gap-2">
+        {/* <div className="lg:hidden flex items-center gap-2"> */}
           {/* Mobile Cart */}
-          <Popover
-          //open={cartPopoverOpen} onOpenChange={setCartPopoverOpen}
-          >
+          {/* <Popover>
             <PopoverTrigger asChild>
               <Button variant="ghost" size="sm" className="relative p-2">
                 <ShoppingCart className="w-4 h-4" />
@@ -241,7 +246,7 @@ export function Header({ currentPage, onNavigate, currentLanguage, onLanguageCha
               />
             </PopoverContent>
           </Popover>
-        </div>
+        </div> */}
       </div>
     </header>
   )

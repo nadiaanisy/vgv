@@ -4,7 +4,7 @@ import {
 } from '../misc';
 import {
   Star,
-  ShoppingBag,
+  List,
   MessageCircle,
 } from 'lucide-react';
 import { Badge } from '../ui/badge';
@@ -63,7 +63,7 @@ export function Main({ onNavigate }: MainProps) {
                 {t('BUTTONS.ORDER_VIA_WHATSAPP')}
               </Button>
               <Button variant="outline" size="lg" className="px-8 py-3 gap-2" onClick={() => onNavigate('products')}>
-                <ShoppingBag className="w-5 h-5" />
+                <List className="w-5 h-5" />
                 {t('BUTTONS.VIEW_PRODUCTS')}
               </Button>
             </div>
