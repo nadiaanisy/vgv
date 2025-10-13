@@ -24,7 +24,7 @@ import {
 import {
   languages,
   navigationItems
-} from '../../assets/data';
+} from '../../assets/constants';
 import {
   DropdownMenu,
   DropdownMenuItem,
@@ -48,7 +48,12 @@ interface HeaderProps {
   // updateCartItem: (id: string, quantity: number) => void
   // onProceedToCheckout: () => void
 }
-export function Header({ currentPage, onNavigate, currentLanguage, onLanguageChange }: HeaderProps) {
+export function Header({
+  currentPage,
+  onNavigate,
+  currentLanguage,
+  onLanguageChange
+}: HeaderProps) {
   const {
     t,
     mobileMenuOpen,

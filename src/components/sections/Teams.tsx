@@ -10,7 +10,7 @@ import {
 import { Badge } from '../ui/badge';
 import { Users } from 'lucide-react';
 import { useCustomHook } from '../misc';
-import { teamMembers } from '../../assets/data';
+import { teamMembers } from '../../assets/constants';
 
 export function Teams() {
   const { t } = useCustomHook();
