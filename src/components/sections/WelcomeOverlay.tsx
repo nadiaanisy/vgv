@@ -9,7 +9,7 @@ import {
 import { X } from 'lucide-react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../misc';
-import { welcomeOverlaySlides } from '../../assets/data';
+import { welcomeOverlaySlides } from '../../assets/constants';
 
 interface WelcomeOverlayProps {
   isVisible: boolean
