@@ -26,35 +26,15 @@ export function Main({ onNavigate }: MainProps) {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 mb-4">
                 <Star className="w-5 h-5 text-primary" />
-                <Badge variant="secondary">(NEED UPDATE) Smart Wetsuit Technology</Badge>
+                <Badge variant="secondary">{t('STAR_TITLE')}</Badge>
               </div>
               <h2 className="text-4xl lg:text-5xl font-medium text-foreground leading-tight">
-                (NEED UPDATE) Smart wetsuits that adapt to your water adventures for optimal comfort and performance
+                {t('START_HEADLINE_TITLE')}
               </h2>
               <p className="text-lg text-muted-foreground max-w-lg">
-                (NEED UPDATE) We sell innovative Wetty smart wetsuits that automatically adjust to water temperature and conditions, 
-                giving water sports enthusiasts the ultimate experience in comfort, safety, and performance.
+                {t('START_HEADLINE_SUBTITLE')}
               </p>
             </div>
-
-            {/* Trust Signals */}
-            {/* <div className="bg-white/80 rounded-lg p-6 space-y-4">
-              <h3 className="font-medium text-foreground">{t('HERO.WHY_TITLE')}</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-                <div className="text-center">
-                  <div className="font-medium text-primary">(NEED UPDATE) University Partnership</div>
-                  <div className="text-muted-foreground">(NEED UPDATE) BBA1094 Enterprise</div>
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-primary">(NEED UPDATE) Sales Period</div>
-                  <div className="text-muted-foreground">(NEED UPDATE) Nov - Dec 2024</div>
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-primary">(NEED UPDATE) Satisfaction Guarantee</div>
-                  <div className="text-muted-foreground">(NEED UPDATE) 100% Quality Assured</div>
-                </div>
-              </div>
-            </div> */}
 
             {/* Strong Call-to-Action */}
             <div className="flex flex-col sm:flex-row gap-4">

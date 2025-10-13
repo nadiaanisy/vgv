@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
-import { products } from '../../assets/data';
+import { products } from '../../assets/constants';
 
 interface ProductSliderProps {
   onNavigate: (page: string, productId?: string) => void

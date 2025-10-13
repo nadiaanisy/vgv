@@ -27,7 +27,7 @@ import {
   businessHours,
   contactMethods,
   whatsappNumber
-} from '../../assets/data';
+} from '../../assets/constants';
 import { toast } from 'sonner';
 import { useState } from 'react';
 import { Input } from '../ui/input';

@@ -167,7 +167,7 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
               {t('OUR_BUSINESS_MODEL_TITLE')}
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              (NEED UPDATE) {t('OUR_BUSINESS_MODEL_SUBTITLE')}
+              {t('OUR_BUSINESS_MODEL_SUBTITLE')}
             </p>
           </div>
         </div>
@@ -206,42 +206,43 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-medium text-foreground mb-4">{t('FINANCIAL_PROJECTION')}</h2>
-            <p className="text-muted-foreground">(NEED UPDATE) 3-year revenue and growth outlook</p>
+            <p className="text-muted-foreground">{t('FINANCIAL_PROJECTION_DESCRIPTION_1')}</p>
+            <p className="text-muted-foreground">{t('FINANCIAL_PROJECTION_DESCRIPTION_2')}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center p-8">
               <CardContent className="p-0">
-                <div className="text-3xl font-medium text-primary mb-2">(NEED UPDATE) Year 1</div>
-                <div className="text-2xl font-medium mb-4">(NEED UPDATE) $2.5M</div>
+                <div className="text-3xl font-medium text-primary mb-2">{t('YEAR_1')}</div>
+                <div className="text-2xl font-medium mb-4">{t('YEAR_1_TITLE')}</div>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <div>(NEED UPDATE) 1,500 units sold</div>
-                  <div>(NEED UPDATE) Initial market entry</div>
-                  <div>(NEED UPDATE) Beta customer feedback</div>
+                  <div>{t('YEAR_1_DESCRIPTION_1')}</div>
+                  <div>{t('YEAR_1_DESCRIPTION_2')}</div>
+                  <div>{t('YEAR_1_DESCRIPTION_3')}</div>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="text-center p-8 border-primary/50">
               <CardContent className="p-0">
-                <div className="text-3xl font-medium text-primary mb-2">(NEED UPDATE) Year 2</div>
-                <div className="text-2xl font-medium mb-4">(NEED UPDATE) $8.5M</div>
+                <div className="text-3xl font-medium text-primary mb-2">{t('YEAR_2')}</div>
+                <div className="text-2xl font-medium mb-4">{t('YEAR_2_TITLE')}</div>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <div>(NEED UPDATE) 5,000 units sold</div>
-                  <div>(NEED UPDATE) Retail partnerships</div>
-                  <div>(NEED UPDATE) Product improvements</div>
+                  <div>{t('YEAR_2_DESCRIPTION_1')}</div>
+                  <div>{t('YEAR_2_DESCRIPTION_2')}</div>
+                  <div>{t('YEAR_2_DESCRIPTION_3')}</div>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="text-center p-8">
               <CardContent className="p-0">
-                <div className="text-3xl font-medium text-primary mb-2">(NEED UPDATE) Year 3</div>
-                <div className="text-2xl font-medium mb-4">(NEED UPDATE) $25M</div>
+                <div className="text-3xl font-medium text-primary mb-2">{t('YEAR_3')}</div>
+                <div className="text-2xl font-medium mb-4">{t('YEAR_3_TITLE')}</div>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <div>(NEED UPDATE) 15,000 units sold</div>
-                  <div>(NEED UPDATE) International expansion</div>
-                  <div>(NEED UPDATE) Technology licensing</div>
+                  <div>{t('YEAR_3_DESCRIPTION_1')}</div>
+                  <div>{t('YEAR_3_DESCRIPTION_2')}</div>
+                  <div>{t('YEAR_3_DESCRIPTION_3')}</div>
                 </div>
               </CardContent>
             </Card>
@@ -298,7 +299,7 @@ export function AboutUsPage({ onNavigate }: AboutUsPageProps) {
               <h3 className="text-xl font-medium text-foreground">{t('BUSINESS_MODEL_SUMMARY_TITLE')}</h3>
               
               <p className="text-muted-foreground leading-relaxed">
-                (NEED UPDATE) {t('BUSINESS_MODEL_SUMMARY_DESCRIPTION')}
+                {t('BUSINESS_MODEL_SUMMARY_DESCRIPTION')}
               </p>
             </CardContent>
           </Card>
