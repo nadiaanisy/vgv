@@ -35,7 +35,7 @@ import { Button } from '../ui/button';
 import { useCustomHook } from '../misc';
 import { useForm } from 'react-hook-form';
 import { Textarea } from '../ui/textarea';
-import { malaysianStates } from '../../assets/data';
+import { malaysianStates } from '../../assets/constants';
 
 
 // import { useState } from 'react'
