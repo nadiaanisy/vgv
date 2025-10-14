@@ -40,7 +40,8 @@ import {
 } from 'lucide-react';
 import {
   products,
-  experiments
+  experiments,
+  strategicApproach
 } from '../../assets/constants';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
@@ -305,74 +306,23 @@ export function ProductsPage({ onNavigate, selectedProductId }: ProductsPageProp
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Target className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <span>{t('PRICING_STRATEGY')}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0 space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('PREMIUM_POSITIONING')}</strong> {t('PREMIUM_POSITIONING_DESC')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('UNIVERSITY_DISCOUNT')}</strong> {t('UNIVERSITY_DISCOUNT_DESC')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('BUNDLE_PRICING')}</strong> {t('BUNDLE_PRICING_DESC')}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                    <Megaphone className="w-5 h-5 text-green-600" />
-                  </div>
-                  <span>{t('PROMOTION_STRATEGY')}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0 space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('SOCIAL_MEDIA_CAMPAIGNS')}</strong> {t('SOCIAL_MEDIA_CAMPAIGNS_DESC')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('REFERRAL_PROGRAM')}</strong> {t('REFERRAL_PROGRAM_DESC')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('REFERRAL_PROGRAM')}</strong> {t('REFERRAL_PROGRAM_DESC')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('CAMPUS_PRESENCE')}</strong> {t('CAMPUS_PRESENCE_DESC')}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <Users className="w-5 h-5 text-purple-600" />
-                  </div>
-                  <span>{t('DISTRIBUTION_STRATEGY')}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0 space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('DIRECT_SALES')}</strong> {t('DIRECT_SALES_DESC')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('CAMPUS_NETWORK')}</strong> {t('CAMPUS_NETWORK_DESC')}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  <strong>{t('EVENT_PRESENCE')}</strong> {t('EVENT_PRESENCE_DESC')}
-                </p>
-              </CardContent>
-            </Card>
+            {strategicApproach.map((approach, index) => (
+              <Card className="p-6">
+                <CardHeader className="p-0 mb-4">
+                  <CardTitle className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                      {approach.icon}
+                    </div>
+                    <span>{t(approach.title)}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 space-y-3">
+                  <p className="text-sm text-muted-foreground">
+                    {t(approach.description)}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -412,7 +362,13 @@ export function ProductsPage({ onNavigate, selectedProductId }: ProductsPageProp
                   
                   <div>
                     <h4 className="font-medium text-foreground text-sm mb-2">{t('RESULTS')}:</h4>
-                    <p className="text-sm text-muted-foreground">{t(experiment.results)}</p>
+                    <p className="text-sm text-muted-foreground">{t(experiment.results_one)}</p>
+                    <p className="text-sm text-muted-foreground">{t(experiment.results_two)}</p>
+                    {experiment.results_three && (
+                      <p className="text-sm text-muted-foreground">
+                        {t(experiment.results_three)}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -464,9 +420,9 @@ export function ProductsPage({ onNavigate, selectedProductId }: ProductsPageProp
               </div>
 
               <div className="text-xs text-muted-foreground space-y-1">
-                <p>✓ Free shipping on orders over $500</p>
-                <p>✓ 60-day satisfaction guarantee</p>
-                <p>✓ University project special pricing</p>
+                <p>✓ {t('FREE_SHIPPING_OVER_RM50')}</p>
+                <p>✓ {t('100%_SATISFACTION_GUARANTEE')}</p>
+                <p>✓ {t('SPECIAL_PRICE_AGENT_BULK')}</p>
               </div>
             </CardContent>
           </Card>

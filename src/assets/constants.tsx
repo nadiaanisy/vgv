@@ -22,7 +22,8 @@ import {
   Handshake,
   Blocks,
   CalendarSync,
-  Spotlight
+  Spotlight,
+  Target
 } from 'lucide-react';
 import { 
   handleClicks,
@@ -249,6 +250,56 @@ export const teamMembers = [
     initials: "AF",
     assignmentInsight: "TEAM.TECH_WEBSITE_DEVELOPER_INSIGHT",
     keyStrengths: ["TECHNICAL_PROFICIENCY", "PROBLEM_SOLVING", "DETAIL_ORIENTED"]
+  }
+];
+
+export const experiments = [
+  {
+    icon: <Instagram className="w-6 h-6" />,
+    title: "WHAT_WE_HAVE_TRIED_SECTION.ONE.TITLE",
+    period: "WHAT_WE_HAVE_TRIED_SECTION.ONE.PERIOD",
+    description: "WHAT_WE_HAVE_TRIED_SECTION.ONE.DESCRIPTION",
+    results_one: "WHAT_WE_HAVE_TRIED_SECTION.ONE.RESULT_ONE",
+    results_two: "WHAT_WE_HAVE_TRIED_SECTION.ONE.RESULT_TWO",
+    results_three: "WHAT_WE_HAVE_TRIED_SECTION.ONE.RESULT_THREE",
+    learnings: "WHAT_WE_HAVE_TRIED_SECTION.ONE.KEY_LEARNING"
+  },
+  {
+    icon: <Users className="w-6 h-6" />,
+    title: "WHAT_WE_HAVE_TRIED_SECTION.TWO.TITLE",
+    period: "WHAT_WE_HAVE_TRIED_SECTION.TWO.PERIOD",
+    description: "WHAT_WE_HAVE_TRIED_SECTION.TWO.DESCRIPTION",
+    results_one: "WHAT_WE_HAVE_TRIED_SECTION.TWO.RESULT_ONE",
+    results_two: "WHAT_WE_HAVE_TRIED_SECTION.TWO.RESULT_TWO",
+    results_three: "WHAT_WE_HAVE_TRIED_SECTION.TWO.RESULT_THREE",
+    learnings: "WHAT_WE_HAVE_TRIED_SECTION.TWO.KEY_LEARNING"
+  },
+  {
+    icon: <Megaphone className="w-6 h-6" />,
+    title: "WHAT_WE_HAVE_TRIED_SECTION.THREE.TITLE",
+    period: "WHAT_WE_HAVE_TRIED_SECTION.THREE.PERIOD",
+    description: "WHAT_WE_HAVE_TRIED_SECTION.THREE.DESCRIPTION",
+    results_one: "WHAT_WE_HAVE_TRIED_SECTION.THREE.RESULT_ONE",
+    results_two: "WHAT_WE_HAVE_TRIED_SECTION.THREE.RESULT_TWO",
+    learnings: "WHAT_WE_HAVE_TRIED_SECTION.THREE.KEY_LEARNING"
+  }
+];
+
+export const strategicApproach = [
+  {
+    "icon": <Megaphone className="w-5 h-5 text-green-600" />,
+    "title": "STRATEGIC_APPROACH_SECTION.TITLE_ONE",
+    "description": "STRATEGIC_APPROACH_SECTION.DESCRIPTION_ONE"
+  },
+  {
+    "icon": <Users className="w-5 h-5 text-purple-600" />,
+    "title": "STRATEGIC_APPROACH_SECTION.TITLE_TWO",
+    "description": "STRATEGIC_APPROACH_SECTION.DESCRIPTION_TWO"
+  },
+  {
+    "icon": <Target className="w-5 h-5 text-blue-600" />,
+    "title": "STRATEGIC_APPROACH_SECTION.TITLE_THREE",
+    "description": "STRATEGIC_APPROACH_SECTION.DESCRIPTION_THREE"
   }
 ];
 
@@ -642,32 +693,5 @@ export const metrics = [
     value: "19.8%",
     subtext: "ABOVE_INDUSTRY_AVERAGE",
     color: "text-orange-600"
-  }
-];
-
-export const experiments = [
-  {
-    icon: <Instagram className="w-6 h-6" />,
-    title: "Social Media Campaign",
-    period: "October - November 2024",
-    description: "Instagram and TikTok content featuring local surfers testing our products",
-    results: "15,000 views, 320 engagement interactions, 45 direct inquiries",
-    learnings: "Video content performs 3x better than static images. Authentic user-generated content drives higher conversion than polished ads."
-  },
-  {
-    icon: <Users className="w-6 h-6" />,
-    title: "Campus Booth Sales",
-    period: "University Sports Fair - November 2024",
-    description: "Physical booth at university sports event with product demonstrations",
-    results: "150 people approached, 12 units pre-ordered, 65 email signups",
-    learnings: "Hands-on experience is crucial for high-ticket items. Price objections reduced by 40% after product demonstration."
-  },
-  {
-    icon: <Megaphone className="w-6 h-6" />,
-    title: "Peer Selling Network",
-    period: "Ongoing since October 2024",
-    description: "Team members leveraging personal networks and friend referrals",
-    results: "25 direct sales through team connections, $18,750 in revenue",
-    learnings: "Personal recommendations are our highest-converting channel (35% conversion rate). Trust is the biggest factor in purchase decisions."
   }
 ];

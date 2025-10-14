@@ -99,7 +99,9 @@
   "PRODUCT_PERFORMANCE_SUBTITLE": "Best selling products this month",
   "RECENT_ACTIVITY_TITLE": "Recent Activity",
   "RECENT_ACTIVITY_SUBTITLE": "Latest updates and notifications",
-
+  "FREE_SHIPPING_OVER_RM50": "Free shipping over RM50",
+  "100%_SATISFACTION_GUARANTEE": "100% satisfaction guarantee – love it or get your money back",
+  "SPECIAL_PRICE_AGENT_BULK": "Special price for agents and bulk buyers",
   "CUSTOMER_SATISFACTION": "Customer Satisfaction",
   "CHOICE_OF_LANGUAGE": "Choice of Language",
   "ITEMS": "items",
@@ -167,7 +169,7 @@
   "KEY_FEATURES": "Key Features:",
   "SELLING_STRATEGY": "Selling Strategy",
   "OUR_STRATEGIC_APPROACH": "Our Strategic Approach",
-  "OUR_STRATEGIC_APPROACH_DESC": "Comprehensive pricing, promotion, and distribution strategies developed through market research and testing.",
+  "OUR_STRATEGIC_APPROACH_DESC": "Our strategic approach focuses on building trust, accessibility, and lasting customer relationships through quality hygiene solutions that fit every lifestyle.",
   "PRICING_STRATEGY": "Pricing Strategy",
   "PREMIUM_POSITIONING": "Premium Positioning",
   "UNIVERSITY_DISCOUNT": "University Discount",
@@ -366,6 +368,42 @@
     "FINANCE_DATA_ANALYST_INSIGHT": "Analytical thinking and numerical competency",
     "TECH_WEBSITE_DEVELOPER": "Tech & Website Developer",
     "TECH_WEBSITE_DEVELOPER_INSIGHT": "Problem-solving mindset and strong technical proficiency in web development"
+  },
+  "WHAT_WE_HAVE_TRIED_SECTION": {
+    "ONE": {
+      "TITLE": "Social Media Campaign",
+      "PERIOD": "January – March 2025",
+      "DESCRIPTION": "Promotional posts and product demonstrations on TikTok, Instagram, and Facebook, focusing on wet tissues and antibacterial shower gels.",
+      "RESULT_ONE": "20,000+ total views",
+      "RESULT_TWO": "500+ engagements",
+      "RESULT_THREE": "60 direct messages and customer inquiries",
+      "KEY_LEARNING": "Authentic content showing real usage and caregiving moments (especially for elderly and family care) gained stronger trust and higher sales conversions."
+    },
+    "TWO": {
+      "TITLE": "Community Booth Sales",
+      "PERIOD": "April – May 2025",
+      "DESCRIPTION": "Set up mini booths at local bazaars and health events to showcase Wetty products — including free samples and demo wipes.",
+      "RESULT_ONE": "300+ visitors approached",
+      "RESULT_TWO": "8 sample packs given",
+      "RESULT_THREE": "40 confirmed purchases",
+      "KEY_LEARNING": "Face-to-face demos increase confidence in product quality. Customers love the natural scent and non-sticky texture."
+    },
+    "THREE": {
+      "TITLE": "Peer Recommendation Network",
+      "PERIOD": "Ongoing since June 2025",
+      "DESCRIPTION": "Encouraged agents and customers to promote Wetty through personal sharing and WhatsApp groups.",
+      "RESULT_ONE": "35% sales growth through referral system",
+      "RESULT_TWO": "RM12,000+ in total revenue from repeat customers",
+      "KEY_LEARNING": "Personal recommendations and testimonials from real users (especially caregivers and parents) remain the strongest driver for trust and repurchase."
+    }
+  },
+  "STRATEGIC_APPROACH_SECTION": {
+    "TITLE_ONE": "Customer-Centered Marketing",
+    "DESCRIPTION_ONE": "We highlight real stories and genuine experiences from users — especially caregivers, parents, and working adults — to create emotional connections and brand authenticity.",
+    "TITLE_TWO": "Agent & Distributor Empowerment",
+    "DESCRIPTION_TWO": "We support our agents with promotional materials, training, and flexible pricing to help them reach more customers effectively. Collaboration and teamwork drive our growth.",
+    "TITLE_THREE": "Sustainable Product Innovation",
+    "DESCRIPTION_THREE": "Wetty products are made using natural, alcohol-free, and skin-friendly ingredients, ensuring long-term customer satisfaction while supporting environmental responsibility."
   },
 
 
