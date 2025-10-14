@@ -9,11 +9,12 @@ import {
   whatsappNumber,
   instagramHandle,
   titktokHandle
-} from '../assets/data';
+} from '../assets/constants';
 import i18n from 'i18next';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { useTranslation } from 'react-i18next';
+import { ProductReview, Testimonial } from './interface';
 
 export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {
   const [didError, setDidError] = useState(false);
@@ -119,7 +120,22 @@ export const useCustomHook = () => {
   const [showSplash, setShowSplash] = useState(true);
   const [splashCompleted, setSplashCompleted] = useState(false);
 
-
+  /* ADMIN RELATED STATES */
+  const [isAdminRoute, setIsAdminRoute] = useState(false);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState('analytics');
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+  const [deleteTestimonialId, setDeleteTestimonialId] = useState<number | null>(null);
+  const [editingTestimonial, setEditingTestimonial] = useState<Testimonial | null>(null);
+  const [isLoadingSkeleton, setIsLoadingSkeleton] = useState(true)
+  
   /*Handle pages navigation*/
   const handleNavigate = (page: string, productId?: string) => {
     setCurrentPage(page)
@@ -166,6 +182,36 @@ export const useCustomHook = () => {
     showSplash,
     setShowSplash,
     splashCompleted,
-    setSplashCompleted
+    setSplashCompleted,
+
+    /* Admin Area */
+    isAdminRoute,
+    isAdminAuthenticated,
+    setIsAdminRoute,
+    setIsAdminAuthenticated,
+    username,
+    setUsername,
+    password,
+    setPassword,
+    showPassword,
+    setShowPassword,
+    isLoading,
+    setIsLoading,
+    activeTab,
+    setActiveTab,
+    testimonials,
+    setTestimonials,
+    searchQuery,
+    setSearchQuery,
+    isAddDialogOpen,
+    setIsAddDialogOpen,
+    isEditDialogOpen,
+    setIsEditDialogOpen,
+    deleteTestimonialId,
+    setDeleteTestimonialId,
+    editingTestimonial,
+    setEditingTestimonial,
+    isLoadingSkeleton,
+    setIsLoadingSkeleton
   };
 }

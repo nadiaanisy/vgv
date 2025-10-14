@@ -17,6 +17,25 @@ export interface CheckoutFormData {
   notes?: string
 }
 
+export interface Testimonial {
+  id: number
+  name: string
+  role: string
+  company: string
+  avatar: string
+  location: string
+  date: string
+  rating: number
+  comment: string
+  product?: string
+}
+
+export interface ProductReview {
+  productName: string
+  comment: string
+  rating: string
+}
+
 export interface Product {
   id: string
   image: any
