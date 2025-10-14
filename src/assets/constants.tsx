@@ -1,3 +1,35 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import {
+  Baby,
+  Waves,
+  Heart,
+  BarChart3,
+  DollarSign,
+  Instagram,
+  Mail,
+  MapPin,
+  Megaphone,
+  MessageCircle,
+  Phone,
+  Star,
+  TrendingUp,
+  Users,
+  Music2,
+  Facebook,
+  Scroll,
+  HandHelping,
+  BadgePercent,
+  Handshake,
+  Blocks,
+  CalendarSync,
+  Spotlight
+} from 'lucide-react';
+import { 
+  handleClicks,
+  handleWhatsAppOrder
+} from '../components/misc';
+import { Product } from '../components/interface';
+
 /* IMAGES */
 /* -- AVATAR -- */
 import yatiAvatar from './images/teams/yati.jpg';
@@ -7,12 +39,99 @@ import kalimanAvatar from './images/teams/kaliman.jpg';
 import etengahAvatar from './images/teams/etengah.jpg';
 import christineAvatar from './images/teams/christine.jpg';
 
+/* -- PRODUCTS -- */
+/* -- MAIN PRODUCTS -- */
+// import Main_Mini_Wet_Wipes from './images/products/1.jpeg';
+import Main_Wet_Wipes from './images/products/2.jpeg';
+import Main_Sport_wipes from './images/products/3.jpeg';
+// import Main_Shinny_Shower_Gel from './images/products/4.jpeg' // tunggu gambar baru
+import Main_Fabric_Spray from './images/products/5.jpeg';
+// import Main_Antibacteria_Shower_Cream from './images/products/6.jpeg';
+
+/* -- SUB PRODUCTS -- */
+import Wet_Wipes_30 from './images/products/2.1.jpeg';
+import Wet_Wipes_80 from './images/products/2.2.jpeg';
+// import Antibacteria_Shower_Cream_200ml from './images/products/6.2.jpeg';
+import Antibacteria_Shower_Cream_900ml from './images/products/6.1.jpeg';
+// import option1MiniWipes from './images/products/1.1.webp';
+// import option2MiniWipes from './images/products/1.2.webp';
+// import option3MiniWipes from './images/products/1.3.webp';
+// import option4MiniWipes from './images/products/1.4.webp';
+// import option1Wipes from './images/products/2.1.webp';
+// import option2Wipes from './images/products/2.2.webp';
+// import option3Wipes from './images/products/2.3.webp';
+// import option4Wipes from './images/products/2.4.webp';
+// import option5Wipes from './images/products/2.5.webp';
+// import optionFabric1 from './images/products/5.1.png';
+// import optionFabric2 from './images/products/5.2.png';
+// import optionFabric3 from './images/products/5.3.png';
+/* -- ------ -- */
+
 export const email = "veyraglobalventuressdnbhd@gmail.com";
 export const fb = "https://www.facebook.com/share/1AsNBwPqTN/?mibextid=wwXIfr";
 export const whatsappNumber = "+60133461673";
 export const instagramHandle = "veyraglobalventures";
 export const titktokHandle = "veyraglobalventures";
 export const ERROR_IMG_SRC = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
+
+export const businessHours = [
+  { day: "MONDAY_FRIDAY", hours: "9-6" },
+  { day: "SATURDAY", hours: "10-4" },
+  { day: "SUNDAY", hours: "CLOSED" }
+];
+
+export const contactMethods = [
+  {
+    icon: <MessageCircle className="w-6 h-6" />,
+    title: "WhatsApp",
+    description: "QUICK_RESPONSE",
+    contact: whatsappNumber,
+    action: () => handleWhatsAppOrder('contactUs'),
+    color: "text-green-600",
+    bgColor: "bg-green-50",
+    responseTime: "USUALLY_IN_AN_HOUR"
+  },
+  {
+    icon: <Music2 className="w-6 h-6" />,
+    title: "TikTok",
+    description: "CONNECT_WITH_US_ON_SM",
+    contact: titktokHandle,
+    action: () => handleClicks('tiktok'),
+    color: "text-white",
+    bgColor: "bg-black",
+    responseTime: "USUALLY_IN_4_HOUR"
+  },
+  {
+    icon: <Instagram className="w-6 h-6" />,
+    title: "Instagram DM",
+    description: "CONNECT_WITH_US_ON_SM",
+    contact: instagramHandle,
+    action: () => handleClicks('instagram'),
+    color: "text-pink-600",
+    bgColor: "bg-pink-50",
+    responseTime: "USUALLY_IN_4_HOUR"
+  },
+  {
+    icon: <Mail className="w-6 h-6" />,
+    title: "EMAIL",
+    description: "FOR_DETAILED_INQUIRIES",
+    contact: email,
+    action: () => handleClicks('email'),
+    color: "text-blue-600",
+    bgColor: "bg-blue-50",
+    responseTime: "USUALLY_IN_24_HOURS"
+  },
+  {
+    icon: <Facebook className="w-6 h-6" />,
+    title: "Facebook",
+    description: "FOR_DETAILED_INQUIRIES",
+    contact: 'VEYRAGLOBALVENTURES',
+    action: () => handleClicks('fb'),
+    color: "text-blue-600",
+    bgColor: "bg-blue-100",
+    responseTime: "USUALLY_IN_24_HOURS"
+  }
+];
 
 export const languages = [
   { code: 'EN', name: 'English'},
@@ -25,6 +144,55 @@ export const navigationItems = [
   { key: 'products', label: 'MENU_LIST.PRODUCTS' },
   { key: 'testimonial', label: 'MENU_LIST.TESTIMONIAL' },
   { key: 'contact-us', label: 'MENU_LIST.CONTACT_US' }
+];
+
+export const whatDidntWork = [
+  {
+    icon: <Blocks className="w-5 h-5" />,
+    title: "WHAT_DIDNT_WORKED_SECTION.TITLE_ONE",
+    description: "WHAT_DIDNT_WORKED_SECTION.DESCRIPTION_ONE",
+    impact: "WHAT_DIDNT_WORKED_SECTION.IMPACT_ONE",
+    lesson: "WHAT_DIDNT_WORKED_SECTION.LESSON_ONE"
+  },
+  {
+    icon: <CalendarSync className="w-5 h-5" />,
+    title: "WHAT_DIDNT_WORKED_SECTION.TITLE_TWO",
+    description: "WHAT_DIDNT_WORKED_SECTION.DESCRIPTION_TWO",
+    impact: "WHAT_DIDNT_WORKED_SECTION.IMPACT_TWO",
+    lesson: "WHAT_DIDNT_WORKED_SECTION.LESSON_TWO"
+  },
+  {
+    icon: <Spotlight className="w-5 h-5" />,
+    title: "WHAT_DIDNT_WORKED_SECTION.TITLE_THREE",
+    description: "WHAT_DIDNT_WORKED_SECTION.DESCRIPTION_THREE",
+    impact: "WHAT_DIDNT_WORKED_SECTION.IMPACT_THREE",
+    lesson: "WHAT_DIDNT_WORKED_SECTION.LESSON_THREE"
+  }
+];
+
+export const successFactors = [
+  {
+    main: 'SUCCESS_FACTORS_SECTION.MAIN_POINT_1',
+    factor: 'SUCCESS_FACTORS_SECTION.POINT_1',
+  },
+  {
+    main: 'SUCCESS_FACTORS_SECTION.MAIN_POINT_2',
+    factor: 'SUCCESS_FACTORS_SECTION.POINT_2',
+  },
+  {
+    main: 'SUCCESS_FACTORS_SECTION.MAIN_POINT_3',
+    factor: 'SUCCESS_FACTORS_SECTION.POINT_3',
+  },
+  {
+    main: 'SUCCESS_FACTORS_SECTION.MAIN_POINT_4',
+    factor: 'SUCCESS_FACTORS_SECTION.POINT_4',
+  }
+];
+
+export const areasImprovement = [
+  "AREAS_OF_IMPROVEMENT_SECTION.POINT_1",
+  "AREAS_OF_IMPROVEMENT_SECTION.POINT_2",
+  "AREAS_OF_IMPROVEMENT_SECTION.POINT_3"
 ];
 
 export const malaysianStates = [
@@ -84,6 +252,356 @@ export const teamMembers = [
   }
 ];
 
+
+
+/* NEED UPDATE */
+export const whatWorked = [
+  {
+    icon: <Scroll className="w-5 h-5" />,
+    title: "WHAT_WORKED_SECTION.TITLE_ONE",
+    description: "WHAT_WORKED_SECTION.DESCRIPTION_ONE",
+    metrics: "(NEED UPDATE) 847 leads, $170K revenue attributed"
+  },
+  {
+    icon: <HandHelping className="w-5 h-5" />,
+    title: "WHAT_WORKED_SECTION.TITLE_TWO",
+    description: "WHAT_WORKED_SECTION.DESCRIPTION_TWO",
+    metrics: "(NEED UPDATE) 35% of sales from referrals"
+  },
+  {
+    icon: <BadgePercent className="w-5 h-5" />,
+    title: "WHAT_WORKED_SECTION.TITLE_THREE",
+    description: "WHAT_WORKED_SECTION.DESCRIPTION_THREE",
+    metrics: "(NEED UPDATE) 12 events, 156 conversions"
+  },
+  {
+    icon: <Users className="w-5 h-5" />,
+    title: "WHAT_WORKED_SECTION.TITLE_FOUR",
+    description: "WHAT_WORKED_SECTION.DESCRIPTION_FOUR",
+    metrics: "(NEED UPDATE) 78% order completion rate"
+  },
+  {
+    icon: <Handshake className="w-5 h-5" />,
+    title: "WHAT_WORKED_SECTION.TITLE_FIVE",
+    description: "WHAT_WORKED_SECTION.DESCRIPTION_FIVE",
+    metrics: "(NEED UPDATE) ??"
+  },
+];
+
+export const welcomeOverlaySlides = [
+  {
+    title: "Family Adventures Begin",
+    subtitle: "Where every family creates unforgettable water memories",
+    image: "https://images.unsplash.com/photo-1652535873270-2144d2c52d8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMHN3aW1taW5nJTIwdG9nZXRoZXJ8ZW58MXx8fHwxNzU4OTc2ODkyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Users,
+    color: "from-blue-400 to-blue-600"
+  },
+  {
+    title: "Mother & Baby Care",
+    subtitle: "Gentle protection for life's most precious moments",
+    image: "https://images.unsplash.com/photo-1721571389052-9f65bc5f24b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3RoZXIlMjBiYWJ5JTIwd2F0ZXIlMjBzcG9ydHN8ZW58MXx8fHwxNzU4OTc2ODk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Baby,
+    color: "from-pink-400 to-purple-600"
+  },
+  {
+    title: "Sports Excellence",
+    subtitle: "Performance gear for champions and enthusiasts",
+    image: "https://images.unsplash.com/photo-1581560573661-974b0012185c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXRlciUyMHNwb3J0cyUyMGZhbWlseSUyMHN1cmZpbmd8ZW58MXx8fHwxNzU4OTc2ODk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Waves,
+    color: "from-green-400 to-teal-600"
+  },
+  {
+    title: "Adventure Awaits",
+    subtitle: "Discover the depths with confidence and comfort",
+    image: "https://images.unsplash.com/photo-1588732722208-4b86b49699a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZXRzdWl0JTIwZGl2aW5nJTIwYWR2ZW50dXJlfGVufDF8fHx8MTc1ODk3Njg5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    icon: Heart,
+    color: "from-orange-400 to-red-600"
+  }
+];
+
+export const products: Product[] = [
+  {
+    id: '0',
+    image: '',
+    name: 'Wetty Mini Wet Wipes',
+    category: 'Wetty Mini Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_1.DESCRIPTION_LONG',
+    priceRange: "RM3.90 - RM4.90",
+    originalPrice: "RM6.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_1.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_1.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_1.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FRESH_APPLE",
+        originalPrice: "RM6.90", 
+        salePrice: "RM3.90",
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FRESH_APPLE_DESC",
+        image: ''
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_FREE",
+        originalPrice: "RM6.90",
+        salePrice: "RM3.90",
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
+        image: ''
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_ROSE",
+        originalPrice: "RM6.90",
+        salePrice: "RM3.90", 
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_ROSE_DESC",
+        image: ''
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_1.OPTIONS.FRAGRANCE_ANTIBACTERIAL",
+        originalPrice: "RM6.90",
+        salePrice: "RM4.20",
+        description: "PRODUCT_SECTION.PRODUCT_1.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
+        image: ''
+      }
+    ],
+    salePrice: 0.00,
+    shopeeLink: ''
+  },
+  {
+    id: '1',
+    image: Main_Wet_Wipes,
+    name: 'Wetty Wet Tissue',
+    category: 'Wetty Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_2.DESCRIPTION_LONG',
+    priceRange: "RM1.00 - RM11.00",
+    originalPrice: "RM3.62 - RM18.50",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_2.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_2.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_2.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.1x30PCS",
+        image: Wet_Wipes_30,
+        originalPrice: "RM3.62",
+        salePrice: "RM0.00",
+        shopeeLink: 'https://s.shopee.com.my/5L2f1F8Ln0'
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.3x30PCS",
+        image: Wet_Wipes_30,
+        originalPrice: "RM10.25",
+        salePrice: "RM6.40",
+        shopeeLink: 'https://s.shopee.com.my/5AjEoxVXfV'
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.3x80PCS",
+        image: Wet_Wipes_80,
+        originalPrice: "RM18.50",
+        salePrice: "RM11.00",
+        shopeeLink: 'https://s.shopee.com.my/5pyvbw8fI0'
+      },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_FREE",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM11.65",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_FREE_DESC",
+      //   image: option1Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_LAVENDER",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_LAVENDER_DESC",
+      //   image: option2Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ROSE",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ROSE_DESC",
+      //   image: option3Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_DESC",
+      //   image: option4Wipes
+      // },
+      // {
+      //   name: "PRODUCT_SECTION.PRODUCT_2.OPTIONS.FRAGRANCE_ANTIBACTERIAL_FREE",
+      //   originalPrice: "RM18.50",
+      //   salePrice: "RM13.89",
+      //   description: "PRODUCT_SECTION.PRODUCT_2.OPTIONS_DETAILS.FRAGRANCE_ANTIBACTERIAL_FREE_DESC",
+      //   image: option5Wipes
+      // },
+    ]
+  },
+  {
+    id: '2',
+    image: Main_Sport_wipes,
+    name: 'Wetty Sports Wipes',
+    category: 'Wetty Sport Wipes',
+    description_short: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_3.DESCRIPTION_LONG',
+    priceRange: "RM8.68",
+    originalPrice: "RM16.65",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_3.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_3.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_3.BENEFITS.5"
+    ],
+    hasOptions: false,
+    salePrice: 8.68,
+    shopeeLink: 'https://s.shopee.com.my/BKYrZWo5h'
+  },
+  {
+    id: '3',
+    image: '',
+    name: 'Shinny Shower Gel',
+    category: 'Shower',
+    description_short: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_4.DESCRIPTION_LONG',
+    priceRange: "RM7.80",
+    originalPrice: "RM18.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_4.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_4.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_4.BENEFITS.5"
+    ],
+    hasOptions: false,
+    salePrice: 7.80,
+    shopeeLink: 'https://s.shopee.com.my/2LP7xwyAcE'
+  },
+  {
+    id: '4',
+    image: Main_Fabric_Spray,
+    name: 'Wetty Fabric Freshener (400ml)',
+    category: 'Wetty Fabric Freshener',
+    description_short: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_5.DESCRIPTION_LONG',
+    priceRange: "RM11.90",
+    originalPrice: "RM12.90",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_5.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_5.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_5.BENEFITS.5"
+    ],
+    hasOptions: false,
+    // options: [
+    //   {
+    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.TWILIGHT",
+    //     originalPrice: "RM12.90",
+    //     salePrice: "RM8.00",
+    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.TWILIGHT_DESC",
+    //     image: optionFabric1
+    //   },
+    //   {
+    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.SUNSET",
+    //     originalPrice: "RM12.90",
+    //     salePrice: "RM8.00",
+    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.SUNSET_DESC",
+    //     image: optionFabric2
+    //   },
+    //   {
+    //     name: "PRODUCT_SECTION.PRODUCT_5.OPTIONS.MORNING_DEW",
+    //     originalPrice: "RM12.90",
+    //     salePrice: "RM8.00",
+    //     description: "PRODUCT_SECTION.PRODUCT_5.OPTIONS_DETAILS.MORNING_DEW_DESC",
+    //     image: optionFabric3
+    //   }
+    // ],
+    shopeeLink: 'https://s.shopee.com.my/6AbpfoQbrj'
+  },
+  {
+    id: '5',
+    image: '',
+    name: 'Wetty Antibacterial Shower Cream',
+    category: 'Shower',
+    description_short: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_SHORT',
+    description_long: 'PRODUCT_SECTION.PRODUCT_6.DESCRIPTION_LONG',
+    priceRange: "RM9.90",
+    originalPrice: "RM18.30",
+    whyChosen: "PRODUCT_SECTION.PRODUCT_6.WHY_CHOSEN",
+    targetMarket: [
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.1",
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.2",
+      "PRODUCT_SECTION.PRODUCT_6.TARGET_MARKET.3"
+    ],
+    benefits: [
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.1",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.2",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.3",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.4",
+      "PRODUCT_SECTION.PRODUCT_6.BENEFITS.5"
+    ],
+    hasOptions: true,
+    options: [
+      {
+        name: "PRODUCT_SECTION.PRODUCT_6.OPTIONS.900ML",
+        image: Antibacteria_Shower_Cream_900ml,
+        originalPrice: "RM18.30",
+        salePrice: "RM9.90",
+        shopeeLink: 'https://s.shopee.com.my/BKYrq8klH'
+      },
+      {
+        name: "PRODUCT_SECTION.PRODUCT_6.OPTIONS.2000ML",
+        image: '',
+        originalPrice: "RM20.00",
+        salePrice: "RM9.65",
+        shopeeLink: 'https://s.shopee.com.my/AUl937BNsP'
+      },
+    ],
+    salePrice: 9.65,
+    shopeeLink: 'https://s.shopee.com.my/2LP7xwyAcE'
+  },
+];
+
 export const affiliateLinks = [
   'https://s.shopee.com.my/5L2f1F8Ln0',
   'https://s.shopee.com.my/5AjEoxVXfV',
@@ -95,3 +613,61 @@ export const affiliateLinks = [
   'https://s.shopee.com.my/AUl937BNsP',
   'https://s.shopee.com.my/2LP7xwyAcE'
 ]
+
+export const metrics = [
+  {
+    icon: <Users className="w-6 h-6" />,
+    label: "UNITS_SOLD",
+    value: "247",
+    subtext: "ACROSS_ALL_PRODUCT_LINES",
+    color: "text-blue-600"
+  },
+  {
+    icon: <DollarSign className="w-6 h-6" />,
+    label: "REVENUE",
+    value: "$284,500",
+    subtext: "TOTAL_SALES_TO_DATE",
+    color: "text-green-600"
+  },
+  {
+    icon: <Phone className="w-6 h-6" />,
+    label: "CUSTOMERS_APPROACHED",
+    value: "1,247",
+    subtext: "DIRECT_OUTREACH_CONTACTS",
+    color: "text-purple-600"
+  },
+  {
+    icon: <TrendingUp className="w-6 h-6" />,
+    label: "CONVERSION_RATE",
+    value: "19.8%",
+    subtext: "ABOVE_INDUSTRY_AVERAGE",
+    color: "text-orange-600"
+  }
+];
+
+export const experiments = [
+  {
+    icon: <Instagram className="w-6 h-6" />,
+    title: "Social Media Campaign",
+    period: "October - November 2024",
+    description: "Instagram and TikTok content featuring local surfers testing our products",
+    results: "15,000 views, 320 engagement interactions, 45 direct inquiries",
+    learnings: "Video content performs 3x better than static images. Authentic user-generated content drives higher conversion than polished ads."
+  },
+  {
+    icon: <Users className="w-6 h-6" />,
+    title: "Campus Booth Sales",
+    period: "University Sports Fair - November 2024",
+    description: "Physical booth at university sports event with product demonstrations",
+    results: "150 people approached, 12 units pre-ordered, 65 email signups",
+    learnings: "Hands-on experience is crucial for high-ticket items. Price objections reduced by 40% after product demonstration."
+  },
+  {
+    icon: <Megaphone className="w-6 h-6" />,
+    title: "Peer Selling Network",
+    period: "Ongoing since October 2024",
+    description: "Team members leveraging personal networks and friend referrals",
+    results: "25 direct sales through team connections, $18,750 in revenue",
+    learnings: "Personal recommendations are our highest-converting channel (35% conversion rate). Trust is the biggest factor in purchase decisions."
+  }
+];

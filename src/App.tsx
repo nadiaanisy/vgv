@@ -1,6 +1,6 @@
 import './assets/i18';
 // import { toast } from 'sonner';
-// import { useState } from 'react';
+import { useEffect } from 'react';
 import { Toaster } from './components/ui/sooner';
 // import { CartItem } from './components/interface';
 import { useCustomHook } from './components/misc';
@@ -14,6 +14,10 @@ import { SplashScreen } from './components/sections/SplashScreen';
 import { TestimonialPage } from './components/pages/TestimonialPage';
 import { BackgroundMusic } from './components/sections/BackgroundMusic';
 
+/* ADMIN COMPONENTS */
+import { AdminLogin } from './components/admin/AdminLogin';
+import { AdminDashboard } from './components/admin/AdminDashboard';
+
 export default function App() {
   const {
     // t,
@@ -25,7 +29,11 @@ export default function App() {
     showSplash,
     setShowSplash,
     splashCompleted,
-    setSplashCompleted
+    setSplashCompleted,
+    isAdminRoute,
+    setIsAdminRoute,
+    isAdminAuthenticated,
+    setIsAdminAuthenticated
   } = useCustomHook();
 
   // const [cartItems, setCartItems] = useState<CartItem[]>([])
@@ -89,6 +97,52 @@ export default function App() {
   //   clearCart()
   // }
 
+  // Check for admin route and authentication on mount
+  useEffect(() => {
+    const path = window.location.hash || window.location.pathname
+    const isAdmin = path.includes('admin')
+    setIsAdminRoute(isAdmin)
+    
+    if (isAdmin) {
+      const token = localStorage.getItem('veyra_admin_token')
+      setIsAdminAuthenticated(token === 'authenticated')
+      setShowSplash(false)
+    }
+  }, [])
+
+  // Listen for hash changes to handle admin navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const path = window.location.hash || window.location.pathname
+      const isAdmin = path.includes('admin')
+      setIsAdminRoute(isAdmin)
+      
+      if (isAdmin) {
+        const token = localStorage.getItem('veyra_admin_token')
+        setIsAdminAuthenticated(token === 'authenticated')
+        setShowSplash(false)
+      } else {
+        setShowSplash(false)
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  // Keyboard shortcut to access admin (Ctrl/Cmd + Shift + A)
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'a') {
+        e.preventDefault()
+        window.location.hash = 'admin'
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyPress)
+    return () => window.removeEventListener('keydown', handleKeyPress)
+  }, [])
+
   const handleSplashComplete = () => {
     setShowSplash(false)
     setSplashCompleted(true)
@@ -97,6 +151,15 @@ export default function App() {
   // const getTotalCartItems = () => {
   //   return cartItems.reduce((total, item) => total + item.quantity, 0)
   // }
+
+  const handleAdminLogin = () => {
+    setIsAdminAuthenticated(true)
+  }
+
+  const handleAdminLogout = () => {
+    setIsAdminAuthenticated(false)
+    window.location.hash = ''
+  }
 
   const renderPage = () => {
     switch (currentPage) {
@@ -118,6 +181,29 @@ export default function App() {
     }
   }
 
+  // If admin route, show admin interface
+  if (isAdminRoute) {
+    return (
+      <div className="size-full min-h-screen bg-background">
+        {isAdminAuthenticated ? (
+          <AdminDashboard
+            onLogout={handleAdminLogout}
+            currentLanguage={currentLanguage}
+            onLanguageChange={handleLanguageChange}
+          />
+        ) : (
+          <AdminLogin
+            onLogin={handleAdminLogin}
+            currentLanguage={currentLanguage}
+            onLanguageChange={handleLanguageChange}
+          />
+        )}
+        <Toaster position="top-right" richColors />
+      </div>
+    )
+  }
+
+  // Regular website
   return (
     <div className="size-full min-h-screen bg-background">
       {/* Splash Screen */}

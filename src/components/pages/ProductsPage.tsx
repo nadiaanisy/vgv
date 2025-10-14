@@ -41,7 +41,7 @@ import {
 import {
   products,
   experiments
-} from '../../assets/data';
+} from '../../assets/constants';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 // import { CartItem } from '../interface';

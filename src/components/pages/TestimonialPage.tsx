@@ -27,23 +27,29 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '../ui/carousel';
+import { toast } from 'sonner';
 import {
   metrics,
   whatWorked,
-  testimonials,
-  whatDidntWork
-} from '../../assets/data';
+  successFactors,
+  whatDidntWork,
+  areasImprovement
+} from '../../assets/constants';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
-import React, { useEffect } from 'react';
+import { Testimonial } from '../interface';
+import React, { useEffect, useState } from 'react';
+import { supabase } from '../../utils/supabaseClient';
 
 interface TestimonialPageProps {
   onNavigate: (page: string) => void
 }
 export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
   const { t } = useCustomHook();
-  const [carouselApi, setCarouselApi] = React.useState<CarouselApi>()
-
+  const [carouselApi, setCarouselApi] = React.useState<CarouselApi>();
+  const [fetchedTestimonials, setFetchedTestimonials] = useState<Testimonial[]>([]);
+  const [loading, setLoading] = React.useState(false);
+  
   // Auto-slide functionality for testimonials
   useEffect(() => {
     if (!carouselApi) return
@@ -54,6 +60,30 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
 
     return () => clearInterval(autoSlide)
   }, [carouselApi])
+
+  // Fetch testimonials
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from('testimonials')
+        .select('*')
+        .order('date', { ascending: false });
+
+      setLoading(false);
+
+      if (error) {
+        toast.error(t('ERRORS.FAILED_TO_LOAD'));
+        console.error(error);
+        return;
+      }
+
+      setFetchedTestimonials(data);
+    };
+
+    fetchTestimonials();
+  }, []);
+
 
   return (
     <main className="min-h-screen bg-background">
@@ -87,6 +117,7 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
       </section>
 
       {/* Metrics Section */}
+      NNT KITA AMEK DARI API
       <section className="w-full py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -134,13 +165,13 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
             className="w-full max-w-5xl mx-auto"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial) => (
+              {fetchedTestimonials.map((testimonial) => (
                 <CarouselItem key={testimonial.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="h-full hover:shadow-lg transition-shadow">
                     <CardHeader className="text-center pb-4">
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
                         <ImageWithFallback
-                          src={testimonial.image}
+                          src={testimonial.avatar}
                           alt={testimonial.name}
                           className="w-full h-full object-cover"
                         />
@@ -165,7 +196,7 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
                       <div className="relative">
                         <Quote className="w-6 h-6 text-primary/20 absolute -top-2 -left-1" />
                         <p className="text-muted-foreground italic pl-5 leading-relaxed">
-                          {testimonial.quote}
+                          {testimonial.comment}
                         </p>
                       </div>
                       
@@ -210,10 +241,10 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
                       {item.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-medium text-foreground mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-3">{item.description}</p>
+                      <h3 className="font-medium text-foreground mb-2">{t(item.title)}</h3>
+                      <p className="text-muted-foreground text-sm mb-3">{t(item.description)}</p>
                       <Badge variant="outline" className="text-xs text-green-700 border-green-200">
-                        {item.metrics}
+                        {t(item.metrics)}
                       </Badge>
                     </div>
                   </div>
@@ -245,17 +276,17 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
                       <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center text-red-600">
                         {item.icon}
                       </div>
-                      <h3 className="font-medium text-foreground">{item.title}</h3>
+                      <h3 className="font-medium text-foreground">{t(item.title)}</h3>
                     </div>
-                    
-                    <p className="text-muted-foreground text-sm">{item.description}</p>
-                    
+
+                    <p className="text-muted-foreground text-sm">{t(item.description)}</p>
+
                     <div className="space-y-2">
                       <div className="text-xs text-red-600">
-                        <strong>{t("IMPACT")}:</strong> {item.impact}
+                        <strong>{t("IMPACT")}:</strong> {t(item.impact)}
                       </div>
                       <div className="text-xs text-foreground">
-                        <strong>{t("LESSON")}:</strong> {item.lesson}
+                        <strong>{t("LESSON")}:</strong> {t(item.lesson)}
                       </div>
                     </div>
                   </div>
@@ -281,38 +312,28 @@ export function TestimonialPage({ onNavigate }: TestimonialPageProps) {
               <div className="grid md:grid-cols-2 gap-8 text-left">
                 <div>
                   <h3 className="font-medium text-foreground mb-3">{t('SUCCESS_FACTORS')}</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5" />
-                      Digital-first marketing approach works best
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5" />
-                      Customer referrals are our strongest growth driver
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-600 mt-0.5" />
-                      Product demonstrations convert skeptics
-                    </li>
-                  </ul>
+                  {successFactors.map((item, index) => (
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2 mb-3">
+                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5" />
+                          <span>
+                            <strong>{t(item.main)}</strong>: {t(item.factor)}
+                          </span>
+                      </li>
+                    </ul>
+                  ))}
                 </div>
-                
+
                 <div>
                   <h3 className="font-medium text-foreground mb-3">{t('AREAS_OF_IMPROVEMENT')}</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <XCircle className="w-4 h-4 text-red-600 mt-0.5" />
-                      Focus on targeted vs. broad advertising
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="w-4 h-4 text-red-600 mt-0.5" />
-                      Maintain premium positioning consistently
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="w-4 h-4 text-red-600 mt-0.5" />
-                      Prioritize digital over physical channels
-                    </li>
-                  </ul>
+                  {areasImprovement.map((item, index) => (
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2 mb-3">
+                        <XCircle className="w-4 h-4 text-red-600 mt-0.5" />
+                        {t(item)}
+                      </li>
+                    </ul>
+                  ))}
                 </div>
               </div>
             </CardContent>
