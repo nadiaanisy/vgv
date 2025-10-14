@@ -74,7 +74,7 @@ const CardContent = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">
     <div
       ref={ref}
       data-slot="card-content"
-      className={cn("px-6 [&:last-child]:pb-6", className)}
+      className={cn("px-6 [&:last-child]:pb-4", className)}
       {...props}
     />
   )
