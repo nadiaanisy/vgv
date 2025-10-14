@@ -43,7 +43,7 @@ export function BackgroundMusic({
           playlist: youtubeId,
           modestbranding: 1,
           origin: window.location.origin, // avoids postMessage error
-          mute: autoPlay ? 1 : 0,        // mute initially if autoplay
+          mute: 0        // mute initially if autoplay
         },
         events: {
           onReady: (event: any) => {

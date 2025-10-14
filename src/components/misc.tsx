@@ -14,7 +14,7 @@ import i18n from 'i18next';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { useTranslation } from 'react-i18next';
-import { ProductReview, Testimonial } from './interface';
+import { Testimonial } from './interface';
 
 export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {
   const [didError, setDidError] = useState(false);
