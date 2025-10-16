@@ -35,22 +35,27 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "autoprefixer": "^10.4.21",
+    "cheerio": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
+    "cors": "^2.8.5",
     "embla-carousel-react": "^8.6.0",
+    "express": "^5.1.0",
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.544.0",
     "motion": "*",
+    "next": "^15.5.5",
     "next-themes": "^0.4.6",
+    "node-fetch": "^3.3.2",
     "postcss": "^8.5.6",
+    "puppeteer": "^24.25.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
@@ -63,7 +68,6 @@
     "tailwind-merge": "^3.3.1",
     "tailwind-variants": "^3.1.1",
     "tailwindcss": "^3.4.17",
-    "typescript": "^4.9.5",
     "vaul": "^1.1.2",
     "web-vitals": "^2.1.4"
   },
@@ -71,7 +75,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "ts-node src/utils/scraper.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -92,11 +97,15 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^20.10.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.23",
+    "@types/node": "^20.19.21",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

@@ -11,12 +11,4 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     schema: 'public',
     parseToNumber: true, // ✅ forces bigint (int8) to return as number
   },
-}as any)
-
-// async function testConnection() {
-//   const { data, error } = await supabase.from('languages').select('*').limit(1)
-//   if (error) console.error(error)
-//   else console.log('Connected! Sample data:', data)
-// }
-
-// testConnection()
+} as any)
